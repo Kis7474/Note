@@ -1,0 +1,164 @@
+기초
+
+식별자 정하기
+
+각각의 프론트엔드를 구별할 수 있는 고유 식별자를 정해주세요. 알파벳, 하이픈으로만 해주세요.
+
+my-module 이라는 이름을 예제로 할 거예요.
+
+
+
+필수 토글
+
+토글은 원하는 걸 정의해서 맘대로 쓸 수 있지만, "my-module.mode=모드=select=끄기,메인,보조,자동" 토글은 필수예요. 순서도 반드시 맞춰야 해요.
+
+팁: "모드"라는 토글 이름은 바꿀 수 있어요.
+
+
+
+
+
+manifest.lb
+
+모듈을 만들고, 정확하게 manifest.lb라는 이름의 로어북을 생성하세요.
+
+미니보드의
+manifest.lb
+
+
+
+manifest.lb에서 작노/로어북/페소 설명 같은 걸 프론트엔드가 받을지 안 받을지, 프론트엔드가 컨텍스트를 얼마나 받을지 같은 걸 설정할 수 있어요.
+
+
+키	설명	값의 종류	필수 여부	기본값
+identifier	모듈의 고유 식별자입니다.	문자열	필수	없음
+authorsNote	모듈 프롬프트에 작노를 포함할지 여부를 결정합니다.	true / false	선택	false
+charDesc	모듈 프롬프트에 현재 봇의 설명을 포함할지 여부를 결정합니다.	true / false	선택	false
+personaDesc	모듈 프롬프트에 페르소나의 설명을 포함할지 여부를 결정합니다.	true / false	선택	false
+loreBooks	모듈 프롬프트에 활성화된 로어북 내용을 포함할지 여부를 결정합니다.
+참고: 키워드로 활성화된 로어북도 들어가요.	true / false	선택	false
+lazy	지연 로딩을 사용할지 여부를 결정합니다. true로 설정하면 초기 생성 시에는 플레이스홀더(lb-lazy)만 생성되고, 리롤을 통해 실제 내용을 불러와야 합니다.	true / false	선택	false
+maxCtx	이 모듈이 사용할 최대 컨텍스트 토큰 크기를 지정합니다. 전역 설정보다 우선합니다.	숫자	선택	전역 설정
+maxLogs	이 모듈이 프롬프트에 포함할 최근 채팅 로그의 최대 개수를 지정합니다. 전역 설정보다 우선합니다.	숫자	선택	전역 설정
+multilingual	다국어 지원 프롬프트를 활성화할지 여부를 결정합니다. false로 설정하면 전역 언어 설정이 적용되지 않습니다.	true / false	선택	true
+rerollBehavior	리롤 시 이전 모듈 블록을 어떻게 처리할지 결정합니다.	preserve-prev / remove-prev	선택	preserve-prev
+팁: identifier, multilingual, rerollBehavior를 제외한 모든 항목은 토글로도 제공할 수 있어요. my-module.maxCtx = 최대 컨텍 토글.
+이때, 불리언이면 0 = false, 1 = true예요.
+
+
+
+프롬프팅
+
+라이트보드의 프롬프트는 리스의 "프롬"처럼 큰 템플릿과 그걸 채울 조각들로 구성돼요. 큰 템플릿은 바꿀 수 없어요.
+
+
+
+로어북 이름	설명	역할 및 용도	필수 여부
+my-module.lb	생성 가이드라인	(가장 중요) LLM이 무엇을, 어떻게 분석하고 생성해야 하는지에 대한 핵심 지침을 담습니다. 캐릭터의 감정, 관계 변화, 중요한 사건 등을 요약하거나 특정 형식에 맞춰 정보를 추출하도록 지시하는 내용을 작성합니다.	필수
+my-module.lb.format	출력 형식(Schema)	LLM이 준수해야 할 정확한 출력 형식을 정의합니다. XML, JSON, Markdown 등 구조화된 데이터의 템플릿을 제공합니다.
+참고: 여기엔 스키마만 넣고, 실제 출력 예시를 my-module.lb에 한 번 더 넣는 걸 추천해요.	필수
+my-module.lb.interaction	상호작용 가이드라인	사용자가 상호작용(Interaction)을 요청했을 때, LLM이 사용자의 지시(direction)와 행동(action)을 어떻게 해석하고 기존 데이터를 수정해야 하는지에 대한 지침을 제공합니다.	상호작용 기능 사용 시 필수
+my-module.lb.jailbreak	탈옥 지침	탈옥용. 기본 탈옥 프롬프트로 충분하지 않으면 재정의할 수 있어요.	선택 (없으면 기본값 사용)
+my-module.lb.job	작업 지침 (Job Instruction)	LLM의 역할을 재정의합니다. 기본값인 "BBS 시뮬레이터" 대신, 이 모듈을 생성할 때 LLM이 어떤 역할을 맡아야 하는지(예: "TRPG 게임 마스터", "캐릭터 심리 분석가") 구체적으로 지정할 수 있습니다.	선택 (없으면 기본값 사용)
+my-module.lb.prefill	생성 예시 (Prefill)	프리필. 추가 탈옥용으로 쓰세요.	선택
+my-module.lb.thoughts	사고 과정 가이드라인 (생성)	CoD 프롬프트.  <Thoughts>처럼, <lb-process> 안에 생각 과정을 출력해요. 백엔드 토글 상태에 따라 자동으로 제거돼요.	선택
+my-module.lb.thoughts-interaction	사고 과정 가이드라인 (상호작용)	상호작용 시에 대신 사용하는 CoD 프롬프트.	선택
+my-module.lb.universe	세계관 추가 설명	프롬프트의 'Narrative Universe Settings' 섹션에 추가적인 세계관 설정을 주입합니다. 이 모듈이 생성될 때 특별히 더 강조해야 할 세계관 정보가 있을 경우 사용합니다.	선택
+my-module.lb.extra
+"작가의 노트"
+이건 프론트엔드 모듈이 아니라 다른 모듈이나 캐릭터 로어북에 넣어요. "작가의 노트"처럼 높은 우선순위로 적용되는 추가 지침이에요.
+
+이름이 같아도 덮어쓰지 않고, 모두 합쳐서 써요.	선택 (프론트엔드 밖)
+
+
+팁: lb.extra를 제외한 로어북들은 다른 모듈이나 봇이 덮어쓸 수 있어요. 이름이 같고, 배치 순서가 높은 로어북이 낮은 로어북을 덮어써요.
+
+
+
+출력 형식
+
+반드시 아래 코드처럼 식별자와 동일한 XML 태그로 감싸주세요. 애트리뷰트는 필요한대로 추가할 수 있어요. (ID, 제목, ...)
+
+
+
+<my-module>
+...
+</my-module>
+cs
+
+
+내용물은 원하는 형식대로 출력하게 하세요.
+
+
+
+출력 형식
+
+렌더링은 알아서 잘 해주세요. 정규식을 써도 되고, Lua editDisplay를 써도 되고.
+
+
+
+중급
+
+리롤
+
+리롤은 아웃풋을 프론트엔드의 출력을 다시 생성하는 기능이에요.
+
+버튼을 렌더링하세요. <button risu-btn="lb-reroll__my-module" type="button">
+
+버튼 내용은 자유롭게 할 수 있어요. 언더바 두 개인 것에 주의하세요.
+
+
+
+콜백
+
+라이트보드는 Lua 콜백 함수를 지원해요. 그런데, 모듈의 트리거 스크립트가 아니라, 로어북으로 만들어야 해요.
+
+
+
+로어북 이름	실행 시점	입력 파라미터	반환값	주요 용도
+{identifier}.lb.onInput	LLM에 채팅 로그를 전달하기 직전	triggerId (문자열), input (문자열, 단일 채팅 로그), index (숫자, 채팅 인덱스)	수정된 input (문자열)	관련 없는 긴 텍스트 제거
+기존 데이터 전달 전 형식 변환
+{identifier}.lb.onOutput	LLM이 결과물을 생성하고 기본 후처리(반복 문자 제거 등)를 마친 직후	triggerId (문자열), output (문자열, LLM이 생성한 결과 블록)	수정된 output (문자열)	형식 보정
+출력 파싱 후 고급 Lua 동작 수행 (변수 설정 등)
+출력 형식 변환
+{identifier}.lb.onMutation	리롤 또는 상호작용으로 채팅 로그가 수정되기 직전	triggerId (문자열), action (문자열, "reroll" 또는 "interaction"), output (문자열, 최종적으로 채팅에 적용될 전체 내용)	수정된 output (문자열)	?
+
+
+function onOutput(triggerId, output)
+  setState(triggerId, 'miniboard_state', output)
+  return output
+end
+ 
+return onOutput
+Colored by Color Scripter
+cs
+
+
+위와 코드처럼, 콜백 함수를 반환하도록 해주세요.
+
+
+
+상호작용
+
+상호작용은 프론트엔드의 출력을 LLM한테 다시 주면서, "이거이거 이렇게 저렇게 수정해라" 명령하는 기능이에요. "이 글에 댓글 달아", "이 부분 다시 만들어줘"에 해당해요.
+
+상호작용 종류 정의 (.lb.interaction 로어북). 형식은 미니보드 로어북을 참고하세요.
+버튼 구현.
+버튼을 렌더링하세요. <button risu-btn="lb-interaction__my-module__{action}" type="button">
+
+{action}에는 1번에서 정의한 상호작용 종류를 LLM이 이해할 수 있는 형태로 넣으세요. 특정 위치만 바꾸는 상호작용이라면, 그 특정 위치도 알아볼 수 있게 넣으세요.
+
+예제: 미니보드 댓글 달기 상호작용 = "lb-interaction__lightboard-miniboard__AddComment/Title:인생 원래 이렇게 재미없는 거냐"
+
+
+
+고급
+
+상호작용 수정자
+
+상호작용에는 "수정자"를 붙여 고급 동작도 제어할 수 있어요. {action} 앞에 수정자와 #을 붙이면 돼요.
+
+예제: 뉴스 새로 띄우기 상호작용 = "lb-interaction__lightboard-news__preserve#ChangeBoard"
+
+immediate: 사용자 입력 단계를 건너뛰고 버튼 클릭 즉시 상호작용을 실행합니다. (예: 링크 클릭)
+preserve: 상호작용 후 기존 데이터 블록을 삭제하지 않고 유지합니다.

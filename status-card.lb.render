@@ -1,0 +1,224 @@
+-- status-card HTML 렌더링 함수
+function editDisplay(triggerId, data)
+    -- 디버그 로그
+    print("=== Status Card Renderer Start ===")
+    print("Input data length: " .. string.len(data))
+    
+    -- <status-card> 태그 찾기 (더 관대한 패턴)
+    local statusPattern = '<status%-card>(.-)</status%-card>'
+    local statusContent = string.match(data, statusPattern)
+    
+    if not statusContent then
+        print("WARNING: No <status-card> tag found")
+        -- 태그 없이도 시도 (fallback)
+        statusPattern = '%[Name:(.-)%[Progress: '
+        statusContent = string.match(data, statusPattern)
+        if not statusContent then
+            print("ERROR: Status card content not found at all")
+            return data
+        end
+        print("Found status content without proper tags")
+    else
+        print("Status card content found: " .. string.len(statusContent) .. " chars")
+    end
+    
+    -- 안전한 trim 함수
+    local function trim(s)
+        if not s then return '' end
+        return s:gsub('^%s*(.-)%s*$', '%1')
+    end
+    
+    -- 안전한 match 함수
+    local function safeMatch(text, pattern, default)
+        local result = string.match(text, pattern)
+        return trim(result or default or '')
+    end
+    
+    -- 정규식으로 각 필드 추출 (더 관대한 패턴)
+    local captures = {}
+    
+    -- 첫 번째 줄 파싱
+    captures.name = safeMatch(statusContent, '%[Name:%s*([^|]+)%|', '이름 없음')
+    captures.age = safeMatch(statusContent, 'Age:%s*(%d+)%s*%|', '??')
+    captures.gender = safeMatch(statusContent, 'Gender:%s*(%S+)%s*%|', '?')
+    captures.workPeriod = safeMatch(statusContent, 'Working Period:%s*([^|]+)%|', '미상')
+    captures.rank = safeMatch(statusContent, 'Rank:%s*([^|]+)%|', '직급 없음')
+    captures.housing = safeMatch(statusContent, 'Housing:%s*([^%]]+)%]', '미배정')
+    
+    -- Performance & Effects
+    captures.performance = safeMatch(statusContent, '%[Performance:%s*([^|]+)%|', 'N/A')
+    captures.effects = safeMatch(statusContent, 'Effects:%s*([^%]]+)%]', '없음')
+    
+    -- Specialty
+    captures.specPrimary = safeMatch(statusContent, 'Primary%s*%-%s*([^|]+)%|', '없음')
+    captures.specSecondary = safeMatch(statusContent, 'Secondary%s*%-%s*([^%]]+)%]', '없음')
+    
+    -- Body Rating (간소화된 파싱)
+    local bodyRatingLine = safeMatch(statusContent, '%[Body Rating:([^%]]+)%]', '')
+    
+    captures.vaginaGrade = safeMatch(bodyRatingLine, 'Vagina%s*[–%-]%s*([A-FS][+%-]?)', 'N/A')
+    captures.vaginaStatus = safeMatch(bodyRatingLine, 'Vagina%s*[–%-]%s*[^(]*%(([^)]+)%)', '미평가')
+    
+    captures.analGrade = safeMatch(bodyRatingLine, 'Anal%s*[–%-]%s*([A-FS][+%-]?)', 'N/A')
+    captures.analStatus = safeMatch(bodyRatingLine, 'Anal%s*[–%-]%s*[^(]*%(([^)]+)%)', '미평가')
+    
+    captures.oralGrade = safeMatch(bodyRatingLine, 'Oral%s*[–%-]%s*([A-FS][+%-]?)', 'N/A')
+    captures.oralStatus = safeMatch(bodyRatingLine, 'Oral%s*[–%-]%s*[^(]*%(([^)]+)%)', '미평가')
+    
+    -- Body Detail (복잡한 파싱)
+    local bodyDetailLine = safeMatch(statusContent, '%[Body Detail:([^%]]+)%]', '')
+    
+    captures.vaginaDetail = safeMatch(bodyDetailLine, 'Vagina%s*[–%-]%s*([^|]+)%|', '상세 정보 없음')
+    captures.analDetail = safeMatch(bodyDetailLine, 'Anal%s*[–%-]%s*([^|]+)%|', '상세 정보 없음')
+    captures.oralDetail = safeMatch(bodyDetailLine, 'Oral%s*[–%-]%s*(.+)$', '상세 정보 없음')
+    
+    -- Mind
+    local mindLine = safeMatch(statusContent, '%[Mind:([^%]]+)%]', '')
+    captures.obedience = safeMatch(mindLine, 'Obedience%s*(%d+)%%', '0')
+    captures.loyalty = safeMatch(mindLine, 'Loyalty%s*(%d+)%%', '0')
+    captures.emotion = safeMatch(mindLine, 'Emotion:%s*(.+)$', '알 수 없음')
+    
+    -- Relations
+    captures.relations = safeMatch(statusContent, '%[Relations:([^%]]+)%]', '없음')
+    
+    -- Schedule
+    local scheduleLine = safeMatch(statusContent, '%[Next Schedule:([^%]]+)%]', '')
+    captures.nextSchedule = safeMatch(scheduleLine, '([^|]+)%|', '없음')
+    captures.review = safeMatch(scheduleLine, 'Review[^-]*%-%s*([^|]+)%|', '미정')
+    captures.pending = safeMatch(scheduleLine, 'Pending:%s*(.+)$', '없음')
+    
+    -- Progress
+    local progressLine = safeMatch(statusContent, '%[Progress:([^%]]+)%]', '')
+    captures.progress = safeMatch(progressLine, '([^|]+)%|', '미상')
+    captures.risk = safeMatch(progressLine, 'Risk:%s*(.+)$', '알 수 없음')
+    
+    print("=== Parsed Data ===")
+    print("Name: " .. captures.name)
+    print("Performance: " .. captures.performance)
+    
+    -- HTML 생성 (이스케이프 처리 강화)
+    local function escapeHtml(text)
+        if not text then return '' end
+        text = text:gsub('&', '&amp;')
+        text = text:gsub('<', '&lt;')
+        text = text:gsub('>', '&gt;')
+        text = text:gsub('"', '&quot;')
+        text = text:gsub("'", '&#39;')
+        return text
+    end
+    
+    -- 안전하게 HTML에 삽입
+    for k, v in pairs(captures) do
+        captures[k] = escapeHtml(v)
+    end
+    
+    local html = [[
+<div style="max-width: 500px; margin: 20px auto; background: linear-gradient(145deg, #0f0f0f, #181818); border: 1px solid #333; border-top: 3px solid #ff0055; font-family: 'Consolas', 'Monaco', monospace; color: #ccc; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); overflow: hidden; position: relative;">
+    <div style="position: absolute; top: -20px; right: -20px; font-size: 100px; color: rgba(255, 0, 85, 0.03); font-weight: bold; pointer-events: none; z-index: 0;">]] .. captures.gender .. [[</div>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: rgba(255, 0, 85, 0.08); border-bottom: 1px solid #333; position: relative; z-index: 1;">
+        <span style="color: #ff0055; font-weight: bold; letter-spacing: 1px; font-size: 0.9rem;">니어 그룹 사원증</span>
+        <span style="background: #ff0055; color: #000; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase;">]] .. captures.rank .. [[</span>
+    </div>
+    <div style="display: flex; padding: 15px; gap: 15px; position: relative; z-index: 1;">
+        <div style="width: 80px; height: 100px; background-color: #1a1a1a; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+            <span style="font-size: 2rem;">👩</span>
+        </div>
+        <div style="flex-grow: 1; font-size: 0.8rem; line-height: 1.6; display: flex; flex-direction: column; justify-content: center;">
+            <div style="font-size: 1.1rem; font-weight: bold; color: #fff; margin-bottom: 6px;">]] .. captures.name .. [[</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                <span>🎂 나이: <span style="color:#aaa">]] .. captures.age .. [[</span></span>
+                <span>⚧ 성별: <span style="color:#aaa">]] .. captures.gender .. [[</span></span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 2px;"><span>📅 근무기간: <span style="color:#aaa">]] .. captures.workPeriod .. [[</span></span>
+                <span>🏠 주거지: <span style="color:#aaa">]] .. captures.housing .. [[</span></span></div>
+            <div style="margin-top: 4px; padding-top: 4px; border-top: 1px dashed #333; display: flex; justify-content: space-between;">
+                <span>🏆 평가: <span style="color: #ffcc00;">]] .. captures.performance .. [[</span></span>
+                <span>⚡ 상태: <span style="color: #00bcd4;">]] .. captures.effects .. [[</span></span>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 0 15px 10px; position: relative; z-index: 1;">
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; font-size: 0.8rem;">
+            <span style="background: rgba(0, 188, 212, 0.1); color: #00bcd4; padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(0, 188, 212, 0.3);">★ Primary: ]] .. captures.specPrimary .. [[</span>
+            <span style="background: rgba(224, 64, 251, 0.1); color: #e040fb; padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(224, 64, 251, 0.3);">☆ Secondary: ]] .. captures.specSecondary .. [[</span>
+        </div>
+    </div>
+    <div style="margin: 5px 15px 10px; background: #111; border: 1px solid #333; border-radius: 4px; padding: 10px; font-size: 0.8rem; position: relative; z-index: 1;">
+        <div style="color: #666; font-size: 0.7rem; margin-bottom: 8px; letter-spacing: 1px; border-bottom: 1px solid #333; padding-bottom: 2px;">🔞 신체 개발 평가</div>
+        <div style="margin-bottom: 8px;">
+            <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                <span style="width: 50px;">🐱 보지</span>
+                <span style="color: #ff99cc; font-weight: bold; margin-right: 6px;">]] .. captures.vaginaGrade .. [[</span>
+                <span style="color: #ff99cc; font-size: 0.75rem;">(]] .. captures.vaginaStatus .. [[)</span>
+            </div>
+            <div style="color: #888; font-size: 0.75rem; padding-left: 24px; line-height: 1.3;">]] .. captures.vaginaDetail .. [[</div>
+        </div>
+        <div style="margin-bottom: 8px;">
+            <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                <span style="width: 50px;">🍑 항문</span>
+                <span style="color: #cc9966; font-weight: bold; margin-right: 6px;">]] .. captures.analGrade .. [[</span>
+                <span style="color: #cc9966; font-size: 0.75rem;">(]] .. captures.analStatus .. [[)</span>
+            </div>
+            <div style="color: #888; font-size: 0.75rem; padding-left: 24px; line-height: 1.3;">]] .. captures.analDetail .. [[</div>
+        </div>
+        <div>
+            <div style="display: flex; align-items: center; margin-bottom: 2px;">
+                <span style="width: 50px;">👄 오랄</span>
+                <span style="color: #ff6666; font-weight: bold; margin-right: 6px;">]] .. captures.oralGrade .. [[</span>
+                <span style="color: #ff6666; font-size: 0.75rem;">(]] .. captures.oralStatus .. [[)</span>
+            </div>
+            <div style="color: #888; font-size: 0.75rem; padding-left: 24px; line-height: 1.3;">]] .. captures.oralDetail .. [[</div>
+        </div>
+    </div>
+    <div style="padding: 0 15px 10px; position: relative; z-index: 1;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.8rem;">
+            <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:2px;">
+                    <span>⛓️ 복종</span> <span style="color:#ff0055;">]] .. captures.obedience .. [[%</span>
+                </div>
+                <div style="height:4px; background:#333; border-radius:2px;">
+                    <div style="width: ]] .. captures.obedience .. [[%; height:100%; background:#ff0055; border-radius:2px;"></div>
+                </div>
+            </div>
+            <div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:2px;">
+                    <span>❤️ 충성</span> <span style="color:#00bcd4;">]] .. captures.loyalty .. [[%</span>
+                </div>
+                <div style="height:4px; background:#333; border-radius:2px;">
+                    <div style="width: ]] .. captures.loyalty .. [[%; height:100%; background:#00bcd4; border-radius:2px;"></div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 5px; font-size: 0.75rem; text-align: right; color: #888;">💭 Emotion: <span style="color: #ddd;">]] .. captures.emotion .. [[</span></div>
+    </div>
+    <div style="background: #0a0a0a; border-top: 1px solid #333; padding: 10px 15px; font-size: 0.75rem; color: #777; display: flex; flex-direction: column; gap: 5px; position: relative; z-index: 1;">
+        <div>👥 <b>관계:</b> <span style="color:#999">]] .. captures.relations .. [[</span></div>
+        <div>📅 <b>다음 일정:</b> <span style="color:#ccc">]] .. captures.nextSchedule .. [[</span></div>
+        <div>📝 <b>평가:</b> <span style="color:#aaa">]] .. captures.review .. [[</span></div>
+        <div>⚠️ <b>대기 중:</b> <span style="color:#ffa500">]] .. captures.pending .. [[</span></div>
+        <div style="margin-top: 4px; padding-top: 6px; border-top: 1px dashed #222; display: flex; justify-content: space-between; align-items: center;">
+            <span>⏳ <b>진행도:</b> <span style="color:#ccc">]] .. captures.progress .. [[</span></span>
+            <span style="color: #ff4444; background: rgba(255, 68, 68, 0.1); padding: 1px 6px; border-radius: 3px; font-weight: bold;">⚠️ 위험도: ]] .. captures.risk .. [[</span>
+        </div>
+    </div>
+    <div style="padding: 10px 15px; border-top: 1px solid #333; text-align: center;">
+        <button risu-btn="lb-reroll__status-card" type="button" style="background: #ff0055; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">🔄 상태창 새로고침</button>
+    </div>
+</div>
+]]
+    
+    print("HTML generated: " .. string.len(html) .. " chars")
+    
+    -- 원본 태그를 HTML로 교체 (전역 치환)
+    local result = string.gsub(data, '<status%-card>.-</status%-card>', html)
+    
+    print("=== Status Card Renderer End ===")
+    
+    return result
+end
+
+-- editDisplay 리스너 등록
+listenEdit("editDisplay", editDisplay)
+
+-- 함수 반환 (호환성)
+return editDisplay

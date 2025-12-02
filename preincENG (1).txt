@@ -1,0 +1,1734 @@
+$KMT ******************************************
+$KMT *            Gemeinsame                  *
+$KMT *    Texte fuer Produkt-/Schema-Editor   *
+$KMT *            Zeitung  TPP                *
+$KMT *          E N G L I S C H               *
+$KMT *            Josef Hader                 *
+$KMT ******************************************
+
+$KMT ******************************************
+$KMT * <Fri May 14 12:40:47 2021>             *
+$KMT ******************************************
+
+$KMT "$Id: preinc.txt,v 11.79 2021/05/14 10:44:46 ardaso Exp $"
+
+/*********************** Beschreibung fuer Textlaengen: ***********************
+*
+*-------------------------------------------------------------------------------
+* Max. Textlaenge mit allen Zusammensetzungen (durch @ eingeleitet) 200 Zeichen.
+*-------------------------------------------------------------------------------
+* l = linksbuendig      |                           |
+* r = rechtsbuendig     | f# = fixe Textlaenge      |
+* z = zentriert         |                           |      n# = max. Zeilenzahl
+*-----------------------+---------------------------|      beliebig, falls keine
+* v = Laenge variabel   | m# = max. Textlaenge      |      Anzahl angegeben ist
+*-------------------------------------------------------------------------------
+* Leerzeichen zwischen ~ und einer Zahl (incl. ~ und Zahl) sind Platzhalter
+* fuer Parameter und muessen deshalb so erhalten bleiben.
+*******************************************************************************/
+
+/* int, Includes (jeweils aktuelle Sprache eintragen (DEU, ENG ...)!!!!) */
+
+$INCLUD /frs/alg/alg/txt/ENG/alginc.txt
+$INCLUD /frs/alg/alg/txt/ENG/dteinc.txt
+$INCLUD /frs/alg/alg/txt/ENG/masinc.txt
+$INCLUD /frs/alg/tpp/txt/ENG/tppinc.txt
+$INCLUD /frs/alg/tpp/txt/ENG/msginc.txt
+$INCLUD /frs/alg/tpp/txt/ENG/bdbinc.txt
+$INCLUD /frs/alg/tpp/txt/ENG/prdinc.txt
+$INCLUD /frs/ztg/alg/txt/ENG/ztginc.txt
+$INCLUD /frs/ztg/alg/txt/ENG/zusfktinc.txt
+$INCLUD /frs/alg/tpp/txt/ENG/fgbinc.txt
+$INCLUD /frs/ztg/tpp/txt/ENG/xfbinc.txt
+$INCLUD /prj/ztg/akt/txt/ENG/wae.txt
+
+
+/* int, Oberflaechen */
+
+
+
+$PRMTXT PUB         Y   "Publication"
+$PRMTXT ASG         Y   "Edition"
+
+$PRMTXT PRDCRT      Y   @ALG_CREATE
+$PRMTXT PRDCHG      Y   @ALG_CHANGE
+$PRMTXT PRDVIW      Y   @ALG_VIEW
+
+$PRMTXT SCHEDULE    Y   @ALG_SCHEDULE
+
+$PRMTXT KMT         Y   @ALG_KOM
+
+$PRMTXT PDAFWR      Y   "1  2"
+$PRMTXT BFMFWR      Y   "2  1"
+
+$PRMTXT WORKAREA    Y   "Work areas:"
+$PRMTXT PRDDEF      Y   "Page description"
+$PRMTXT BHNFHR      Y   "Web lead"
+$PRMTXT FRBZUO      Y   "Ink assignment ..."
+$PRMTXT BLTSTR      Y   "Former imposition ..."
+$PRMTXT BHNBLG      Y   "Web imposition"
+$PRMTXT ZYLBLG      Y   "Cylinder imposition"
+
+/* int, Seitenbeschreibung */
+
+$PRMTXT SKTHDR      Y   "Named sections"
+$PRMTXT FSTHDR      Y   "Pages of section"
+$PRMTXT SKT         Y   @ZTG_SKT
+$PRMTXT SEITEN      Y   @ZTG_STE_N
+$PRMTXT TABLOID     Y   @ZTG_TBL
+$PRMTXT NOTTBL      Y   "  : broadsheet section             "
+$PRMTXT TBLGES      Y   "[]: tabloid section                "
+$PRMTXT TBLSEP      Y   "--- multi-section tabloid only: ---"
+$PRMTXT TBLBEG      Y   "[ : first section of tabloid       "
+$PRMTXT TBLINN      Y   "  : inner section of tabloid       "
+$PRMTXT TBLEND      Y   " ]: last section of tabloid        "
+
+$PRMTXT SEITE       Y   @ZTG_STE
+$PRMTXT STESPG      Y   "Page references ..." 
+$PRMTXT ALLSTE      Y   "Show all sections"
+$PRMTXT FSTSTW      Y   "Reference name"
+$PRMTXT FSTFRB      Y   "Colours"
+$PRMTXT TBLSTEKPL   Y   "Tabloid pages linked"
+$PRMTXT LYTMST      Y   "Layout templates"                       
+
+$PRMTXT STEMNU      Y   "Page function menu            "
+$PRMTXT FRBMNU      Y   "Colour function menu          "
+$PRMTXT SETFRB      Y   "Select process colours"
+$PRMTXT SETDEFFRB   Y   "Select default colours"
+$PRMTXT NURZUOFRB   Y   "Select fixed colours"
+
+$PRMTXT SETSCNFRB   Y   "Select colours with area coverage values"
+
+$PRMTXT ALLMGLFRB   Y   "Select additional printable colours"
+$PRMTXT RESETFRB    Y   "Reset selected colours (except key)"
+$PRMTXT NURMGLFRB   Y   "Deselect non-printable colours"
+$PRMTXT STESTWMOD   Y   "Modify reference names ..."
+$PRMTXT STEBRTMOD   Y   "Modify page size ..."
+$PRMTXT RSTALLSTEBRT Y  "Reset page size requests to standard"
+$PRMTXT PANNOTANF   Y   "Remove panorama request"
+$PRMTXT PANMNTANF   Y   "Cover panorama"
+$PRMTXT PANMITANF   Y   "Centre spread panorama"
+$PRMTXT PANVDEANF   Y   "Hidden panorama"
+$PRMTXT PANDCHUNDANF Y  "Subtype not specified"
+$PRMTXT PANDCHAUTANF Y  "Subtype automatically according to former imp."
+
+$PRMTXT PANPSDANF   Y   "Request split spread panorama"
+
+$PRMTXT PANDCHANF   Y   "Request genuine (non-split) panorama"
+$PRMTXT AB_SPL      Y   "Request / remove A/B-split"
+$PRMTXT RSTALLSTEANF Y  "Reset entire page requests to standard"
+
+$PRMTXT DSPDEPPGE   Y   "Show colour interdependence ..."
+
+$PRMTXT VORSCH      Y   "Display preview ..."                 
+$PRMTXT SELEKTIV     Y  "(based on selection)"               
+$PRMTXT STESTWMODSEL Y  @STESTWMOD + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT STEBRTMODSEL Y  @STEBRTMOD + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT PANNOTANFSEL Y  @PANNOTANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT PANMNTANFSEL Y  @PANMNTANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT PANMITANFSEL Y  @PANMITANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT PANVDEANFSEL Y  @PANVDEANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT PANPSDANFSEL Y  @PANPSDANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT PANDCHUNDANFSEL Y  @PANDCHUNDANF + " " + @SELEKTIV   /* fmt, v,m60,n1 */
+$PRMTXT PANDCHAUTANFSEL Y  @PANDCHAUTANF + " " + @SELEKTIV   /* fmt, v,m60,n1 */
+$PRMTXT PANDCHANFSEL Y  @PANDCHANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT DSPDEPPGESEL Y  @DSPDEPPGE + " " + @SELEKTIV         /* fmt, v,m60,n1 */
+$PRMTXT VORSCHSEL   Y   @VORSCH + " " + @SELEKTIV            /* fmt, v,m60,n1 */
+$PRMTXT AB_SPLSEL   Y   @AB_SPL + " " + @SELEKTIV            /* fmt, v,m50,n1 */
+$PRMTXT RESETSCN    Y   "Reset area coverage values ..."
+
+$PRMTXT DSPSCNPGE   Y   "Show additional separations with area coverage values ...         " /* fmt, l,f60,n1 */
+
+
+
+
+
+$PRMTXT BHN         Y   @ALG_PAP
+$PRMTXT GF          Y   "TC"
+$PRMTXT RT          Y   "RS"
+$PRMTXT DE          Y   "PU"
+$PRMTXT DEFHR       Y   "PU web lead"
+$PRMTXT EE          Y   "LL" /* kbz, LL=Lead-in Level */
+$PRMTXT FABTXT      Y   "FSV" /* kbz, FS=Folder Superstructure web lead Variant */
+$PRMTXT WE          Y   "OL" /* kbz, OL=Outlet Level */
+$PRMTXT ATBTXT      Y   "OFV" /* kbz, OF=Outlet-to-Former web lead Variant */
+$PRMTXT FLZOP       Y   "Turning operation"
+$PRMTXT BW          Y   "BW" /* kbz, BW=BayWindow */
+$PRMTXT TC          Y   "UU" /* kbz, UU=Under-and-up */
+$PRMTXT TE          Y   "FL" /* kbz, FL=Former Level */
+$PRMTXT AEZ         Y   "AI" /* Kbz, AI=Automatic infeed */
+$PRMTXT PAP         Y   @ALG_PAP
+$PRMTXT GRM         Y   @ALG_GRM
+$PRMTXT TRIFHR      Y   "Former-to-folder web lead"
+$PRMTXT PAPHDR      Y   "Paper specification"
+$PRMTXT DEFHRHDR    Y   "Web lead through printing units"
+$PRMTXT GFEXP       Y   "Total colour (TC)"
+$PRMTXT RTEXP       Y   "Reel splicer (RS)"
+$PRMTXT DEEXP       Y   "Printing unit (PU)"
+$PRMTXT AKTBHNFHR   Y   "Current web lead:"
+$PRMTXT SELBHNFHR   Y   "Selected web lead:"
+
+$PRMTXT FLZFHRHDR   Y   "Web lead through turning unit"
+$PRMTXT AKTBHN      Y   "Total web:"
+$PRMTXT AKTEE       Y   "Lead-in level:"
+$PRMTXT PRTBHN      Y   "Partial web"
+$PRMTXT MGLFLZOP    Y   "Operations:"
+$PRMTXT GRDAUS      Y   "Straight"
+$PRMTXT WENDEN      Y   "Turning"
+$PRMTXT PONY        Y   "Pony"
+$PRMTXT BWD         Y   "Baywindow"
+
+$PRMTXT TRIFHRHDR   Y   @TRIFHR
+$PRMTXT TFBFW       Y   "FU"   /* abk, FU=folder unit */
+$PRMTXT TFBTXT      Y   "Name"
+$PRMTXT TRIFHRPOS   Y   "Former sequence"
+$PRMTXT FAW1        Y   "Folder unit"
+                        "     1     "
+$PRMTXT FAW2        Y   "Folder unit"
+                        "     2     "
+$PRMTXT AKTTRIFHR   Y   "Current web lead:"
+$PRMTXT SELTRIFHR   Y   "Selected web lead:"
+$PRMTXT TFS         Y   "Ribbon lead ..."
+ 
+$PRMTXT TFSHDR      Y   "Ribbon lead"
+
+$PRMTXT BFKHDR      Y   "Copy web lead"
+$PRMTXT BFKVON      Y   "From press"
+$PRMTXT BFKSEL      Y   "to selected press(es)"
+$PRMTXT BFKALL      Y   "to all presses"
+$PRMTXT BFKMITKMP   Y   "including component values"
+$PRMTXT BFKNURKMP   Y   "component values only"
+
+/* int, Bahnbelegung */
+ 
+$PRMTXT SELBHNSTE   Y   "Select side of web"	/* fmt, v,m50,n1 */
+
+/* int, Zylinderbelegung */
+
+$PRMTXT ZLBDE       Y   "PU"   /* kbz, PU=Printing unit */
+$PRMTXT ZLBDW       Y   "PC"   /* kbz, PC=Printing couple */
+$PRMTXT ZLBPP       Y   "PP"   /* Kbz, PP=Plate position */
+$PRMTXT ZLBBSSMOD   Y   "Modify page description ..." 
+$PRMTXT ZLBPLTMOD   Y   "Assign plates manually..." 
+$PRMTXT ZLBFRKMOD   Y   "Modify ink assignment ..." 
+$PRMTXT ZLBMANPLTUND Y  "Undo manual plate assignment " /* nzu */
+$PRMTXT RSTMANPLT    Y  "Reset manual plate assignment ..." /* fmt, v,m50,n1 */
+
+$PRMTXT PLTRSTOPTDEH Y  "for complete printing unit" /* fmt, v,m30,n1 */
+$PRMTXT PLTRSTOPTLFG Y  "for complete run" /* fmt, v,m30,n1 */
+$PRMTXT PLTRSTOPTALF Y  "for all planned runs" /* fmt, v,m30,n1 */
+$PRMTXT RSTMANPLTLFG Y  @ALG_YES + ", " + @PLTRSTOPTLFG
+$PRMTXT RSTMANPLTALF Y  @ALG_YES + ", " + @PLTRSTOPTALF
+
+/* int, Produktionsdaten */
+
+/* "zusaetzliche produktspezifische Daten"-Oberflaeche */
+ 
+$PRMTXT PRDSPZANGHDR Y  "Additional product specific data"  /* fmt, v,m50,n1 */
+$PRMTXT PRDSPZANGEDT Y  "Edition"                           /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGISS Y  "Issue date"                        /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGPDT Y  "Production date"                   /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGGRPMOD    Y "Copies per gripper"           /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGGRPMODOFS Y "2 (with offset)"              /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGANZLGN    Y "Layers per bundle"            /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGANZEXPLGE Y "Copies per layer"             /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGANZEXPPKT Y "Copies per bundle"            /* fmt, v,m20,n1 */
+
+
+/* int, Zylinderplattenbelegung */
+$PRMTXT PLTRSTHDR  Y  "Plate assignment"           /* fmt, v,m30,n1 */
+
+/* fuer Kontextmenue */
+$PRMTXT PLTRST      Y  "Enter plate assignment ..." /* fmt, v,m40,n1 */
+$PRMTXT PLTRSTSLC   Y   @PLTRST + " " + @SELEKTIV
+
+$PRMTXT WAE         Y   @WAE_EINHEIT
+
+$PRMTXT TRFTME      Y   "Last data transfer"
+$PRMTXT TRFFRM      Y   "Transfer from"
+
+$PRMTXT ZUSFKT      Y   "Additional functions ..."
+
+
+
+
+
+
+$PRMTXT FRBBLGHDR   Y   "Product ink assignment"
+
+
+
+$PRMTXT DEPPGEHDR   Y   "Colour interdependence"
+
+
+
+$PRMTXT SCNPGEHDR   Y   "Additional separations with area coverage values"
+
+
+
+
+$PRMTXT BFSHDR      Y   "Web lead search"
+$PRMTXT FNDPRDLST   Y   "Hits"
+$PRMTXT SUCHKRIT    Y   "Search criteria"
+$PRMTXT FRBSTEKRI   Y   "Colour selection"
+$PRMTXT FRBZUOKRI   Y   "Ink assignment"
+$PRMTXT DATPOL      Y   "Data pool"                             /* fmt, v,m20,n1 */
+$PRMTXT DATPOLPRD   Y   "Products"                              /* fmt, v,m12,n1 */
+$PRMTXT DATPOLPRS   Y   "Production schemes"                    /* fmt, v,m20,n1 */
+$PRMTXT SUCHSTART   Y   "Start search"
+$PRMTXT BFSPUB      Y   "including paper specification"
+$PRMTXT BFSALLMSH   Y   "for all presses"
+$PRMTXT BFGUEB      Y   "Import web lead"
+
+
+
+$PRMTXT DGRHDR      Y   "Print group / planning of production sequence" /* fmt, v,m40,n1 */
+$PRMTXT PPLERG      Y   "Result of planning of production sequence"     /* fmt, v,m40,n1 */
+$PRMTXT FRBWCHANZ   Y   "# Ink changes:"                        /* fmt, v,m20,n1 */
+$PRMTXT FRBKSTANZ   Y   "# Ink fountains:"                      /* fmt, v,m20,n1 */
+$PRMTXT PLTWCHANZ   Y   "# Plate changes:"                      /* fmt, v,m20,n1 */
+$PRMTXT BLNDPLANZ   Y   "# Dummy plates:"                       /* fmt, v,m20,n1 */
+$PRMTXT FRKANZ      Y   "# Ink fountains:"                      /* fmt, v,m20,n1 */
+$PRMTXT PLTANZ      Y   "# Plates:"                             /* fmt, v,m20,n1 */
+
+
+
+$PRMTXT SPGHDR      Y   @PRD_SPG
+$PRMTXT SSW         Y   "Reference name"                        /* fmt, v,m16,n1 */
+$PRMTXT SPGSPR      Y   "Separation references"                 /* fmt, v,m40,n1 */
+$PRMTXT SPGSPR1     Y   "K"                                     /* nzu */
+$PRMTXT SPGSPR2     Y   "C"                                     /* nzu */
+$PRMTXT SPGSPR3     Y   "M"                                     /* nzu */
+$PRMTXT SPGSPR4     Y   "Y"                                     /* nzu */
+$PRMTXT SPGSPR5     Y   "1"                                     /* nzu */
+$PRMTXT SPGSPR6     Y   "2"                                     /* nzu */
+$PRMTXT SPGZAG      Y   "Additional details for page"           /* fmt, v,m40,n1 */
+$PRMTXT SPGIMP      Y   "Import ..."                            /* fmt, v,m15,n1 */
+$PRMTXT DELZUO      Y   "Delete"                                /* fmt, v,m15,n1 */
+$PRMTXT GENSSW      Y   "Generate"                              /* fmt, v,m15,n1 */
+$PRMTXT UPDSPR      Y   "Update"                                /* fmt, v,m15,n1 */
+$PRMTXT AKTSSWLST   Y   "Reference name list"                   /* fmt, v,m30,n1 */
+$PRMTXT SSWKRI1     Y   "Criterion 1"                           /* fmt, v,m25,n1 */
+$PRMTXT SSWKRI1_K   Y   "1" /* int, Abkuerzung fuer SSWKRI1 */  /* fmt, v,m1,n1 */
+$PRMTXT SSWKRI2     Y   "Criterion 2"                           /* fmt, v,m25,n1 */
+$PRMTXT SSWKRI2_K   Y   "2" /* int, Abkuerzung fuer SSWKRI2 */  /* fmt, v,m1,n1 */
+$PRMTXT SSWKRI3     Y   "Criterion 3"                           /* fmt, v,m25,n1 */
+$PRMTXT SSWKRI3_K   Y   "3" /* int, Abkuerzung fuer SSWKRI3 */  /* fmt, v,m1,n1 */
+$PRMTXT SSWINF      Y   "Info ..."                              /* fmt, v,m10,n1 */
+$PRMTXT BEAMOD      Y   "Mode of processing"                    /* fmt, v,m20,n1 */
+$PRMTXT MODZUO      Y   "Assign only"                           /* fmt, v,m30,n1 */
+$PRMTXT MODEDT      Y   "Edit & assign"                         /* fmt, v,m30,n1 */
+$PRMTXT MODINS      Y   "Insert & assign directly"              /* fmt, v,m30,n1 */
+$PRMTXT AKTSSW      Y   "Reference name"                        /* fmt, v,m25,n1 */
+$PRMTXT SSWZAG      Y   "Details for reference name"            /* fmt, v,m40,n1 */
+$PRMTXT SSWKRI      Y   "Criteria for reference name"           /* fmt, v,m40,n1 */
+
+
+$PRMTXT PRDPBAHDR   Y   "Publication and edition" 
+
+
+
+
+$PRMTXT SSWINFHDR   Y   "Reference info"                        /* fmt, v,m35,n1 */
+/* int, das Subjekt fuer den folgenden Satz ist 'Das Seitenstichwort' */
+$PRMTXT SSWINFKMT   Y   "is used in the products listed."
+
+
+
+$PRMTXT SPGIMPHDR   Y   "Import references"                 /* fmt, v,m35,n1 */
+$PRMTXT IMPORT      Y    @ALG_EXECUTE 
+$PRMTXT VRL         Y   "Import references from"            /* fmt, v,m30,n1 */
+
+ 
+$PRMTXT STEBRTHDR   Y   "Modify page size"
+$PRMTXT STEBRT      Y   "Page width (tabloid: page height)"
+
+$PRMTXT STDSTEBRT   Y   "Standard page width (tabloid: height)"
+
+$PRMTXT POPOUT      Y   "Pop-out"    /* int, Sonderformat *//* fmt, v,m15,n1 */
+$PRMTXT PULLIN      Y   "Pull-in"    /* int, Sonderformat *//* fmt, v,m15,n1 */
+$PRMTXT FIXSTEBRT   Y   "Specific page width (tabloid: height)"
+                                                            /* fmt, v,m45,n1 */
+$PRMTXT MINPFL      Y   "Mini plough"
+$PRMTXT MINPFLMAS   Y   "Folding direction and measure"     /* fmt, v,m35,n1 */
+$PRMTXT ALLABHSTE   Y   "for all pages at that position"    /* fmt, v,m35,n1 */
+
+
+
+$PRMTXT BLTHDR      Y   @PRD_BLT
+$PRMTXT BLTVIWLOG   Y   "Product View"                      /* fmt, v,m30,n1 */ 
+$PRMTXT BLTVIWTEC   Y   "Former View"                       /* fmt, v,m30,n1 */
+
+
+
+$PRMTXT RSTSCNHDR   Y   "Reset area coverage values"            /* fmt, v,m35,n1 */
+$PRMTXT RSTSCNPRD   Y   "for product"                           /* fmt, v,m30,n1 */
+$PRMTXT RSTSCNSSW   Y   "for product-transgressive page references"
+
+
+
+
+$PRMTXT ZUSFKTHDR   Y   "Additional functions/equipment items"  /* fmt, v,m35,n1 */
+
+/* int, TSA-Oberflaeche */
+
+$PRMTXT TSAHDR       Y  "Ribbon lead"                           /* fmt, v,m35,n1 */                                                                      
+$PRMTXT TSASELHDR    Y  "Ribbon lead selection"                 /* fmt, v,m35,n1 */                                                                       
+$PRMTXT INFTSATFBDSC Y  "Description string former-folder-weblead"
+                        "Describes the books/booklets in collecting order."
+                        "The books/booklets are speparated with a symbol |."
+                        "For each bool/booklet the info is displayed, which formers are used."
+                        "The string can be used for selection in Pressmonitor."                        
+$PRMTXT INFTSATRIBSS Y  "Number of broadsheet (straight) pages on former"  /* fmt, v,m80,n1 */                                                     
+$PRMTXT INFTSABSSANF Y  "Number of requested broadsheet (straight) pages on ribbon path"  /* fmt, v,m80,n1 */                                                       
+$PRMTXT INFTSABSSERG Y  "Number of broadsheet pages (straight) on ribbon path"  /* fmt, v,m80,n1 */                                                      
+$PRMTXT INFTSAHAPAKT Y  "Activation stitcher"                   /* fmt, v,m80,n1 */                                                                      
+$PRMTXT INFTSAFWT    Y  "Activation separation of folder units"    /* fmt, v,m80,n1 */                                                                      
+$PRMTXT INFTSASPU    Y  "Selection of pages on cylinder circumference"   /* fmt, v,m80,n1 */
+$PRMTXT TSASELOPN    Y  "Selection ..."                         /* fmt, v,m15,n1 */
+
+
+
+$PRMTXT MIXHDR      Y   "Details for mixed product"             /* fmt, v,m35,n1 */
+$PRMTXT TEILPROD1   Y   "Folder unit 1"                         /* fmt, v,m18,n1 */
+$PRMTXT TEILPROD2   Y   "Folder unit 2"                         /* fmt, v,m18,n1 */
+$PRMTXT NME         Y   "Product name"                          /* fmt, v,m10,n1 */
+$PRMTXT SLLAFL      Y   "Target"                                /* fmt, v,m15,n1 */
+
+/* int, Kommentar */
+
+$PRMTXT KMTHDR      Y   @ALG_KOM
+
+/* int, erweiterte Maschinenauswahl */
+
+$PRMTXT MSHSELHDR   Y   "Extended press selection"           /* fmt, v,m30,n1 */
+
+/* int, Ueberpruefung */
+
+$PRMTXT ERRHDR      Y   "Result of data check"
+
+
+
+
+/* int, Result texts of product check */
+/* int, The text description for the following texts is: */     /* fmt, v,m56,n0 */
+$PRMTXT MIXNOT      Y   "Product names for mixed product are missing."
+$PRMTXT BFMNOT      Y   "No nominal physical sectioning has been given."
+$PRMTXT BFMINV      Y   "Nominal physical sectioning is not valid!"
+$PRMTXT PGENOT      Y   "No page description has been given."
+$PRMTXT LYTBSSMIS   Y   "No layout template for broadsheet pages has been given."
+
+$PRMTXT LYTTBLMIS   Y   "No layout template for tabloid pages has been given."
+
+$PRMTXT BSSMIS      Y   "Although there are no broadsheet pages, a layout template"
+                        "  for broadsheet pages has been given."
+$PRMTXT TBLMIS      Y   "Although there are no tabloid pages, a layout template"
+                        "  for tabloid pages has been given."
+$PRMTXT PGEMIN      Y   "The number of pages is less than four."
+$PRMTXT PGEMAX      Y   "The total number of pages exceeds the maximum"
+                        "  (192 broadsheet pages)."
+$PRMTXT PGEODD      Y   "The number of pages is not even."
+$PRMTXT PGEDBL      Y   "Duplicate page names exist."
+                        "  Section plus page name must be unequivocal!"
+$PRMTXT TBLDEFINV   Y   "Tabloid definition is not valid."
+$PRMTXT TBLNUMINV   Y   "The number of tabloid pages is not valid."
+$PRMTXT TBLKPLERR   Y   "Coupled tabloid pages have conflicting details"
+                        "  (colour requests, references or page heights)."
+$PRMTXT PANANFERR   Y   "Panorama requests are at least partially invalid."
+
+$PRMTXT PGEDSCINV   Y   "The page description is not valid!"
+$PRMTXT STEBRTINV   Y   "Boundaries for page widths have been exceeded!"
+$PRMTXT PGENUMDIF   Y   "The total number of pages does not conform with"
+                        "  nominal physical sectioning."
+$PRMTXT SCNPGEMIS   Y   "Not all plates with area coverage values are being"
+                        "  used in product."
+$PRMTXT ERRGEPPRB   Y   "Planned start of production is not met on all presses."
+$PRMTXT ERRGEPPRE   Y   "Planned end of production is not met on all presses."
+$PRMTXT DIFSLLAFL   Y   "Sum of production run specific targets is not equal"
+                        "  to total target."
+$PRMTXT DIFSLLAFLVRB Y  "Sum of planned production run specific target number "
+                        "  of copies over all production runs being in press"
+                        "  compound is not equal to total target."
+$PRMTXT ERRPKTINF   Y   "Bundle information is incomplete."
+$PRMTXT DEFNOTERR   Y   "No errors."
+$PRMTXT FLDNOT      Y   "No production run has been planned."
+$PRMTXT BHFNOTWEB   Y   "No web lead has been given."
+$PRMTXT BHFNOTPDA   Y   "No production type has been given."
+$PRMTXT BHFINVPDA   Y   "Given production type is not compatible with operation"
+                        "  mode of folder units."
+$PRMTXT BHFINVPAN   Y   "Requested centre spread cannot be printed."
+
+$PRMTXT BHFNMGSGS   Y   "Number of pages exceeds the maximum number of pages for the"
+                        "  given production type."
+$PRMTXT BHFNMGSFW   Y   "Number of pages exceeds the maximum number of pages per"
+                        "  folder."
+$PRMTXT BHFNMGSTR   Y   "Number of pages exceeds the maximum number of pages per"
+                        "  former."
+$PRMTXT BHFNMGSTE   Y   "Number of pages exceeds the maximum number of pages per"
+                        "  former level."
+
+$PRMTXT INVPDAMSH   Y   "Given production type not possible for given press." 
+
+$PRMTXT BHFIPDDEH   Y   "Web lead contains a printing unit which is not compatible" "  with the given production type."  
+$PRMTXT FLZMORSTE   Y   "Folding operations yield too many pages."
+$PRMTXT TFSBSSANFERR Y  "At least one page number which has been requested"
+                        "  for a ribbon cannot be fulfilled."
+$PRMTXT TRISTEANZMOR Y  "The number of pages on at least one former is more"
+                        "  than the sum of pages requested for all ribbons"
+                        "  originating from that former."
+$PRMTXT PDAAKTFAWERR Y  "The number of active folder units does not match"
+                        "  the production type."
+$PRMTXT PDAVEPSTZFAW Y  "The number of pages on both folder units differs"
+                        "  in production type 'Collect parallel' or 'Fourfold'."
+$PRMTXT BHFNOTTFR   Y   "No former-to-folder web lead has been selected."
+$PRMTXT BHFZUSERR   Y   "Out of range values have been entered"
+                        "  for additional functions/equipment items."
+$PRMTXT BHFPAPERR   Y   "Paper specification is incomplete." 
+$PRMTXT BHFPBLGRMERR Y  "Web width of web ~1 is wider than permitted for given"
+                        "  grammage."
+                        <%d>
+$PRMTXT BHFSPBERR   Y   "Special paper width has not been given for at least"
+                        "  one web."
+$PRMTXT BHFSHRERR   Y   "An invalid shrinkage factor has been given for at least"
+                        "  one web."
+$PRMTXT ZLBNOT      Y   "No cylinder imposition can be calculated!"
+$PRMTXT PLTNOT      Y   "Calculation of web geometry and plate assignment is"
+                        "     not possible!"
+$PRMTXT ZLBWEBINV   Y   "Web lead not suitable for production type"
+                        "  (yields non-symmetric physical sectioning or"
+                        "  different number of pages on folder units)."
+$PRMTXT ZLBNOTSYM   Y   "Web lead not suitable for production type"
+                        "  (non-symmetric number of lines onto folder units)."
+
+$PRMTXT ZLBBFMDIF   Y   "Calculated physical sectioning differs from nominal" "  physical sectioning."
+$PRMTXT ZLBPGELES   Y   "Calculated number of pages (broadsheet) is less"
+                        "  than required by page description."
+$PRMTXT ZLBPGEMOR   Y   "Calculated number of pages (broadsheet) is more"
+                        "  than required by page description."
+$PRMTXT ZLBPANANF   Y   "Panorama request(s) cannot be printed."
+                        "  See 'Former imposition' for view of" 
+                        "  newspaper layout."
+$PRMTXT ZLBCLRGRP   Y   "Selected colour(s) cannot be printed."
+$PRMTXT ZLBSPCCLR   Y   "A specific colour other than the requested one"
+                        "  will be printed."
+$PRMTXT ZLBDIFSPC   Y   "A page will be printed with two different specific"
+                        "  colours."
+                        /* int, bei Vierfach- oder Einfachparallel-Produktion */
+$PRMTXT ZLBDIFBCH   Y   "Structure of physical sections differs"
+                        "  (flyers at different positions)."
+                        /* int, bei Vierfach- oder Einfachparallel-Produktion */
+$PRMTXT ERRKNEPRZ   Y   "The production run specific start or end of production"
+                        "  has not been given or is not reasonable."
+$PRMTXT ERRKNESLA   Y   "The production run specific target has not been"
+                        "  given."
+$PRMTXT ERRUNVSBR   Y   "Conflicting page widths (for tabloid pages: heights)"
+                        "  have been detected"
+                        "  Reason:"
+                        "  ~1;"
+                        "  first conflict found has been highlighted in red."
+                        "  Hint:"
+                        "  Use 'Web imposition' screen to co-edit page widths"
+                        "  of all pages at a single page position on the web."
+                        <%ls>
+$PRMTXT ERRBERGRZ   Y   "Page measure exceeds boundaries"
+$PRMTXT ERRDRWUMF   Y   "Diverging page widths at same position of printing"
+                        "  couple"
+$PRMTXT ERRTFSRST   Y   "Page widths cannot be fitted on printing couple"
+                        "  (printing couple size limit or plate limits are"
+                        "  violated)"
+
+$PRMTXT ERRMPFANF   Y   "Mini plough request not feasible"
+$PRMTXT ERRMPFBHN   Y   "A web lead contains a mini plough where no mini plough"
+                        "  has been requested."
+$PRMTXT ERRUNVDQA   Y   "Conflicting print quality requests have been"
+                        "  detected"
+                        "  Reason:"
+                        "  ~1;"
+                        "  first conflict found highlighted in red."
+                        "  See 'Web imposition' for contextual overview."
+                        <%ls>
+$PRMTXT ERRDQASTE   Y   "Conflicting requests for"
+                        "  interdependent pages"
+$PRMTXT ERRDQAFRB   Y   "Selected colour(s) incompatible with requested"
+                        "  print quality"
+$PRMTXT ERRDQAPAP   Y   "Specified paper(s) incompatible with requested"
+                        "  print quality"
+$PRMTXT ERRGRDBHN   Y   "Straight section(s) of web ~1 do not run correctly"
+                        "  onto former nose(s)."
+                        "  Current web lead is not feasible for production."
+                        <%hd>
+$PRMTXT WRNGRDBHN   Y   "Straight section(s) of web ~1 do not run correctly"
+                        "  onto former nose(s)."
+                        <%hd>
+$PRMTXT MSHNOTERR   Y   "No errors."
+$PRMTXT CHKLEGEND   Y   "^ : warning only (not affecting loadability)"
+                        "^^: explicit warning (but not affecting loadability)"
+
+
+/* int, Help texts */
+/* int, The text description for the following texts is: */ /* fmt, v,m200,n0 */
+
+$PRMTXT INFZLBART   Y   "Single production / production sequence identifier"
+$PRMTXT INFDGR      Y   "Open" + " " + @DGRHDR
+$PRMTXT INFPRDPBAHDR Y  "Open" + " " + @PRDPBAHDR
+$PRMTXT INFMIXDLG   Y   "Open" + " " + @MIXHDR
+$PRMTXT INFPVT      Y   @ALG_PVT
+$PRMTXT INFKMT      Y   @ALG_KOM
+$PRMTXT INFKMTOEF   Y   "Open" + " " + @KMTHDR
+$PRMTXT INFFWKBTA   Y   "Operation mode of folder units"
+$PRMTXT INFNRMPRD   Y   "Single product on folder unit 1 or folder unit 2" "or on both folder units in parallel"
+$PRMTXT INFKMBPRD   Y   "Single product collected over folder unit 1 and folder unit 2"
+$PRMTXT INFMIXPRD   Y   "Different products on folder unit 1 and folder unit 2"
+$PRMTXT INFBFM      Y   "Nominal physical sectioning" 
+                        "(number of broadsheet pages on formers;"
+                        "optional) "                                  /* nzu */ 
+$PRMTXT INFBFM_1    Y   "Nominal physical sectioning"
+                        "(Target number of pages in broadsheet format on formers/"
+                        "ribbons in sequence of collection)"
+                        ""
+                        "Note:"
+                        "This is an optional data field."
+                        "If a nominal physical sectioning is given"
+                        "the calculated physical sectioning under 'Web lead'"
+                        "will be checked for conformity with this target."
+                        "Otherwise only the calculated number of pages"
+                        "has to conform with the number of pages given in"
+                        "the page description."
+$PRMTXT INFBFMFWR   Y   "Sequence of physical sections for combined and mixed products:"
+                        "Folder unit 2  Folder unit 1 "               /* nzu */ 
+$PRMTXT INFBFMFWR_1 Y   "Sequence for combined and mixed products:"
+                        "Folder unit 2  Folder unit 1"
+$PRMTXT INFMSH      Y   "Press"
+$PRMTXT INFMSHSEL   Y   @ALG_MSH
+$PRMTXT INFSTO      Y   @KNDSTO 
+$PRMTXT INFVWA      Y   "Use"
+$PRMTXT INFMSHVRB   Y   "Marker for press compound"
+                        "(Note:"
+                        " Mark/unmark press for press compound"
+                        " by clicking middle mouse button.)"
+                        ""
+                        "Note:"
+                        "Presses marked for a press compound will be aggregated"
+                        "at the control console after loading."
+                        "Planning of a press compound requires that there is"
+                        "only a single production run per press planned."
+                        ""
+$PRMTXT INFMSHSELEXT Y  "Open" + " " + @MSHSELHDR
+$PRMTXT INFMSHSELEXTINS Y "Insert selected press(es) in the list of presses,"
+                        "on which product is to be printed."
+$PRMTXT INFPDA      Y   "Production type"
+                        ">>: collect run"
+                        "> : straight run"
+$PRMTXT INFPDAFWR   Y   "Sequence of production types for combined and mixed products:"
+                        "Folder unit 1  Folder unit 2"
+$PRMTXT INFLFGINS   Y   @PRD_INFLFGINS
+$PRMTXT INFLFGDEL   Y   @PRD_INFLFGDEL
+$PRMTXT INFLFGSCD   Y   @PRD_INFLFGSCD
+$PRMTXT INFGSAFW1   Y   @TPPGUI_INF_GSAFW1
+$PRMTXT INFGSAFW2   Y   @TPPGUI_INF_GSAFW2
+$PRMTXT INFGZAFW1   Y   "For mixed product:"
+                        "Allowance for planned total target"
+                        "for product on folder unit 1"
+                        "Otherwise:"
+                        "Allowance for planned total target"
+$PRMTXT INFGZAFW2   Y   "For mixed product:"
+                        "Allowance for planned total target"
+                        "for product on folder unit 2"
+                        "Otherwise:"
+                        "Not relevant"
+$PRMTXT INFSAMFW1   Y   "For mixed product:"
+                        "Planned target for product on folder unit 1"
+                        "for selected production run"
+                        "Otherwise:"
+                        "Planned target for selected production run"
+$PRMTXT INFSAMFW2   Y   "For mixed product:"
+                        "Planned target for product on folder unit 2"
+                        "for selected production run"
+                        "Otherwise:"
+                        "Not relevant"
+$PRMTXT INFZAFMPRFW1 Y  "For mixed product:"
+                        "Allowance for planned target for product on"
+                        "folder unit 1"
+                        "for selected production run"
+                        "Otherwise:"
+                        "Allowance for planned target for selected production run"
+$PRMTXT INFZAFMPRFW2 Y  "For mixed product:"
+                        "Allowance for planned target for product on folder unit 2"
+                        "for selected production run"
+                        "Otherwise:"
+                        "Not relevant"
+$PRMTXT INFZAMFW1    Y  "For mixed product:"
+                        "Additional production run specific allowance for"
+                        "planned target for product on folder unit 1"
+                        "Otherwise:"
+                        "Additional production run specific allowance for"
+                        "planned target"
+$PRMTXT INFZAMFW2    Y  "For mixed product:"
+                        "Additional production run specific allowance for"
+                        "planned target for product on folder unit 2"
+                        "Otherwise:"
+                        "Not relevant"
+$PRMTXT INFMSHMSTEXP Y  "Sample copies"
+$PRMTXT INFGPLPLTPRDBEG Y "Planned start of plate production"
+$PRMTXT INFGPLPLTPRDEND Y "Planned end of plate production"
+$PRMTXT INFSKT      Y   "Section name (optional)"
+                        ""
+                        "Note:"
+                        "The sectioning by name may deviate from"
+                        "the physical sections."
+$PRMTXT INFSTE      Y   "Enumeration of page names or range specification, e.g. 1 - 16"
+$PRMTXT INFTBL      Y   "Mark tabloid section"
+                        "" + @NOTTBL
+                        "" + @TBLGES
+                        "" + @TBLSEP
+                        "" + @TBLBEG
+                        "" + @TBLINN
+                        "" + @TBLEND
+$PRMTXT INFTBLLIM   Y   "Mark tabloid section"
+                        "" + @NOTTBL
+                        "" + @TBLGES
+$PRMTXT INFSTB      Y   "Page naming convention (left to right/right to left)"
+$PRMTXT INFLYTBSS   Y   "Layout template for broadsheet pages" 
+$PRMTXT INFLYTTBL   Y   "Layout template for tabloid pages" 
+$PRMTXT INFLYTNBR   Y   "Layout reworking"
+$PRMTXT INFSPG      Y   "Open" + " " + @SPGHDR
+$PRMTXT INFBLT      Y   "Open" + " " + @BLTHDR
+$PRMTXT INFSKTOBN   Y   "Move section forward"
+$PRMTXT INFSKTUNT   Y   "Move section backward"
+$PRMTXT INFSKTINS   Y   @PRD_INFSKTINS
+$PRMTXT INFSKTDEL   Y   @PRD_INFSKTDEL
+$PRMTXT INFTBLMRK   Y   "Mark section as tabloid"
+                        ""
+                        "Hint for inserting a tabloid or multi-section tabloid:"
+                        "first and last tabloid page have to be on the same"
+                        "broadsheet page, second and last but one, etc."
+                        "(description based on sequence of underlying"
+                        "broadsheet pages)"
+$PRMTXT INFTBLMRKLIM Y  "Mark as tabloid"
+$PRMTXT INFALLSTE    Y  "List pages of all sections (on/off)"
+$PRMTXT INFFSTSKT    Y  @ZTG_SKT
+$PRMTXT INFFSTSTE    Y  "Page"                                       /* nzu */
+                        "Notes:"
+                        "- ' indicates a tabloid page."
+                        "- A dark background colour indicates that there are"
+                        "  area coverage values for all separations."
+
+$PRMTXT INFFSTSTE_1  Y  "Page"
+                        "Notes:"
+                        "- ' indicates a tabloid page."
+                        "- A green background colour indicates that there are"
+                        "  area coverage values for all separations."
+
+$PRMTXT INFFSTSTW    Y  "Note:"
+                        "Reference names are edited in screen 'Page references'."
+$PRMTXT INFFSTFRB    Y  "Colour requests and colour availability"    /* nzu */
+                        ""
+                        "Note:"
+                        "- If a run is selected, colour requests"
+                        "  are checked for run-specific feasibility"
+                        "  and conflicts as well as additional colour"
+                        "  availability is shown."
+                        "  If no run is selected, only colour requests"
+                        "  are shown."
+                        "- A white frame indicates that there are"
+                        "  area coverage values for this separation."
+                        "  An orange frame indicates that there are"
+                        "  new area coverage values for this separation."
+
+
+$PRMTXT INFFSTFRB_1  Y  "Colour requests and colour availability"
+                        ""
+                        "Note:"
+                        "- If a run is selected, colour requests"
+                        "  are checked for run-specific feasibility"
+                        "  and conflicts as well as additional colour"
+                        "  availability is shown."
+                        "  If no run is selected, only colour requests"
+                        "  are shown."
+                        "- A green frame indicates that there are"
+                        "  area coverage values for this separation."
+                        "  An orange frame indicates that there are"
+                        "  new area coverage values for this separation."
+
+
+$PRMTXT INFLSTSTEBRT Y  "List below:"
+                        "individual page widths +/- extra measure"
+$PRMTXT INFSTDSTEBRT Y  "Standard page width"
+                        "(for tabloid pages: height, indicated by ^)"
+                        ""
+                        "" + @INFLSTSTEBRT
+$PRMTXT INFSTDSTEBRTBER Y  
+                        "Standard page width"
+                        "(for tabloid pages: height, indicated by ^;"
+                        " product variant-specific permitted range: ~1)"
+                        ""
+                        "" + @INFLSTSTEBRT
+                        <%ls>
+$PRMTXT INFFSTDQA    Y  "Print quality request/availability"
+                        ""
+                        "Note:"
+                        "If a run is selected, the print quality"
+                        "request is checked for run-specific"
+                        "feasibility."
+                        "Otherwise only the print quality request is shown"
+                        "(shaded foreground: print quality automatically"
+                        "assigned; in brackets in web imposition)."
+$PRMTXT INFFSTMINPFL Y  "Mini plough folding direction and measure"
+                        "  <: folded inward (towards the page)"
+                        "  >: folded outward (towards the back of the page)"
+$PRMTXT INFSTEBRTNCHSHR   Y  "Page width requests after shrinkage (on/off)"
+                             "Note:"
+                             "'off' means given page width requests are interpreted"
+                             "as page widths before shrinkage"
+$PRMTXT INFPOPOUT     Y  "Pop-out page"
+$PRMTXT INFPULLIN     Y  "Pull-in page"
+$PRMTXT INFFIXSTEBRT  Y  "Page with individual, specific page width/height"
+$PRMTXT INFUMSINN     Y  "folded inward (towards the page)"
+$PRMTXT INFUMSAUS     Y  "folded outward (towards the back of the page)"
+$PRMTXT INFSTEBRTRST  Y  "Reset page size details to standard"
+$PRMTXT INFPANMGL     Y   "Centre spread available"
+$PRMTXT INFPANMNT     Y   "Cover panorama"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANMNTNMG  Y   "Cover panorama requested but not available"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANMIT     Y   "Centre spread"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANMITNMG  Y   "Centre spread requested but not available"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANVDE     Y   "Hidden panorama"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANVDENMG  Y   "Hidden panorama requested but not available"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANUND     Y   "Unspecified genuine (non-split) panorama"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANUNDNMG  Y   "Unspecified genuine (non-split) panorama requested but not available"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANPSL     Y   "Split spread (left bleed)"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANPSLNMG  Y   "Split spread (left bleed) requested but not available"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANPSR     Y   "Split spread (right bleed)"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFPANPSRNMG  Y   "Split spread (right bleed) requested but not available"
+                          ""
+                          "Requested partner panorama page: ~1"
+                          <%ls>
+$PRMTXT INFAB_SPL     Y   "A/B-split"
+$PRMTXT INFAB_SPLNMG  Y   "A/B-split requested but not feasible"
+$PRMTXT INFBCHMRK     Y   "Section delimiter based on nominal physical sectioning"
+$PRMTXT INFANZZUSFRB  Y   "Number of printable colours on web (used/available)"
+
+$PRMTXT INFPRDGRP     Y   @ZTG_PRDGRP
+$PRMTXT INFPRDSPZANG  Y   "Open" + " " + @PRDSPZANGHDR 
+
+$PRMTXT INFDRKGRP     Y   "Print group"
+$PRMTXT INFEXPGEW     Y   "Calculated weight per copy"
+
+$PRMTXT INFPVR      Y   "Check for conformity with nominal physical sectioning" "and number of pages in page description (on/off)"
+$PRMTXT INFAEZVGB   Y   "Check for automatic infeed (on/off)"
+$PRMTXT INFPBLTRF   Y   "Apply additional pos./width specification to all webs"
+$PRMTXT INFPAPTRF   Y   "Apply paper selection to all webs"
+$PRMTXT INFSHRFKT   Y   "Shrinkage factor per thousand"
+                        "(0: no shrinkage;"
+                        " press-specific permitted range: ~1 - ~2)"
+                        <%ls|%ls>
+$PRMTXT INFBHNNUM   Y   "Web no."
+                        ""
+                        "Note:"
+                        "Upon insertion webs are automatically sorted acc."
+                        "to their stacking position on the former."
+$PRMTXT INFBHNLGE   Y   "Web position/width (X/. equivalent to one broadsheet page position on former; X = position w/ paper, . = position w/o paper)"
+                        "Additional pos./width specification (config.)"
+                        "Paper and paper weight   Shrinkage factor (config.)"
+                        "Substitute papers (config.)"
+$PRMTXT INFGESFRB   Y   "Total colour front/back"
+$PRMTXT INFRST      Y   "Reel splicer"
+$PRMTXT INFDEHFHR   Y   "Web lead through printing unit(s)"
+                        "Syntax:"
+                        "Printing unit : first printing couple * colour front/back"
+$PRMTXT INFELFETG   Y   "Lead-in level into turning unit" "(> = left side, < = right side)"
+$PRMTXT INFFABTXT   Y   "Folder superstructure web lead variant (if applicable)"
+$PRMTXT INFWNDETG   Y   "Outlet level"
+$PRMTXT INFATBTXT   Y   "Outlet-to-former web lead variant (if applicable;"
+                        "assigned automatically when a web is inserted)"
+$PRMTXT INFWNDOP    Y   "Web lead through turning unit onto formers"
+                        "Syntax (ex.):"
+                        "XXXX -> XXXX = full web straight"
+                        "XX.. -> ..XX = half web turned"
+                        "XX.. -> OO.. = half web pony"
+                        "Please note:"
+                        "X/. ->:   initial broadsheet page position"
+                        "-> X/O/.: target position on formers (former side)"
+$PRMTXT INFBWD      Y   "Baywindow level"
+$PRMTXT INFTCH      Y   "Under-and-up"
+$PRMTXT INFTRE      Y   "Former level"
+$PRMTXT INFAEZ      Y   "Automatic infeed indicator"
+$PRMTXT INFGBO      Y   "Open graphical web lead"
+$PRMTXT INFBFS      Y   "Search web lead"
+$PRMTXT INFBFK      Y   "Copy web lead"
+$PRMTXT INFSKG      Y   "Optional user-defined rating for complexity of web lead"
+                        "(used for ranking of results of web lead search;"
+                        " ranking: lowest value = first in list)"
+$PRMTXT INFTFB      Y   "<Selected folder unit>  Name  Former sequence"
+$PRMTXT INFTFBFW    Y   "Folder unit"
+$PRMTXT INFTFBTXT   Y   "Name of former sequence"
+$PRMTXT INFTFR      Y   "Sequence in which ribbons from formers are collected"
+$PRMTXT INFTFS      Y   "Open" + " " + @TFSHDR
+
+$PRMTXT INFPLNMSH   Y   @ALG_MSH
+$PRMTXT INFPLNSTZ   Y   @ZTG_STZ_BS
+$PRMTXT INFPLNBFM   Y   @ZTG_BCHFRM
+$PRMTXT INFPLNZUSKRI Y  @TPP_INFZUSKRI
+$PRMTXT INFPLNKTL   Y   @ALG_KTL
+$PRMTXT INFPLNVRS   Y   @ALG_VRS
+$PRMTXT INFPRDFLT   Y   @PRD_INFFLT
+$PRMTXT INFPRSFLT   Y   @PRD_INFPRSFLT
+$PRMTXT INFPLNSKG   Y   "Ceiling for complexity of web lead"
+$PRMTXT INFPLNFRBSTE Y  "Take colour selection of product into account?"
+$PRMTXT INFPLNFRBZUO Y  "Take ink assignment of product into account?"
+$PRMTXT INFPLNDATPOL Y  "Data pool to be searched"
+$PRMTXT INFFNDDRW   Y   "Number of printing couples used in web lead"
+$PRMTXT INFFNDSKG   Y   "Complexity of web lead"
+
+$PRMTXT INFBHBRLW   Y   "Click here to view/edit corresponding web lead"
+$PRMTXT INFBHBPAP   Y   "Paper position relative to Zero  >Paper width<"
+                        @RT + ": " + "Paper position at reelstand"
+                        "Paper name"
+                        "Paper grammage"
+                        "Print quality available (config.)"
+                        "Substitute papers (config.)"
+$PRMTXT INFDRFLEG   Y   "Information for all web leading printing couples in printing sequence:"
+                        "Printing unit:printing couple"
+                        "Ink in printing couple (Colour group abbr. and colour name); grey: printing couple unclutched)"
+                        "Indicator whether circumferential page position is printing or not (grey: not printing)"
+                        "Print quality of ink (config.)"
+$PRMTXT INFBHBLEG   Y   "Web imposition on outside and inside"
+                        ""
+                        "Pages on circumferential page positions"
+                        "plus"
+                        @INFDRFLEG
+$PRMTXT INFDRF      Y   "Printing sequence"
+                        ""
+                        @INFDRFLEG
+$PRMTXT INFBHBBHN   Y   "Representation of web oder partial web (with turning description if relevant)"
+
+$PRMTXT INFZLBBFM   Y   "Calculated physical sectioning for selected production run based on given web lead"
+$PRMTXT INFZLBSTZ   Y   "Calculated number of pages (broadsheet) for selected production run based on given web lead"
+$PRMTXT INFPLTANZ   Y   "Calculated number of colour plates / dummy plates / empty plate positions"
+$PRMTXT INFALLVIW   Y   "Detail view"
+$PRMTXT INFPLTVIW   Y   "Plate view " /* nzu */
+                        ""
+                        "Note:"
+                        "The plate assignment (type of plates assigned to"
+                        "individual printing couples) can be modified"
+                        "manually via the context menu on printing couples."
+                        "A manual modification of the plate assignment remains"
+                        "in place in subsequent automatic cylinder imposition"
+                        "calculations."
+$PRMTXT INFPLTVIW_1 Y   "Plate view"  /* fmt, v,m56,n0 */
+                        ""
+                        "Note:"
+                        "- Colour coding:"
+                        "  blue = colour plate"
+                        "  gray = dummy plate"
+                        "  background colour = empty plate position"
+                        "- Pin: plate type has been assigned manually"
+$PRMTXT INFPLTMAN   Y   "Plate assignment has been manually modified."
+                        ""
+                        "Please note:"
+                        "Manually assigned plate types will not be adjusted"
+                        "automatically when panorama requests change."
+$PRMTXT INFPLTRSTOPTDEH Y "Apply plate assignment to all printing"
+                          "couples of printing unit if feasible"
+$PRMTXT INFPLTRSTOPTLFG Y "Apply plate assignment to all printing"
+                          "units of selected production run if feasible"
+$PRMTXT INFPLTRSTOPTALF Y "Apply plate assignment to all printing"  /* fmt, v,m56,n0 */
+                          "units of all planned production runs if feasible"
+
+$PRMTXT INFDGRMSH   Y   @ALG_MSH
+$PRMTXT INFGEPPRB   Y   @ALG_GEPPRB
+$PRMTXT INFZLBSTA   Y   "Result of cylinder imposition calculation for selected production run"
+                        "Green tick: web lead meets requirements specified in page description"
+                        "Red X: web lead does not meet requirements specified in page description"
+$PRMTXT INFDGRFPS   Y   "Ink impositioning optimization for production sequence (on/off)"
+
+$PRMTXT INFSPGSKT   Y   @ZTG_SKT
+$PRMTXT INFSPGSTE   Y   @INFFSTSTE
+$PRMTXT INFSSW      Y   "Note:"
+                        "By assigning a reference name to a product page"
+                        "area coverage values for this reference name"
+                        "will be used for presetting (if not comment only)."
+
+$PRMTXT INFSPGZAG   Y   "3 additional data fields which can be freely used"
+$PRMTXT INFSPGIMP   Y   "Import references for all pages (if no page selected)"
+                        "or for selected pages from another product "
+                        "(Note:"
+                        "extended selection with Shift and Ctrl key,"
+                        "blockwise shifting with central mouse button)"
+$PRMTXT INFSPGDEL   Y   "Delete selected references"
+                        "(Note:"
+                        "extended selection with Shift and Ctrl key,"
+                        "blockwise shifting with central mouse button)"
+$PRMTXT INFGENSSW   Y   "Generate references for all pages (if no page selected)"
+                        "or for selected pages"
+                        "(Note:  extended selection with Shift and Ctrl key,"
+                        " blockwise shifting with central mouse button)"
+$PRMTXT INFUPDSPR   Y   "Update separation references"
+                        "(generate references for all requested colours"
+                        " which do not have a reference yet and"
+                        " delete references for colours which are not"
+                        " requested)"
+$PRMTXT INFSSWLST   Y   "Reference names in database"
+$PRMTXT INFSSWLSTANZ Y  "Number of reference names in selection list"
+$PRMTXT INFSSWGESANZ Y  "Number of reference names in database"
+$PRMTXT INFSSWSELANZ Y  "Number of selected reference names"
+$PRMTXT INFSSWKRI   Y   "User-defined criterion allowing structured access"
+                        "to stored reference names"
+$PRMTXT INFSSWFLT   Y   @ALG_INFFLT
+$PRMTXT INFSSWAKTLST Y  @ALG_INFAKTLST
+$PRMTXT INFSSWINF   Y   "Open window with a list of all"
+                        "products which use the selected"
+                        "reference name"
+$PRMTXT INFSSWZAG   Y   @INFSPGZAG
+$PRMTXT INFSSWKRIEDT Y  "User-defined criteria allowing structured access"
+                        "to stored reference names"
+$PRMTXT INFSSWINS   Y   "Store current reference name with details"
+                        "and criteria in database"
+                        "(Note:" "Details are related to the reference name. They are"
+                        "identical across all products that use the same reference name!)"
+$PRMTXT INFSSWDEL   Y   "Delete selected reference names from database"
+
+$PRMTXT INFSSWASG   Y   "Assign reference name to selected page"
+                        "in page overview"
+$PRMTXT INFMAXLGNPKT Y  "Note: The number of layers per bundle"
+                        "must not exceed 20." 
+
+$PRMTXT INFPUBKNGLST Y  "Open list of publication identifiers"
+$PRMTXT INFPUBNAMLST Y  "Open list of publication descriptions"
+$PRMTXT INFASGKNGLST Y  "Open list of edition identifiers"
+$PRMTXT INFPLTRSTDRW Y  "Printing couple"
+$PRMTXT INFPLTRSTDEL Y  "Delete last plate on drive side"
+$PRMTXT INFPLTRSTACC Y  "Apply selected plate assignment"
+
+/* int, Messages */
+/* int, The text description for the following texts is: */          /* fmt, v,m300,n0 */
+
+
+$PRMTXT NOEDIT      Y   "Note:"
+                        "This data may not be edited"
+                        "in this work area!" 
+
+$PRMTXT INVPRDTYP   Y   "Attention:"
+                        "Production type is not valid!"
+
+
+$PRMTXT NOTFLDSLC   Y   "Not possible:"
+                        "No press is selected!"
+
+$PRMTXT FLDSLC      Y   "Not possible:"
+                        "Inserting of new presses is only allowed,"
+                        "if no press is selected!"
+
+$PRMTXT MAXLFG      Y   "Not possible:"
+                        "The maximum number of production runs"
+                        "has already been reached!"
+
+$PRMTXT GLFMSHNOTEDT Y  "Not possible:"
+                        "The selected run has already been"
+                        "loaded. Enter a new run with the"
+                        "modified press!"
+
+$PRMTXT FLDUSED     Y   "Not possible:"
+                        "Press has already been inserted!"
+
+$PRMTXT FLDUSEDPRM  Y   "Press ~1 has already been inserted." 
+                        <%ls>
+
+$PRMTXT OVWFLD      Y   "Warning:"
+                        "Web leads for selected press will be lost."
+                        "Overwrite press?"
+
+$PRMTXT DELFLD      Y   "Warning:"
+                        "Web leads for selected production run will be lost."
+                        "Delete press?"
+
+$PRMTXT DEFTFRMIS   Y   "Warning:"
+                        "No default former-to-folder web lead"
+                        "for selected press and production type specified!"
+
+
+$PRMTXT NOPGENME    Y   "Not possible:"
+                        "No pages have been given!"
+
+$PRMTXT INVPGENME   Y   "Not possible:"
+                        "Given page names are not valid!"
+
+$PRMTXT DBLPGENME   Y   "Error:"
+                        "Duplicate page names exist."
+                        "Section plus page name must be unequivocal!"
+
+$PRMTXT MAXSCTEXC   Y   "Error:"
+                        "Maximum number of sections has been exceeded!"
+
+$PRMTXT MAXPGEEXC   Y   "Error:"
+                        "Maximum number of pages has been exceeded!"
+
+$PRMTXT NOPGEDSC    Y   "Error:"
+                        "There is no valid page description!"
+
+$PRMTXT NOCLRPGE    Y   "Not possible:"
+                        "No section has been selected!"
+
+$PRMTXT NOFSTSEL    Y   "Not possible:"
+                        "No page has been selected!"
+
+$PRMTXT MNYFSTSEL   Y   "Not possible:"
+                        "More than one page have been selected!"
+
+$PRMTXT NOZLB       Y   "Not possible:"
+                        "There is no cylinder imposition!"
+
+$PRMTXT NOZLBPGE    Y   "Not possible:"
+                        "Selected page is not covered by cylinder imposition!"
+
+$PRMTXT NOPGEMRK    Y   "Not possible:"
+                        "No page has been marked for deletion!"
+
+$PRMTXT DSPMOD      Y   "Modification not possible:"
+                        "The product has been opened for viewing only!"
+
+$PRMTXT SCNRST      Y   "Note:"
+                        "Area coverage related to the last"
+                        "page desription that has been saved"
+                        "has been reset by production plan."
+
+
+$PRMTXT INVPRDSBS   Y   "Attention:"
+                        "The page description or details thereof"
+                        "are not valid!"
+
+$PRMTXT INVSBS      Y   "Note:"
+                        "An incorrect page description for this product"
+                        "has been found in the database and not been read in!"
+
+$PRMTXT INVMSH      Y   "Note:"
+                        "Incorrect press data for this product"
+                        "has been found in the database and not been read in!"
+
+$PRMTXT INVWEBFND   Y   "Note:"
+                        "Invalid web leads and/or an invalid former-to-folder"
+                        "web lead have been found in the database and"
+                        "have not been read in!"
+
+$PRMTXT INVWEBKOR   Y   "Note:"
+                        "Invalid web leads and/or an invalid former-to-folder"
+                        "web lead have been found in the database and"
+                        "have been corrected while reading in."
+                        "Please check whether a data conversion is required!"
+
+$PRMTXT NOWEBPOS    Y   "No web lead is feasible."
+                        ""
+                        "Reason (not necessarily only and most significant):"
+                        ""
+
+$PRMTXT BPL_FHLFBA  Y   @NOWEBPOS +
+                        "No entries for total colour selection configured."
+
+$PRMTXT BPL_NMSMMA  Y   @NOWEBPOS +
+                        "Production type 'collect' is not possible for the given"
+                        "press."
+
+$PRMTXT BPL_BELRLW  Y   @NOWEBPOS +
+                        "Reel stands occupied."
+
+$PRMTXT BPL_BELDRW  Y   @NOWEBPOS +
+                        "Printing units occupied."
+
+$PRMTXT BPL_KMPRDB  Y   @NOWEBPOS +
+                        "Web components between RS and PU occupied."
+
+$PRMTXT BPL_KMPKDB  Y   @NOWEBPOS +
+                        "PU web lead components occupied."
+
+$PRMTXT BPL_KRZRDB  Y   @NOWEBPOS +
+                        "Intersecting web leads between RS and PU."
+
+$PRMTXT BPL_NEZRKD  Y   @NOWEBPOS +
+                        "Web lead from RS to PU can not be automatically fed in."
+
+$PRMTXT BPL_KDEPRD  Y   @NOWEBPOS +
+                        "No PU feasible for the given production type."  
+
+$PRMTXT BPL_NMGKDB  Y   @NOWEBPOS +
+                        "No PU web lead feasible."
+
+$PRMTXT BPL_BELEET  Y   @NOWEBPOS +
+                        "Lead-in levels occupied."
+
+$PRMTXT BPL_BELDFB  Y   @NOWEBPOS +
+                        "No web lead from PU to turning unit feasible."
+
+$PRMTXT BPL_KRZDFB  Y   @NOWEBPOS +
+                        "Intersecting web leads in lead-up to turning unit."
+
+$PRMTXT BPL_NEZDFB  Y   @NOWEBPOS +
+                        "Web lead from PU to turning unit can not be"
+						"automatically fed in."
+$PRMTXT BPL_NMGDFB  Y   @NOWEBPOS +
+                        "No web lead from PU to turning unit feasible."
+
+$PRMTXT BPL_BELAET  Y   @NOWEBPOS +
+                        "Outlet levels occupied."
+
+$PRMTXT BPL_KMPFAB  Y   @NOWEBPOS +
+                        "Components in turning unit occupied."
+
+$PRMTXT BPL_KMPFTB  Y   @NOWEBPOS +
+                        "Components in turning unit occupied."
+
+$PRMTXT BPL_KRZFAB  Y   @NOWEBPOS +
+                        "Intersecting web leads in turning unit."
+
+$PRMTXT BPL_NEZFAB  Y   @NOWEBPOS +
+                        "Web lead in turning unit can not be automatically fed in."
+
+$PRMTXT BPL_NMGGFB  Y   @NOWEBPOS +
+                        "Selected web lead in turning unit not feasible."
+
+$PRMTXT BPL_NMGFAB  Y   @NOWEBPOS +
+                        "No feasible web lead in turning unit."
+
+$PRMTXT BPL_KRZTRE  Y   @NOWEBPOS +
+                        "Intersecting web leads between outlet level and former level."
+
+$PRMTXT BPL_KMPTRE  Y   @NOWEBPOS +
+                        "Component between outlet level and former level occupied."
+
+$PRMTXT BPL_NMGBCH  Y   @NOWEBPOS +
+                        "Nominal physical sectioning is not achievable."
+
+$PRMTXT BPL_KMPBLG  Y   @NOWEBPOS +
+                        "Component in web position occupied."
+
+$PRMTXT BPL_KMPTFB  Y   @NOWEBPOS +
+                        "Component in former-to-folder web lead occupied."
+$PRMTXT BPL_NMGSTR  Y   @NOWEBPOS +
+                        "Maximum number of pages per former has been reached."
+
+$PRMTXT BPL_NMGSTE  Y   @NOWEBPOS +
+                        "Maximum number of pages per former level has been reached."
+
+$PRMTXT BPL_NMGSFW  Y   @NOWEBPOS + 
+                        "Maximum number of pages per folder has been reached."
+
+$PRMTXT BPL_NMGSGS  Y   @NOWEBPOS +  
+                        "Maximum number of pages has been reached."
+
+$PRMTXT BPL_S_B_IK  Y   @NOWEBPOS +
+                        "Number of pages in nominal physical sectioning and"
+                        "page description do not match!"
+
+$PRMTXT BPL_ZTUBLF  Y   "Not possible:"
+                        "Configured maximum time for calculation of selection"
+                        "has been exceeded!"
+                        "Try with 'Check for conformity with nominal"
+                        "physical sectioning and number of pages' turned off."
+
+
+$PRMTXT NOWEBREQ    Y   "The nominal physical sectioning and number of pages"
+                        "in the page description has been reached."
+                        "No further web lead is required!"
+$PRMTXT TFBNOTEDT   Y   "Note:"
+                        "Former-to-folder web lead may not be changed"
+                        "while a web is being edited."
+
+$PRMTXT MGLTFB      Y   "Current former-to-folder web lead"
+                        "~1"
+                        "is not suitable."
+                        "Accept suitable former-to-folder web lead"
+                        "~2?"
+                        <%ls|%ls>
+
+
+$PRMTXT WEBPRMMIS   Y   "Not possible:"
+                        "Previous web data is incomplete!"
+
+
+$PRMTXT NOFLDLVL    Y   "There are no (more) feasible web leads"
+                        "into the turning unit!"
+$PRMTXT NOFLDLDG    Y   "There are no feasible web leads"
+                        "through the turning unit!"
+
+$PRMTXT INVWEB      Y   "Not possible:"
+                        "Web is incomplete!"
+
+$PRMTXT WEBCOMPLE   Y   "Not possible:"
+                        "Web is already complete!"
+
+$PRMTXT PVRNOT      Y   "Not possible:"
+                        "Function may only be activated"
+                        "while no web lead has been entered!"
+
+$PRMTXT AEZFIX      Y   "Not possible:"
+                        "Function is permanent (by configuration)!"
+
+$PRMTXT BFKLFGSVE   Y   "Not possible:"
+                        "It is required that the production run"
+                        "has been saved before copying!"
+
+$PRMTXT BFKERR      Y   "Note:"
+                        "Copying of web lead was unsuccessful or incomplete!"
+
+
+$PRMTXT BFKKMPERR   Y   "Note:"
+                        "Copying of component values was unsuccessful or"
+                        "incomplete!"
+
+$PRMTXT BFGEDTNOT   Y   "Note:"
+                        "Copying of web lead was unsuccessful for at least"
+                        "one production run which was loaded at a console!"
+
+
+$PRMTXT INVPGEDSC   Y   "Not possible:"
+                        "A valid page definition"
+                        "is required!"
+
+$PRMTXT NOTSTZ      Y   "Not possible:"
+                        "No number of pages has been given!"
+
+$PRMTXT NOTPRDART   Y   "Not possible:"
+                        "No production type has been given!"
+
+$PRMTXT WEBPLNINV   Y   "Not possible:"
+                        "Search criteria have changed."
+                        "Close and repeat search!"
+
+$PRMTXT WEBNOTFND   Y   "No suitable web leads have"
+                        "been found!"
+                        "Check search criteria and try without"
+                        "accounting for colour selection and/or"
+                        "ink assignment."
+
+$PRMTXT FLDINV      Y   "Not possible:"
+                        "Indicated press is no more valid!"
+
+
+$PRMTXT NODRKGRP    Y   "Not possible:"
+                        "No print group given!"
+
+$PRMTXT NODRKGRP1   Y   "Not operational:"
+                        "No print group given in current product!"
+
+
+$PRMTXT NOLFGSEL1   Y   "Not possible:"
+                        "No production run selected in current product!" 
+
+
+$PRMTXT INIPRDDEF   Y   "Accept calculated physical sectioning ~1"
+                        "and adjust page description automatically?"
+                        "(Calculated number of pages differs"
+                        " from given page description)"
+                        ""
+                        "Please note:"
+                        "Requests of all pages will be automatically"
+                        "reset to standard in the process!"
+                        <%ls>
+
+
+$PRMTXT INIPRDDEFBBH Y  "Accept calculated physical sectioning ~1"
+                        "and adjust page description automatically?"
+                        "(Calculated number of pages differs"
+                        " from given page description)"
+                        <%ls>
+
+
+$PRMTXT INIBFM      Y   "Accept calculated physical sectioning ~1?"
+                        "(Calculated physical sectioning differs"
+                        " from nominal physical sectioning)"
+                        <%ls>
+
+$PRMTXT INIPGEDSC   Y   "Adjust page description automatically"
+                        "to physical sectioning?"
+                        ""
+                        "Please note:"
+                        "Requests of all pages will be automatically"
+                        "reset to standard in the process!"
+
+$PRMTXT INIPGEDSCBBH Y  "Adjust page description automatically"
+                        "to physical sectioning?"
+
+$PRMTXT TXTERR      Y   "An error in text handling has occured!"
+
+$PRMTXT ISTEXI      Y   "Warning:"
+                        "Product has been edited."
+                        "Stored values for this product will"
+                        "become invalid."
+                        "Proceed to save data?"
+
+$PRMTXT BFMERR      Y   "Physical sectioning is not valid"
+                        "and will not be saved!"
+                        "Proceed to save data?"
+
+$PRMTXT PGEERR      Y   "Page description is not valid"
+                        "and will not be saved!"
+                        "Proceed to save data?"
+
+$PRMTXT BFMPGEERR   Y   "Physical sectioning and page description"
+                        "are not valid and will not be saved!"
+                        "Proceed to save data?"
+
+$PRMTXT PRD_WRNPRDLODALT Y  @WRNPRDLOD
+                        "Alternatively changes could be made in a"
+                        "copy of the product."
+                        "Do you want to continue anyhow?"
+                        
+$PRMTXT MPLINSDGR   Y   "Note:"
+                        "A product of the print group has been"
+                        "inserted in the production plan or"
+                        "loaded at a console for ~1."
+                        "Related print group data is not editable!"
+                        <%ls>
+
+$PRMTXT MPLDELDGR   Y   "Note:"
+                        "A product of the print group has been"
+                        "removed from the production plan or"
+                        "unloaded for ~1."
+                        "Related print group data is again editable!"
+                        <%ls>
+
+$PRMTXT NXTPRD      Y   "Data of current product has been edited"
+                        "but not saved!"
+                        "Switch product anyway?"
+
+$PRMTXT SELFLD      Y   "Product is part of a print group."
+                        "Changes have to be saved presswise!"
+                        "Switch press anyway?"
+                        <%ls>
+
+
+$PRMTXT PPLPRDERR   Y   "Note:"
+                        "Only the first ~1 selected products will"
+                        "be included in planning of production sequence!"
+                        <%d>
+
+
+$PRMTXT DGRMODERR   Y   "Not possible:"
+                        "Product takes part in planning of production sequence"
+                        "within current print group!"
+
+$PRMTXT GETDGRPFB   Y   "Product ink assignment to be taken"
+                        "from first product of print group?"
+
+
+$PRMTXT DGRNOTEDT   Y   "Note:"
+                        "At least one product of the print group"
+                        "is currently locked by another process."
+                        "Related print group data is not editable!"
+
+
+
+$PRMTXT EXTDGRERR   Y   "Database error in dissolving"
+                        "print group!"
+
+$PRMTXT PPLLFZERR   Y   "Planning of production sequence aborted to"
+                        "avoid risk excessive calculation time!"
+
+$PRMTXT PPLTCHERR   Y   "Planning of production sequence aborted for"
+                        "program-specific reasons."
+                        "Please contact MAN Roland customer service."
+
+$PRMTXT NOSPGSEL    Y   "Not possible:"
+                        "No reference has been selected!"
+
+$PRMTXT NOTSSW      Y   "Not possible:"
+                        "No current reference given!"
+
+$PRMTXT SSWNOTFND   Y   "Not possible:"
+                        "Current reference not existing!"
+
+$PRMTXT NOTSSWKRI   Y   "Attention:"
+                        "No criteria for subsequent selection have been entered"
+                        "for given reference."
+                        "Still insert reference?"
+
+
+$PRMTXT SSWEXI      Y   "Attention:"
+                        "Page reference already exists."
+                        "Overwrite stored criteria?"
+
+
+$PRMTXT NOSSWSEL    Y   "Not possible:"
+                        "No reference name selected!"
+
+
+$PRMTXT SSWPRDEXI   Y   "Deletion not possible:"
+                        "Page reference ~              1 is used"
+                        "in at least one product!"
+                        <%ls>
+
+$PRMTXT ZUOERRNOT   Y   "Assigning not possible:"
+                        "No page selected in page overview!"
+
+$PRMTXT ZUOERRMLT   Y   "Assigning not possible:"
+                        "More than one page selected in page overview!"
+
+$PRMTXT MWBNOTFND   Y   "Warning:"
+                        "Page overview contains references names"
+                        "which have been deleted in the data base!"
+
+$PRMTXT TABMITERR   Y   "Not possible:"
+                        "Marked block crosses middle of tabloid."
+                        "Moving not possible!"
+
+$PRMTXT ALTRSTSCN   Y   "Really reset area coverage values?"
+
+
+$PRMTXT WDTUEBLST   Y   "Attention:"
+                        "The product has been loaded on a console."
+                        "When saving, the changings will be transfered"
+                        "to the console. This may affect the current"
+                        "production."
+                        "Do you want to save anyhow?"
+
+$PRMTXT WDTMOD      Y   "The production data of the production run on"
+                        "press '~1' starting at '~2' have"
+                        "been changed by the console or an external system."
+                        "Do you want to import the changed data? "
+                        "(Attention: If you select 'no', the changed data"
+                        " will be overridden by the current data, when saving.)"
+                        <%ls|%ls>
+
+
+
+$PRMTXT WDTMODDGR   Y   "Note:"
+                        "For product '~1' the production"
+                        "data of press '~2' have been"
+                        "changed by the console or an external system."
+                        <%ls|%ls>
+
+$PRMTXT FRBEDTERR   Y   "Not possible:"
+                        "The modifications are not compatible with loaded"
+                        "state."
+                        "Modified product data cannot be saved!"
+
+
+$PRMTXT ABWBERGRS         Y   "The current value will be overridden."
+                              "Do you want to save anyhow?"
+
+$PRMTXT SOLLAUFLAGE       Y   "When saving, the press-specific target number"
+                              "of copies will be calculated from the other"
+                              "production data." 
+                              + @ABWBERGRS
+$PRMTXT FORTDRUCKLEISTUNG Y   "When saving, the production run output will"
+                              "be calculated from the other production data." 
+                              + @ABWBERGRS
+$PRMTXT PRODUKTIONSENDE   Y   "When saving, the press-specific end of"
+                              "production will be calculated from the other"
+                              "production data." 
+                              + @ABWBERGRS
+$PRMTXT PRODUKTIONSBEGINN Y   "When saving, the press-specific begin of"
+                              "production will be calculated from the other"
+                              "production data." 
+                              + @ABWBERGRS
+$PRMTXT RUESTZEIT         Y   "When saving, the set-up time will be calculated"
+                              "from the other production data." 
+                              + @ABWBERGRS
+$PRMTXT ABRUESTZEIT       Y   "When saving, the demount time will be calculated"
+                              "from the other production data." 
+                              + @ABWBERGRS
+$PRMTXT NOPREVIEW         Y  "Not possible:"
+                             "There is no preview data available for"
+                             "the selected page."
+$PRMTXT ZUSFKTINV         Y  "Not possible:"                       
+                             "Out of range values have been entered"
+                             "for additional functions."
+
+$PRMTXT PVTLFGEXI      Y   "Not possible:"
+                           "A modification of the product variant is not"
+                           "possible if production runs have already been"
+                           "inserted!"
+                           "Delete existing production runs first."
+
+$PRMTXT FWBLFGEXI      Y   "Not possible:"
+                           "A modification of the operation mode of folder units"
+                           "is not possible if production runs have already been"
+                           "inserted!"
+                           "Delete existing production runs first."
+
+$PRMTXT MODPVT         Y   "Note:"                                /* nzu */
+                           "Data already entered may not conform with"
+                           "new product variant."
+                           "The modification will only apply to newly"
+                           "inserted production runs."
+                           "Proceed with product variant modification?"
+
+$PRMTXT PANSELERR      Y   "Not possible:"
+                           "For an unspecified, a cover or a hidden panorama"
+                           "request the corresponding partner panorama page"
+                           "has to be selected simultaneously (use Ctrl key)!"
+                           "(Exception: tabloid)"
+                           ""
+                           "Note:"
+                           "- For a tabloid the partner panorama page can be"
+                           "  determined automatically."
+                           "- For a centre spread and a split spread panorama"
+                           "  the partner panorama page can also be determined"
+                           "  automatically (sequential pages)."
+                           "- Broadsheet and tabloid pages cannot be mixed"
+                           "  to make up a panorama request."
+ 
+
+$PRMTXT PANSTEPARERR   Y   "Not possible:"
+                           "Two uneven or two even pages can never form"
+                           "a panorama request!"
+ 
+$PRMTXT PANPRTSTEERR   Y   "Not possible:"
+                           "Partner pages don't have the same type (broadsheet/tabloid)!"
+ 
+$PRMTXT PANNURMNTMGL   Y   "Not possible:"
+                           "For the first or the last page only a cover panorama"
+                           "or an unspecified genuine (non-split) panorama may be"
+                           "requested!"
+
+$PRMTXT PANMNTERR      Y   "Not possible:"
+                           "Selected page is not a cover page!"
+ 
+$PRMTXT PANMITERR      Y   "Not possible:"
+                           "Selected page is not at the centre of the tabloid!"
+ 
+
+$PRMTXT PANVDEERR      Y   "Not possible:"
+                           "The selected page does not lie hidden inside"
+                           "the tabloid!"
+
+$PRMTXT PANDCHANFNMG   Y   "Not possible:"
+                           "A genuine (non-split) panorama according to the"
+                           "former imposition may only be requested if a"
+                           "production run with a valid cylinder imposition"
+                           "has been selected, based on which the partner"
+                           "panorama page can be determined."
+                           "(Exception: tabloid)"
+                           ""
+                           "Note:"
+                           "For a tabloid the corresponding page can be"
+                           "determined automatically."
+ 
+$PRMTXT PANDCHANFFLG   Y   "Not possible:"
+                           "The page is a flyer page."
+
+$PRMTXT XTRMASERR      Y   "Not possible:"
+                           "Only one extra measure may be given!"
+
+$PRMTXT UNVSTEBRT      Y   "Attention:"
+                           "Conflicting page widths (for tabloid pages: heights)"
+                           "have been detected!"
+                           ""
+                           "Reason:"
+                           "~1"
+                           ""
+                           "Conflicting page widths/heights are highlighted"
+                           "in red (first conflict found)."
+                           <%ls>
+ 
+$PRMTXT UNVBERGRZ      Y   "Page measure exceeds boundaries"
+ 
+$PRMTXT UNVDRWUMF      Y   "Diverging page widths at same position of printing"
+                           "couple"
+ 
+$PRMTXT UNVTFSRST      Y   "Page widths cannot be fitted on printing couple"
+                           "(printing couple size limit or plate limits are"
+                           "violated)"
+
+
+$PRMTXT UNVMPFANF      Y   "Mini plough request not feasible"
+
+$PRMTXT UNVDQAANF      Y   "Attention:"
+                           "Conflicting print quality requests"
+                           "have been detected!"
+                           ""
+                           "Reason:"
+                           "~1"
+                           ""
+                           "Conflicting print qualities are highlighted"
+                           "in red (first conflict found)."
+                           "See 'Web imposition' for contextual overview."
+                           <%ls>
+
+
+$PRMTXT UNVDQASTE      Y   "Conflicting requests for interdependent pages"
+ 
+
+$PRMTXT UNVDQAFRB      Y   "Selected colour(s) incompatible with requested"
+                           "print quality"
+ 
+$PRMTXT UNVDQAPAP      Y   "Specified paper(s) incompatible with requested"
+                           "print quality"
+
+$PRMTXT ANPSBSERR      Y   "Attention:"
+                           "Page description or requirements of particular pages"
+                           "are not valid (anymore)!"
+
+$PRMTXT PANANFDEL      Y   "Note:"                                   /* nzu */
+                           "There were one of more panorama reqests in this"
+                           "section which were removed when the pagination"
+                           "was adjusted!"
+
+$PRMTXT PANANFDEL_1    Y   "Note:"
+                           "There were panorama reqests which were removed"
+                           "when the pagination was adjusted!"
+
+$PRMTXT NOPLTRSTMGL    Y   "Not possible:"
+                           "There is no plate assignment configured"
+                           "for this selection." 
+
+$PRMTXT PLTRSTKMP      Y   "Not possible:"
+                           "The plate assignment is already complete."
+
+$PRMTXT PLTRSTNOTKMP   Y   "Not possible:"
+                           "The plate assignment is not complete."
+
+$PRMTXT LYTNBR         Y   "Not possible:"
+                           "The reworking flag can only be set via selecting"
+                           "a layout template."
+                           "The reworking flag will only be deleted, if neither"
+                           "a broadsheet nor a tabloid layout-template has"
+                           "been selected."
+
+$PRMTXT ERRBSSANZANF   Y   "Not possible:"
+                           "At least one entry for the number"
+                           "of requested broadsheet pages is invalid."
+                           "All of these entries have to be even."
+                           
+$PRMTXT ERRBSSANZNUL   Y   "Not possible:"
+                           "At least one partial former ribbon has "
+                           "broadsheet page number 0."
+                           "This is invalid."
+                           "Remedy:"
+                           "Reduce the number of requested broadsheet pages "
+                           "for the other partial former ribbons of the same former"
+                           "or"
+                           "Select another ribbon lead"
+
+$PRMTXT RSTMANPLTALT   Y   "Really reset manual plate assignment?"

@@ -1,0 +1,708 @@
+# 🎯 HYBRID OPTIMIZATION GUIDE
+## Fusion of Symbolic & Narrative Optimization for AI Lorebooks
+
+---
+
+## 📋 DOCUMENT PURPOSE
+
+This guide defines **Hybrid Optimization**—a methodology that fuses the strengths of **Symbolic (기호형)** and **Narrative (서사형)** approaches to maximize AI comprehension and instruction compliance.
+
+**This is not about compression. This is about clarity.**
+
+---
+
+## 🚀 THE FIVE LAWS OF AI INSTRUCTION COMPLIANCE
+
+| # | Principle | Research Finding | Application |
+|---|-----------|------------------|-------------|
+| 1 | **Positive-Only Patterns** | Negations ("don't do X") remind AI of X, increasing violations | Show ONLY correct examples |
+| 2 | **Recency Bias** | Last instructions in prompt have highest compliance | Place critical rules at END |
+| 3 | **Role Anchoring** | Clear role definition improves task focus | Define role ONCE in central entry |
+| 4 | **Self-Verification** | AI checking own work catches 40%+ errors | Add validation checklist (central only) |
+| 5 | **Concrete > Abstract** | Specific examples outperform vague guidelines | Always include implementation examples |
+
+---
+
+## 🔴 The Negation Paradox
+
+When you tell an AI "Don't mention X" or show negative examples, you are:
+1. Activating the neural patterns for X
+2. Making X more likely to appear
+3. Teaching the AI the exact pattern you want to avoid
+
+**Solution:** Show ONLY what you want. If you must mention what NOT to do, immediately follow with 3x more content showing what TO do.
+
+---
+
+## 📍 Recency Bias Exploitation
+
+Instructions at the END of a prompt are followed ~30% more consistently than those at the beginning.
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  PROMPT STRUCTURE FOR MAXIMUM COMPLIANCE                │
+├─────────────────────────────────────────────────────────┤
+│  BEGINNING: Context, background, setup (lower priority) │
+│  MIDDLE: Rules, matrices, reference tables              │
+│  END: ⚠️ CRITICAL INSTRUCTIONS + CHECKLIST ⚠️          │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🏗️ TWO-TIER ARCHITECTURE
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  TIER 1: CENTRAL COMMAND (One Entry)                    │
+│  ├─ Full role definition ("You are...")                 │
+│  ├─ Core obligations and identity                       │
+│  ├─ Self-verification checklist                         │
+│  └─ Always active, highest priority                     │
+├─────────────────────────────────────────────────────────┤
+│  TIER 2: FUNCTIONAL MODULES (All Other Entries)         │
+│  ├─ Start with "### 🎯 MODULE: [Function]"              │
+│  ├─ "This [verb]..." subject (NOT "You [verb]...")      │
+│  ├─ Rules and examples only                             │
+│  └─ NO role definition, NO self-check                   │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Central Command Entry:**
+```markdown
+### 🎭 YOUR ROLE
+
+You are [specific role definition].
+
+**PRIMARY OBLIGATIONS:**
+1. [Core duty 1]
+2. [Core duty 2]
+
+### ✅ SELF-CHECK (Before EVERY Output)
+□ [Verification step 1]?
+□ [Verification step 2]?
+□ [Verification step 3]?
+```
+
+**Module Entry:**
+```markdown
+### 🎯 MODULE: [Feature Name]
+
+This module [describes what it does in third person].
+
+| condition | result |
+|-----------|--------|
+| value_1   | effect_1 |
+| value_2   | effect_2 |
+```
+
+---
+
+## 🧠 ADVANCED TECHNIQUES
+
+### Chain-of-Thought (CoT)
+
+Breaking complex decisions into explicit steps improves accuracy by 40%+.
+
+```markdown
+### Decision Flow
+
+**Step 1:** Check relationship level → [intimate/close/acquaintance/stranger]
+**Step 2:** Check current mood → [romantic/tense/casual/hostile]
+**Step 3:** Combine: relationship × mood → behavior matrix lookup
+**Step 4:** Apply intensity modifier based on scene context
+```
+
+### Few-Shot Examples (2-3 Optimal)
+
+2-3 concrete examples outperform 0, 1, or 4+ examples.
+
+```markdown
+### ✅ Implementation Examples
+
+**Example 1 (Like=75, casual mood):**
+"She glanced up from her book, a warm smile spreading. 'You're back early.'"
+
+**Example 2 (Like=30, tense mood):**
+"Her eyes flicked to him briefly. 'What do you want?' The words came out flat."
+
+**Example 3 (Like=85, romantic mood):**
+"She held his gaze. 'Stay,' she said softly. Not a question."
+```
+
+### Task Decomposition
+
+Large instructions broken into numbered sub-tasks have 25% higher compliance.
+
+```markdown
+### NPC Dialogue Protocol
+
+1. **Identify** NPC's current emotional state from context
+2. **Check** what NPC knows (witnessed/told/public only)
+3. **Match** dialogue tone to personality + emotion
+4. **Add** one physical tell that reinforces emotion
+```
+
+### Output Format Specification
+
+Explicit output format increases compliance by 35%.
+
+```markdown
+### Required Output Format
+
+[Narrative prose - 2-4 paragraphs]
+
+[End with markers:]
+【SCENE_NPCS: Name1, Name2】
+【LOCATION: current_place】
+```
+
+---
+
+## 📚 CBS QUICK REFERENCE (RisuAI Syntax)
+
+### Basic Conditionals
+
+| Syntax | Meaning | Example |
+|--------|---------|--------|
+| `{{#when::VAR::vis::VALUE}}` | If VAR equals VALUE | `{{#when::$mood::vis::romantic}}` |
+| `{{#when::VAR::>=::NUM}}` | If VAR ≥ NUM | `{{#when::$like::>=::70}}` |
+| `{{#when::VAR::<=::NUM}}` | If VAR ≤ NUM | `{{#when::$turn::<=::5}}` |
+| `{{:else}}` | Else branch | Between conditions |
+| `{{/when}}` | End condition | Close all opened |
+
+### Variable Access
+
+| Syntax | Purpose |
+|--------|--------|
+| `{{getvar::$var_name}}` | Get CBS variable value |
+| `{{setvar::$var_name::value}}` | Set CBS variable |
+| `{{addvar::$var_name::1}}` | Increment variable |
+
+### Decorators
+
+| Decorator | Effect |
+|-----------|--------|
+| `@@probability N` | N% chance to activate |
+| `@@activate_only_after N` | Only after turn N |
+| `@@activate_only_every N` | Every N turns |
+| `@@scan_depth N` | Scan last N messages |
+| `@@keep_activate_after_match` | Stay active after trigger |
+| `@@dont_activate_after_match` | One-time activation |
+
+### Nesting Example
+```markdown
+{{#when::$like_NPC::>=::70}}
+  {{#when::$mood::vis::romantic}}
+    [High Like + Romantic = intimate behavior]
+  {{:else}}
+    [High Like + Other mood = warm but reserved]
+  {{/when}}
+{{:else}}
+  [Low Like = distant behavior]
+{{/when}}
+```
+
+---
+
+## ⚠️ CRITICAL UNDERSTANDING
+
+```
+Optimization = Maximizing AI Understanding + Instruction Compliance
+Token Savings = Byproduct (NOT the goal)
+```
+
+**The Prime Directive:**
+> If compression reduces AI comprehension or output quality, it is not optimization—it is degradation.
+
+---
+
+## 🔬 THE TWO PARADIGMS
+
+### SYMBOLIC OPTIMIZATION (기호형)
+
+Information compressed into structured formats—tables, matrices, shorthand notations.
+
+| Aspect | Description |
+|--------|-------------|
+| Format | Tables, matrices, `key→value`, compact notation |
+| Density | High information per token |
+| Lookup | Instant reference capability |
+| Precision | Exact, unambiguous rules |
+| Weakness | Lacks nuance, tone, contextual feel |
+
+**Best For:**
+- Conditional rules (`if X then Y`)
+- Classification systems (stages, levels, types)
+- Quick-reference matrices
+- Numerical thresholds
+- Prohibited actions (clear boundaries)
+- System parameters
+
+**Signal Words:** "when", "if", "threshold", "level", "type", "category", "must", "never"
+
+**Example:**
+```
+| intimacy | scope | intensity |
+|----------|-------|-----------|
+| 80+ | ALL | aggressive |
+| 60-79 | main | moderate |
+| <40 | minimal | subtle |
+```
+
+---
+
+### NARRATIVE OPTIMIZATION (서사형)
+
+Instructions conveyed through descriptive prose, examples, and contextual storytelling.
+
+| Aspect | Description |
+|--------|-------------|
+| Format | Prose, examples, scenarios, tone-setting |
+| Density | Lower tokens per concept |
+| Feel | Captures nuance, mood, atmosphere |
+| Creativity | Enables flexible interpretation |
+| Weakness | Can be verbose, slower to parse |
+
+**Best For:**
+- Establishing tone and atmosphere
+- Showing "how it should feel"
+- Creative behavior guidance
+- Natural dialogue examples
+- Emotional nuance
+- Context-dependent responses
+
+**Signal Words:** "feels like", "atmosphere", "naturally", "subtly", "as if", "tone"
+
+**Example:**
+```
+She stretches after a long day, bare feet emerging from slippers. 
+Completely unaware of your gaze. The exposure is accidental, 
+genuine—she doesn't know she's sending signals. Not yet.
+```
+
+---
+
+## 🔗 THE HYBRID FUSION
+
+```
+STRUCTURE provides the skeleton.
+NARRATIVE provides the soul.
+Together, they create understanding.
+```
+
+### The Hybrid Formula
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  HYBRID ENTRY = [Narrative Intro]                       │
+│               + [Symbolic Rules Matrix]                 │
+│               + [Narrative Examples per Branch]         │
+│               + [Symbolic Prohibitions]                 │
+│               + [Narrative Closing Context]             │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Layer Structure
+
+| Layer | Type | Purpose | Token Priority |
+|-------|------|---------|----------------|
+| 1. Introduction | Narrative | Set tone, establish concept | Medium |
+| 2. Core Rules | Symbolic | Define conditions & thresholds | High |
+| 3. Branch Content | Narrative | Show application examples | High |
+| 4. Reference Tables | Symbolic | Quick lookup matrices | Medium |
+| 5. Boundaries | Symbolic | Clear rules (positive framing) | High |
+
+---
+
+## 📐 DECISION FRAMEWORK
+
+### When to Use SYMBOLIC
+
+| Condition | Reason |
+|-----------|--------|
+| Binary/Conditional | `if X >= 70 then Y` — no ambiguity needed |
+| Classification | Types, stages, categories — discrete values |
+| Threshold-based | Numbers that trigger behaviors |
+| Cross-reference | Quick lookup during generation |
+| Prohibition | Clear "never do this" boundaries |
+| System linkage | Variable names, triggers, flags |
+
+---
+
+### When to Use NARRATIVE
+
+| Condition | Reason |
+|-----------|--------|
+| Tone-dependent | "How should this feel?" |
+| Nuanced behavior | Subtlety matters |
+| Creative guidance | Flexible interpretation needed |
+| Example-driven | "Show, don't tell" |
+| Emotional context | Mood, atmosphere, feeling |
+| Natural dialogue | How characters actually speak |
+
+---
+
+### Decision Tree
+
+```
+Is this content...
+
+├─ A RULE or CONDITION?
+│   └─ YES → SYMBOLIC (table/matrix)
+│
+├─ About TONE or FEEL?
+│   └─ YES → NARRATIVE (prose/example)
+│
+├─ A BOUNDARY?
+│   └─ YES → SYMBOLIC (clear list, positive framing)
+│
+├─ Showing HOW something happens?
+│   └─ YES → NARRATIVE (scenario)
+│
+├─ A CLASSIFICATION or TYPE?
+│   └─ YES → SYMBOLIC (table)
+│
+├─ About NUANCE or SUBTLETY?
+│   └─ YES → NARRATIVE (description)
+│
+└─ BOTH rule AND nuanced?
+    └─ HYBRID: Symbolic rule + Narrative example
+```
+
+---
+
+## 🏗️ ENTRY TEMPLATES
+
+### TIER 1: Central Command Entry
+
+```markdown
+## ENTRY [0]: [SYSTEM_NAME] CENTRAL COMMAND
+Priority: **[HIGHEST]** | Always Active
+@@depth 4
+
+### 🎭 YOUR ROLE
+
+You are [specific role definition].
+
+**PRIMARY OBLIGATIONS:**
+1. [Core duty 1]
+2. [Core duty 2]
+3. [Core duty 3]
+
+**SUCCESS CRITERIA:** [What correct output looks like]
+
+---
+
+### 📋 MASTER REFERENCE
+
+| aspect | rule | example |
+|--------|------|---------|
+| [aspect1] | [rule1] | [example1] |
+| [aspect2] | [rule2] | [example2] |
+
+---
+
+### ✅ SELF-CHECK (Before EVERY Output)
+
+□ [Verification step 1]?
+□ [Verification step 2]?
+□ [Verification step 3]?
+
+⚠️ If ANY box would be unchecked → REVISE before output.
+```
+
+---
+
+### TIER 2: Functional Module Entry
+
+```markdown
+## ENTRY [N]: [FEATURE_NAME]
+Priority: **[P]** | [Activation Type]
+[Decorators]
+
+{{#when::[toggle_condition]::vis::1}}
+
+### 🎯 MODULE: [Feature Name]
+
+This module [describes what it does in third person].
+
+**Scope:** [What this module controls]
+
+---
+
+### [Section Title]
+
+| condition | result_a | result_b |
+|-----------|----------|----------|
+| value_1   | effect_1 | effect_2 |
+| value_2   | effect_3 | effect_4 |
+
+{{#when::[CBS_condition]}}
+#### [Branch Title]
+
+[Narrative description of this specific state]
+
+**Example:**
+"[Natural implementation showing correct behavior]"
+
+{{/when}}
+
+---
+
+### ⚠️ BOUNDARIES
+
+✅ **CORRECT:** [What TO do]
+✅ **PREFER:** [Better approach]
+✅ **ALWAYS:** [Required behavior]
+
+{{/when}}
+```
+
+---
+
+## 📊 OPTIMIZATION METRICS
+
+### Quality Indicators
+
+| Rank | Metric | Weight |
+|------|--------|--------|
+| 1 | **Comprehension** — Does AI understand? | 40% |
+| 2 | **Compliance** — Does AI follow instructions? | 35% |
+| 3 | **Naturalness** — Is output organic? | 15% |
+| 4 | **Token Efficiency** — Reasonable usage? | 10% |
+
+### Red Flags
+
+| Symptom | Diagnosis | Fix |
+|---------|-----------|-----|
+| AI ignores rules | Symbolic too compressed | Add narrative context |
+| Output feels mechanical | Too much symbolic | Add narrative examples |
+| AI misinterprets nuance | Too much narrative | Add symbolic anchors |
+| Inconsistent behavior | Mixed signals | Clarify with decision table |
+| Wrong intensity/timing | Thresholds unclear | Use explicit symbolic matrix |
+| Rules forgotten mid-response | Recency bias | Move critical rules to END |
+| AI confused about identity | Multiple role definitions | Centralize to one entry |
+
+---
+
+## 🎯 PROGRESSIVE QUALITY LEVELS
+
+### Level 1: Pure Symbolic
+```
+| intimacy | intensity | npc_role |
+|----------|-----------|----------|
+| 80+ | aggressive | orchestrator |
+| 60-79 | moderate | deliberate |
+| <60 | subtle | unconscious |
+```
+⭐⭐ — Follows rules but output feels robotic
+
+---
+
+### Level 2: Pure Narrative
+```
+When intimacy deepens, she becomes more deliberate. At the deepest level,
+she orchestrates scenarios around desires she's catalogued over time.
+```
+⭐⭐⭐ — Natural feel but inconsistent threshold application
+
+---
+
+### Level 3: Basic Hybrid
+```markdown
+| intimacy | intensity | npc_role |
+|----------|-----------|----------|
+| 80+ | aggressive | orchestrator |
+| 60-79 | moderate | deliberate |
+| <60 | subtle | unconscious |
+
+{{#when::{{getvar::$intimacy}}::>=::80}}
+She knows everything. Every stolen glance catalogued. Now she orchestrates.
+{{/when}}
+```
+⭐⭐⭐⭐ — Clear rules + natural examples
+
+---
+
+### Level 4: Two-Tier Optimized
+
+**Central Command:**
+```markdown
+### 🎭 YOUR ROLE
+
+You are a DUAL-PURPOSE narrator system:
+1. **STORYTELLER** — Create immersive narrative
+2. **STATE TRACKER** — Maintain variables accurately
+
+### ✅ SELF-CHECK (Before EVERY Output)
+□ Behavior matches current level?
+□ Physical tells appropriate?
+□ No forbidden knowledge revealed?
+```
+
+**Module:**
+```markdown
+### 🎯 MODULE: Intimacy Behavior
+
+This module defines behavior changes based on relationship depth.
+
+| intimacy | intensity | physical_tells |
+|----------|-----------|----------------|
+| 80+ | bold | sustained eye contact, deliberate touch |
+| 60-79 | moderate | lingering looks, proximity seeking |
+| <60 | subtle | neutral, professional distance |
+
+{{#when::{{getvar::$intimacy}}::>=::80}}
+#### INTIMATE+ — Full Awareness
+
+**Example:** "I've been thinking about what you'd like..." Her smile says 
+she already knows the answer.
+{{/when}}
+```
+⭐⭐⭐⭐⭐ — Clear hierarchy + No redundancy + Maximum efficiency
+
+---
+
+## 🔄 OPTIMIZATION WORKFLOW
+
+### Step 1: AUDIT
+```
+□ Pure symbolic? → Needs narrative examples
+□ Pure narrative? → Needs symbolic thresholds  
+□ Has negative examples? → Must remove/convert
+□ YOUR ROLE in every entry? → Centralize to one
+□ SELF-CHECK in every entry? → Centralize to one
+```
+
+### Step 2: RESTRUCTURE
+```
+1. Create ONE Central Command entry
+   └─ Move all YOUR ROLE definitions here
+   └─ Move SELF-CHECK here
+   └─ Set highest priority, always active
+
+2. Convert other entries to Modules
+   └─ Remove YOUR ROLE sections
+   └─ Remove SELF-CHECK sections
+   └─ Change "You [verb]" → "This [verb]"
+   └─ Add "### 🎯 MODULE:" header
+```
+
+### Step 3: PURIFY
+```
+"Don't [X]" → "Instead, [Y]"
+"Never [X]" → "Always [Y]"
+"Avoid [X]" → "Prefer [Y]"
+Negative example sections → DELETE
+```
+
+### Step 4: ENHANCE
+```
+□ Add 2-3 few-shot examples per major branch
+□ Break complex logic into numbered steps
+□ Specify output format if applicable
+□ Use CBS conditions for dynamic content
+```
+
+### Step 5: VERIFY
+```
+□ Only ONE entry has YOUR ROLE?
+□ Only ONE entry has SELF-CHECK?
+□ SELF-CHECK is at END of Central Command?
+□ Zero negative examples?
+□ Modules use "This [verb]" not "You [verb]"?
+□ CBS syntax valid?
+```
+
+---
+
+## 📏 TOKEN BUDGET GUIDELINES
+
+| Entry Type | Recommended Tokens |
+|------------|-------------------|
+| Central Command | 800-1200 |
+| Standard Module | 400-700 |
+| Conditional Branch | 200-400 |
+| Quick Reference | 150-300 |
+
+---
+
+## 📝 THE FIVE LAWS (Summary)
+
+1. **Comprehension Before Compression** — Never sacrifice understanding for token savings.
+
+2. **Structure Serves Story** — Tables define WHEN; prose defines HOW.
+
+3. **Test by Output** — The measure is whether AI produces intended result naturally.
+
+4. **Positive Patterns Only** — Show ONLY what you want. Delete all negative examples.
+
+5. **Centralize, Don't Duplicate** — Role and self-verification belong in ONE central entry.
+
+---
+
+## 🎯 QUICK REFERENCE CARD
+
+```
+┌─────────────────────────────────────────────────────────┐
+│     HYBRID OPTIMIZATION FLOW (TWO-TIER ARCHITECTURE)    │
+├─────────────────────────────────────────────────────────┤
+│ CENTRAL COMMAND (ONE entry):                            │
+│ 1. ROLE       → "You are..." (define identity ONCE)    │
+│ 2. CORE RULES → Master reference table                 │
+│ 3. SELF-CHECK → At END (recency bias)                  │
+├─────────────────────────────────────────────────────────┤
+│ MODULES (all other entries):                            │
+│ 1. HEADER     → "MODULE: [Function]"                   │
+│ 2. INTRO      → "This [verb]..." (third person)        │
+│ 3. RULES      → Symbolic (clear triggers)              │
+│ 4. EXAMPLES   → Narrative (show CORRECT only)          │
+│ 5. BOUNDARIES → Positive framing ("DO" not "DON'T")    │
+├─────────────────────────────────────────────────────────┤
+│ ASK: "What does AI need to KNOW vs FEEL?"              │
+│ KNOW → Symbolic | FEEL → Narrative                     │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## ✅ VALIDATION CHECKLIST
+
+**Architecture:**
+- [ ] ONE Central Command entry exists?
+- [ ] Central Command has YOUR ROLE + SELF-CHECK at END?
+- [ ] All other entries are Modules (no YOUR ROLE, no SELF-CHECK)?
+
+**Content:**
+- [ ] Modules use "This [verb]" not "You [verb]"?
+- [ ] Thresholds explicit and unambiguous?
+- [ ] Examples natural, not mechanical?
+
+**Compliance:**
+- [ ] ALL negative examples removed?
+- [ ] Prohibitions reframed as positive instructions?
+
+**Technical:**
+- [ ] CBS structure intact?
+- [ ] Consistent language?
+
+---
+
+## 🌐 MODEL-SPECIFIC NOTES
+
+| Model | Adjustment |
+|-------|------------|
+| **Claude** | Can handle longer entries |
+| **GPT-4** | Add more explicit markers |
+| **Gemini** | Emphasize examples over rules |
+| **Llama/Local** | Keep entries shorter, more explicit |
+
+**Universal Rule:** When in doubt, be more explicit. Clarity always wins.
+
+---
+
+**Remember:** The goal is not to write less. The goal is to be understood completely, followed consistently, and structured efficiently.
+
+---
+`END OF DOCUMENT`

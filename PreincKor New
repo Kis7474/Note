@@ -47,8 +47,8 @@ $INCLUD /prj/ztg/akt/txt/ENG/wae.txt
 
 
 
-$PRMTXT PUB         Y   "간행물"
-$PRMTXT ASG         Y   "판"
+$PRMTXT PUB Y "간행물"
+$PRMTXT ASG Y "판"
 
 $PRMTXT PRDCRT      Y   @ALG_CREATE
 $PRMTXT PRDCHG      Y   @ALG_CHANGE
@@ -61,13 +61,13 @@ $PRMTXT KMT         Y   @ALG_KOM
 $PRMTXT PDAFWR      Y   "1  2"
 $PRMTXT BFMFWR      Y   "2  1"
 
-$PRMTXT WORKAREA    Y   "작업 영역:"
-$PRMTXT PRDDEF      Y   "페이지 설명"
-$PRMTXT BHNFHR      Y   "웹 리드"
-$PRMTXT FRBZUO      Y   "잉크 할당 ..."
-$PRMTXT BLTSTR      Y   "기존 임포지션 ..."
-$PRMTXT BHNBLG      Y   "웹 임포지션"
-$PRMTXT ZYLBLG      Y   "실린더 임포지션"
+$PRMTXT WORKAREA Y "작업 영역:"
+$PRMTXT PRDDEF Y "페이지 설명"
+$PRMTXT BHNFHR Y "웹 리드"
+$PRMTXT FRBZUO Y "잉크 할당 ..."
+$PRMTXT BLTSTR Y "기존 임포지션 ..."
+$PRMTXT BHNBLG Y "웹 임포지션"
+$PRMTXT ZYLBLG Y "실린더 임포지션"
 
 /* int, Seitenbeschreibung */
 

@@ -47,8 +47,8 @@ $INCLUD /prj/ztg/akt/txt/ENG/wae.txt
 
 
 
-$PRMTXT PUB         Y   "간행물"
-$PRMTXT ASG         Y   "판"
+$PRMTXT PUB Y "간행물"
+$PRMTXT ASG Y "판"
 
 $PRMTXT PRDCRT      Y   @ALG_CREATE
 $PRMTXT PRDCHG      Y   @ALG_CHANGE
@@ -61,67 +61,67 @@ $PRMTXT KMT         Y   @ALG_KOM
 $PRMTXT PDAFWR      Y   "1  2"
 $PRMTXT BFMFWR      Y   "2  1"
 
-$PRMTXT WORKAREA    Y   "작업 영역:"
-$PRMTXT PRDDEF      Y   "페이지 설명"
-$PRMTXT BHNFHR      Y   "웹 리드"
-$PRMTXT FRBZUO      Y   "잉크 할당 ..."
-$PRMTXT BLTSTR      Y   "기존 임포지션 ..."
-$PRMTXT BHNBLG      Y   "웹 임포지션"
-$PRMTXT ZYLBLG      Y   "실린더 임포지션"
+$PRMTXT WORKAREA Y "작업 영역:"
+$PRMTXT PRDDEF Y "페이지 설명"
+$PRMTXT BHNFHR Y "웹 리드"
+$PRMTXT FRBZUO Y "잉크 할당 ..."
+$PRMTXT BLTSTR Y "기존 임포지션 ..."
+$PRMTXT BHNBLG Y "웹 임포지션"
+$PRMTXT ZYLBLG Y "실린더 임포지션"
 
 /* int, Seitenbeschreibung */
 
-$PRMTXT SKTHDR      Y   "명명된 섹션"
-$PRMTXT FSTHDR      Y   "섹션의 페이지"
+$PRMTXT SKTHDR Y "명명된 섹션"
+$PRMTXT FSTHDR Y "섹션의 페이지"
 $PRMTXT SKT         Y   @ZTG_SKT
 $PRMTXT SEITEN      Y   @ZTG_STE_N
 $PRMTXT TABLOID     Y   @ZTG_TBL
-$PRMTXT NOTTBL      Y   "  : 브로드시트 섹션             "
-$PRMTXT TBLGES      Y   "[]: 타블로이드 섹션                "
-$PRMTXT TBLSEP      Y   "--- 다중 섹션 타블로이드 전용: ---"
-$PRMTXT TBLBEG      Y   "[ : 타블로이드의 첫 번째 섹션       "
-$PRMTXT TBLINN      Y   "  : 타블로이드의 내부 섹션       "
-$PRMTXT TBLEND      Y   " ]: 타블로이드의 마지막 섹션        "
+$PRMTXT NOTTBL Y "  : 브로드시트 섹션             "
+$PRMTXT TBLGES Y "[]: 타블로이드 섹션                "
+$PRMTXT TBLSEP Y "--- 다중 섹션 타블로이드 전용: ---"
+$PRMTXT TBLBEG Y "[ : 타블로이드의 첫 번째 섹션       "
+$PRMTXT TBLINN Y "  : 타블로이드의 내부 섹션       "
+$PRMTXT TBLEND Y " ]: 타블로이드의 마지막 섹션        "
 
 $PRMTXT SEITE       Y   @ZTG_STE
-$PRMTXT STESPG      Y   "페이지 참조 ..." 
-$PRMTXT ALLSTE      Y   "모든 섹션 표시"
-$PRMTXT FSTSTW      Y   "참조 이름"
-$PRMTXT FSTFRB      Y   "색상"
-$PRMTXT TBLSTEKPL   Y   "연결된 타블로이드 페이지"
-$PRMTXT LYTMST      Y   "레이아웃 템플릿"                       
+$PRMTXT STESPG Y "페이지 참조 ..." 
+$PRMTXT ALLSTE Y "모든 섹션 표시"
+$PRMTXT FSTSTW Y "참조 이름"
+$PRMTXT FSTFRB Y "색상"
+$PRMTXT TBLSTEKPL Y "연결된 타블로이드 페이지"
+$PRMTXT LYTMST Y "레이아웃 템플릿"                       
 
-$PRMTXT STEMNU      Y   "페이지 기능 메뉴            "
-$PRMTXT FRBMNU      Y   "색상 기능 메뉴          "
-$PRMTXT SETFRB      Y   "프로세스 색상 선택"
-$PRMTXT SETDEFFRB   Y   "기본 색상 선택"
-$PRMTXT NURZUOFRB   Y   "고정 색상 선택"
+$PRMTXT STEMNU Y "페이지 기능 메뉴            "
+$PRMTXT FRBMNU Y "색상 기능 메뉴          "
+$PRMTXT SETFRB Y "프로세스 색상 선택"
+$PRMTXT SETDEFFRB Y "기본 색상 선택"
+$PRMTXT NURZUOFRB Y "고정 색상 선택"
 
-$PRMTXT SETSCNFRB   Y   "면적 커버리지 값이 있는 색상 선택"
+$PRMTXT SETSCNFRB Y "면적 커버리지 값이 있는 색상 선택"
 
-$PRMTXT ALLMGLFRB   Y   "추가 인쇄 가능 색상 선택"
-$PRMTXT RESETFRB    Y   "선택한 색상 재설정 (키 색상 제외)"
-$PRMTXT NURMGLFRB   Y   "인쇄 불가 색상 선택 해제"
-$PRMTXT STESTWMOD   Y   "참조 이름 수정 ..."
-$PRMTXT STEBRTMOD   Y   "페이지 크기 수정 ..."
-$PRMTXT RSTALLSTEBRT Y  "페이지 크기 요청을 표준으로 재설정"
-$PRMTXT PANNOTANF   Y   "파노라마 요청 제거"
-$PRMTXT PANMNTANF   Y   "표지 파노라마"
-$PRMTXT PANMITANF   Y   "센터 스프레드 파노라마"
-$PRMTXT PANVDEANF   Y   "숨겨진 파노라마"
+$PRMTXT ALLMGLFRB Y "추가 인쇄 가능 색상 선택"
+$PRMTXT RESETFRB Y "선택한 색상 재설정 (키 색상 제외)"
+$PRMTXT NURMGLFRB Y "인쇄 불가 색상 선택 해제"
+$PRMTXT STESTWMOD Y "참조 이름 수정 ..."
+$PRMTXT STEBRTMOD Y "페이지 크기 수정 ..."
+$PRMTXT RSTALLSTEBRT Y "페이지 크기 요청을 표준으로 재설정"
+$PRMTXT PANNOTANF Y "파노라마 요청 제거"
+$PRMTXT PANMNTANF Y "표지 파노라마"
+$PRMTXT PANMITANF Y "센터 스프레드 파노라마"
+$PRMTXT PANVDEANF Y "숨겨진 파노라마"
 $PRMTXT PANDCHUNDANF Y  "세부 유형 미지정"
-$PRMTXT PANDCHAUTANF Y  "세부 유형 자동 (기존 임포지션에 따라)"
+$PRMTXT PANDCHAUTANF Y "세부 유형 자동 (기존 임포지션에 따라)"
 
-$PRMTXT PANPSDANF   Y   "분할 스프레드 파노라마 요청"
+$PRMTXT PANPSDANF Y "분할 스프레드 파노라마 요청"
 
-$PRMTXT PANDCHANF   Y   "진정한(분할되지 않은) 파노라마 요청"
+$PRMTXT PANDCHANF Y "진정한(분할되지 않은) 파노라마 요청"
 $PRMTXT AB_SPL      Y   "A/B-스플릿 요청 / 제거"
-$PRMTXT RSTALLSTEANF Y  "전체 페이지 요청을 표준으로 재설정"
+$PRMTXT RSTALLSTEANF Y "전체 페이지 요청을 표준으로 재설정"
 
-$PRMTXT DSPDEPPGE   Y   "색상 상호 의존성 표시 ..."
+$PRMTXT DSPDEPPGE Y "색상 상호 의존성 표시 ..."
 
-$PRMTXT VORSCH      Y   "미리 보기 표시 ..."                 
-$PRMTXT SELEKTIV     Y  "(선택 기반)"               
+$PRMTXT VORSCH Y "미리 보기 표시 ..."                 
+$PRMTXT SELEKTIV Y "(선택 기반)"               
 $PRMTXT STESTWMODSEL Y  @STESTWMOD + " " + @SELEKTIV         /* fmt, v,m60,n1 */
 $PRMTXT STEBRTMODSEL Y  @STEBRTMOD + " " + @SELEKTIV         /* fmt, v,m60,n1 */
 $PRMTXT PANNOTANFSEL Y  @PANNOTANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
@@ -135,7 +135,7 @@ $PRMTXT PANDCHANFSEL Y  @PANDCHANF + " " + @SELEKTIV         /* fmt, v,m60,n1 */
 $PRMTXT DSPDEPPGESEL Y  @DSPDEPPGE + " " + @SELEKTIV         /* fmt, v,m60,n1 */
 $PRMTXT VORSCHSEL   Y   @VORSCH + " " + @SELEKTIV            /* fmt, v,m60,n1 */
 $PRMTXT AB_SPLSEL   Y   @AB_SPL + " " + @SELEKTIV            /* fmt, v,m50,n1 */
-$PRMTXT RESETSCN    Y   "면적 커버리지 값 재설정 ..."
+$PRMTXT RESETSCN Y "면적 커버리지 값 재설정 ..."
 
 $PRMTXT DSPSCNPGE   Y   "면적 커버리지 값이 있는 추가 분판 표시 ...         " /* fmt, l,f60,n1 */
 
@@ -144,79 +144,79 @@ $PRMTXT DSPSCNPGE   Y   "면적 커버리지 값이 있는 추가 분판 표시 
 
 
 $PRMTXT BHN         Y   @ALG_PAP
-$PRMTXT GF          Y   "TC"
-$PRMTXT RT          Y   "RS"
-$PRMTXT DE          Y   "PU"
+$PRMTXT GF Y "TC"
+$PRMTXT RT Y "RS"
+$PRMTXT DE Y "PU"
 $PRMTXT DEFHR       Y   "PU 웹 리드"
 $PRMTXT EE          Y   "LL" /* kbz, LL=Lead-in Level */
 $PRMTXT FABTXT      Y   "FSV" /* kbz, FS=Folder Superstructure web lead Variant */
 $PRMTXT WE          Y   "OL" /* kbz, OL=Outlet Level */
 $PRMTXT ATBTXT      Y   "OFV" /* kbz, OF=Outlet-to-Former web lead Variant */
 $PRMTXT FLZOP       Y   "턴잉 동작"
-$PRMTXT BW          Y   "BW" /* kbz, BW=BayWindow */
-$PRMTXT TC          Y   "UU" /* kbz, UU=Under-and-up */
+$PRMTXT BW Y "BW" /* kbz, BW=BayWindow */
+$PRMTXT TC Y "UU" /* kbz, UU=Under-and-up */
 $PRMTXT TE          Y   "FL" /* kbz, FL=Former Level */
 $PRMTXT AEZ         Y   "AI" /* Kbz, AI=Automatic infeed */
 $PRMTXT PAP         Y   @ALG_PAP
 $PRMTXT GRM         Y   @ALG_GRM
-$PRMTXT TRIFHR      Y   "포머-폴더 웹 리드"
-$PRMTXT PAPHDR      Y   "지 규격"
-$PRMTXT DEFHRHDR    Y   "인쇄 유닛을 통한 웹 리드"
-$PRMTXT GFEXP       Y   "총 색상 (TC)"
-$PRMTXT RTEXP       Y   "릴 스플라이서 (RS)"
-$PRMTXT DEEXP       Y   "인쇄 유닛 (PU)"
-$PRMTXT AKTBHNFHR   Y   "현재 웹 리드:"
-$PRMTXT SELBHNFHR   Y   "선택된 웹 리드:"
+$PRMTXT TRIFHR Y "포머-폴더 웹 리드"
+$PRMTXT PAPHDR Y "지 규격"
+$PRMTXT DEFHRHDR Y "인쇄 유닛을 통한 웹 리드"
+$PRMTXT GFEXP Y "총 색상 (TC)"
+$PRMTXT RTEXP Y "릴 스플라이서 (RS)"
+$PRMTXT DEEXP Y "인쇄 유닛 (PU)"
+$PRMTXT AKTBHNFHR Y "현재 웹 리드:"
+$PRMTXT SELBHNFHR Y "선택된 웹 리드:"
 
-$PRMTXT FLZFHRHDR   Y   "턴잉 유닛을 통한 웹 리드"
-$PRMTXT AKTBHN      Y   "전체 웹:"
-$PRMTXT AKTEE       Y   "리드 인 레벨:"
-$PRMTXT PRTBHN      Y   "부분 웹"
-$PRMTXT MGLFLZOP    Y   "동작:"
-$PRMTXT GRDAUS      Y   "스트레이트"
-$PRMTXT WENDEN      Y   "턴잉"
-$PRMTXT PONY        Y   "포니"
-$PRMTXT BWD         Y   "베이윈도"
+$PRMTXT FLZFHRHDR Y "턴잉 유닛을 통한 웹 리드"
+$PRMTXT AKTBHN Y "전체 웹:"
+$PRMTXT AKTEE Y "리드 인 레벨:"
+$PRMTXT PRTBHN Y "부분 웹"
+$PRMTXT MGLFLZOP Y "동작:"
+$PRMTXT GRDAUS Y "스트레이트"
+$PRMTXT WENDEN Y "턴잉"
+$PRMTXT PONY Y "포니"
+$PRMTXT BWD Y "베이윈도"
 
 $PRMTXT TRIFHRHDR   Y   @TRIFHR
-$PRMTXT TFBFW       Y   "FU"   /* abk, FU=folder unit */
-$PRMTXT TFBTXT      Y   "이름"
-$PRMTXT TRIFHRPOS   Y   "포머 순서"
+$PRMTXT TFBFW Y "FU"   /* abk, FU=folder unit */
+$PRMTXT TFBTXT Y "이름"
+$PRMTXT TRIFHRPOS Y "포머 순서"
 $PRMTXT FAW1        Y   "폴더 유닛"
                         "     1     "
 $PRMTXT FAW2        Y   "폴더 유닛"
                         "     2     "
-$PRMTXT AKTTRIFHR   Y   "현재 웹 리드:"
-$PRMTXT SELTRIFHR   Y   "선택된 웹 리드:"
-$PRMTXT TFS         Y   "리본 리드 ..."
+$PRMTXT AKTTRIFHR Y "현재 웹 리드:"
+$PRMTXT SELTRIFHR Y "선택된 웹 리드:"
+$PRMTXT TFS Y "리본 리드 ..."
  
-$PRMTXT TFSHDR      Y   "리본 리드"
+$PRMTXT TFSHDR Y "리본 리드"
 
-$PRMTXT BFKHDR      Y   "웹 리드 복사"
-$PRMTXT BFKVON      Y   "프레스에서"
-$PRMTXT BFKSEL      Y   "선택된 프레스(들)로"
-$PRMTXT BFKALL      Y   "모든 프레스로"
-$PRMTXT BFKMITKMP   Y   "컴포넌트 값 포함"
-$PRMTXT BFKNURKMP   Y   "컴포넌트 값만"
+$PRMTXT BFKHDR Y "웹 리드 복사"
+$PRMTXT BFKVON Y "프레스에서"
+$PRMTXT BFKSEL Y "선택된 프레스(들)로"
+$PRMTXT BFKALL Y "모든 프레스로"
+$PRMTXT BFKMITKMP Y "컴포넌트 값 포함"
+$PRMTXT BFKNURKMP Y "컴포넌트 값만"
 
 /* int, Bahnbelegung */
  
-$PRMTXT SELBHNSTE   Y   "웹의 면 선택"	/* fmt, v,m50,n1 */
+$PRMTXT SELBHNSTE Y "웹의 면 선택"	/* fmt, v,m50,n1 */
 
 /* int, Zylinderbelegung */
 
 $PRMTXT ZLBDE       Y   "PU"   /* kbz, PU=Printing unit */
 $PRMTXT ZLBDW       Y   "PC"   /* kbz, PC=Printing couple */
 $PRMTXT ZLBPP       Y   "PP"   /* Kbz, PP=Plate position */
-$PRMTXT ZLBBSSMOD   Y   "페이지 설명 수정 ..." 
-$PRMTXT ZLBPLTMOD   Y   "판을 수동으로 할당..." 
-$PRMTXT ZLBFRKMOD   Y   "잉크 할당 수정 ..." 
+$PRMTXT ZLBBSSMOD Y "페이지 설명 수정 ..." 
+$PRMTXT ZLBPLTMOD Y "판을 수동으로 할당..." 
+$PRMTXT ZLBFRKMOD Y "잉크 할당 수정 ..." 
 $PRMTXT ZLBMANPLTUND Y  "수동 판 할당 실행 취소 " /* nzu */
 $PRMTXT RSTMANPLT    Y  "수동 판 할당 재설정 ..." /* fmt, v,m50,n1 */
 
-$PRMTXT PLTRSTOPTDEH Y  "전체 인쇄 유닛에 대해" /* fmt, v,m30,n1 */
+$PRMTXT PLTRSTOPTDEH Y "전체 인쇄 유닛에 대해" /* fmt, v,m30,n1 */
 $PRMTXT PLTRSTOPTLFG Y  "전체 런에 대해" /* fmt, v,m30,n1 */
-$PRMTXT PLTRSTOPTALF Y  "모든 계획된 런에 대해" /* fmt, v,m30,n1 */
+$PRMTXT PLTRSTOPTALF Y "모든 계획된 런에 대해" /* fmt, v,m30,n1 */
 $PRMTXT RSTMANPLTLFG Y  @ALG_YES + ", " + @PLTRSTOPTLFG
 $PRMTXT RSTMANPLTALF Y  @ALG_YES + ", " + @PLTRSTOPTALF
 
@@ -224,176 +224,176 @@ $PRMTXT RSTMANPLTALF Y  @ALG_YES + ", " + @PLTRSTOPTALF
 
 /* "zusaetzliche produktspezifische Daten"-Oberflaeche */
  
-$PRMTXT PRDSPZANGHDR Y  "추가 제품별 데이터"  /* fmt, v,m50,n1 */
-$PRMTXT PRDSPZANGEDT Y  "판"                           /* fmt, v,m20,n1 */
-$PRMTXT PRDSPZANGISS Y  "발행일"                        /* fmt, v,m20,n1 */
-$PRMTXT PRDSPZANGPDT Y  "생산일"                   /* fmt, v,m20,n1 */
-$PRMTXT PRDSPZANGGRPMOD    Y "그리퍼당 부수"           /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGHDR Y "추가 제품별 데이터"  /* fmt, v,m50,n1 */
+$PRMTXT PRDSPZANGEDT Y "판"                           /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGISS Y "발행일"                        /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGPDT Y "생산일"                   /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGGRPMOD Y "그리퍼당 부수"           /* fmt, v,m20,n1 */
 $PRMTXT PRDSPZANGGRPMODOFS Y "2 (오프셋 포함)"              /* fmt, v,m20,n1 */
-$PRMTXT PRDSPZANGANZLGN    Y "뭉치당 층 수"            /* fmt, v,m20,n1 */
+$PRMTXT PRDSPZANGANZLGN Y "뭉치당 층 수"            /* fmt, v,m20,n1 */
 $PRMTXT PRDSPZANGANZEXPLGE Y "층당 부수"             /* fmt, v,m20,n1 */
 $PRMTXT PRDSPZANGANZEXPPKT Y "뭉치당 부수"             /* fmt, v,m20,n1 */
 
 
 /* int, Zylinderplattenbelegung */
-$PRMTXT PLTRSTHDR  Y  "판 할당"           /* fmt, v,m30,n1 */
+$PRMTXT PLTRSTHDR Y "판 할당"           /* fmt, v,m30,n1 */
 
 /* fuer Kontextmenue */
-$PRMTXT PLTRST      Y  "판 할당 입력 ..." /* fmt, v,m40,n1 */
+$PRMTXT PLTRST Y "판 할당 입력 ..." /* fmt, v,m40,n1 */
 $PRMTXT PLTRSTSLC   Y   @PLTRST + " " + @SELEKTIV
 
 $PRMTXT WAE         Y   @WAE_EINHEIT
 
-$PRMTXT TRFTME      Y   "마지막 데이터 전송"
-$PRMTXT TRFFRM      Y   "전송 원본"
+$PRMTXT TRFTME Y "마지막 데이터 전송"
+$PRMTXT TRFFRM Y "전송 원본"
 
-$PRMTXT ZUSFKT      Y   "추가 기능 ..."
-
-
+$PRMTXT ZUSFKT Y "추가 기능 ..."
 
 
 
 
-$PRMTXT FRBBLGHDR   Y   "제품 잉크 할당"
+
+
+$PRMTXT FRBBLGHDR Y "제품 잉크 할당"
 
 
 
-$PRMTXT DEPPGEHDR   Y   "색상 상호 의존성"
+$PRMTXT DEPPGEHDR Y "색상 상호 의존성"
 
 
 
-$PRMTXT SCNPGEHDR   Y   "면적 커버리지 값이 있는 추가 분판"
+$PRMTXT SCNPGEHDR Y "면적 커버리지 값이 있는 추가 분판"
 
 
 
 
-$PRMTXT BFSHDR      Y   "웹 리드 검색"
-$PRMTXT FNDPRDLST   Y   "검색 결과"
-$PRMTXT SUCHKRIT    Y   "검색 기준"
-$PRMTXT FRBSTEKRI   Y   "색상 선택"
-$PRMTXT FRBZUOKRI   Y   "잉크 할당"
-$PRMTXT DATPOL      Y   "데이터 풀"                             /* fmt, v,m20,n1 */
-$PRMTXT DATPOLPRD   Y   "제품"                              /* fmt, v,m12,n1 */
-$PRMTXT DATPOLPRS   Y   "생산 스킴"                    /* fmt, v,m20,n1 */
-$PRMTXT SUCHSTART   Y   "검색 시작"
-$PRMTXT BFSPUB      Y   "지 규격 포함"
-$PRMTXT BFSALLMSH   Y   "모든 프레스에 대해"
+$PRMTXT BFSHDR Y "웹 리드 검색"
+$PRMTXT FNDPRDLST Y "검색 결과"
+$PRMTXT SUCHKRIT Y "검색 기준"
+$PRMTXT FRBSTEKRI Y "색상 선택"
+$PRMTXT FRBZUOKRI Y "잉크 할당"
+$PRMTXT DATPOL Y "데이터 풀"                             /* fmt, v,m20,n1 */
+$PRMTXT DATPOLPRD Y "제품"                              /* fmt, v,m12,n1 */
+$PRMTXT DATPOLPRS Y "생산 스킴"                    /* fmt, v,m20,n1 */
+$PRMTXT SUCHSTART Y "검색 시작"
+$PRMTXT BFSPUB Y "지 규격 포함"
+$PRMTXT BFSALLMSH Y "모든 프레스에 대해"
 $PRMTXT BFGUEB      Y   "웹 리드 가져오기"
 
 
 
-$PRMTXT DGRHDR      Y   "인쇄 그룹 / 생산 순서 계획" /* fmt, v,m40,n1 */
-$PRMTXT PPLERG      Y   "생산 순서 계획 결과"     /* fmt, v,m40,n1 */
-$PRMTXT FRBWCHANZ   Y   "# 잉크 교체 수:"                        /* fmt, v,m20,n1 */
-$PRMTXT FRBKSTANZ   Y   "# 잉크 분할 수:"                      /* fmt, v,m20,n1 */
-$PRMTXT PLTWCHANZ   Y   "# 판 교체 수:"                      /* fmt, v,m20,n1 */
-$PRMTXT BLNDPLANZ   Y   "# 더미 판 수:"                       /* fmt, v,m20,n1 */
-$PRMTXT FRKANZ      Y   "# 잉크 분할 수:"                      /* fmt, v,m20,n1 */
-$PRMTXT PLTANZ      Y   "# 판 수:"                             /* fmt, v,m20,n1 */
+$PRMTXT DGRHDR Y "인쇄 그룹 / 생산 순서 계획" /* fmt, v,m40,n1 */
+$PRMTXT PPLERG Y "생산 순서 계획 결과"     /* fmt, v,m40,n1 */
+$PRMTXT FRBWCHANZ Y "# 잉크 교체 수:"                        /* fmt, v,m20,n1 */
+$PRMTXT FRBKSTANZ Y "# 잉크 분할 수:"                      /* fmt, v,m20,n1 */
+$PRMTXT PLTWCHANZ Y "# 판 교체 수:"                      /* fmt, v,m20,n1 */
+$PRMTXT BLNDPLANZ Y "# 더미 판 수:"                       /* fmt, v,m20,n1 */
+$PRMTXT FRKANZ Y "# 잉크 분할 수:"                      /* fmt, v,m20,n1 */
+$PRMTXT PLTANZ Y "# 판 수:"                             /* fmt, v,m20,n1 */
 
 
 
 $PRMTXT SPGHDR      Y   @PRD_SPG
-$PRMTXT SSW         Y   "참조 이름"                        /* fmt, v,m16,n1 */
-$PRMTXT SPGSPR      Y   "분판 참조"                 /* fmt, v,m40,n1 */
+$PRMTXT SSW Y "참조 이름"                        /* fmt, v,m16,n1 */
+$PRMTXT SPGSPR Y "분판 참조"                 /* fmt, v,m40,n1 */
 $PRMTXT SPGSPR1     Y   "K"                                     /* nzu */
 $PRMTXT SPGSPR2     Y   "C"                                     /* nzu */
 $PRMTXT SPGSPR3     Y   "M"                                     /* nzu */
 $PRMTXT SPGSPR4     Y   "Y"                                     /* nzu */
 $PRMTXT SPGSPR5     Y   "1"                                     /* nzu */
 $PRMTXT SPGSPR6     Y   "2"                                     /* nzu */
-$PRMTXT SPGZAG      Y   "페이지의 추가 세부 정보"           /* fmt, v,m40,n1 */
-$PRMTXT SPGIMP      Y   "가져오기 ..."                            /* fmt, v,m15,n1 */
-$PRMTXT DELZUO      Y   "삭제"                                /* fmt, v,m15,n1 */
-$PRMTXT GENSSW      Y   "생성"                              /* fmt, v,m15,n1 */
-$PRMTXT UPDSPR      Y   "업데이트"                                /* fmt, v,m15,n1 */
-$PRMTXT AKTSSWLST   Y   "참조 이름 목록"                   /* fmt, v,m30,n1 */
-$PRMTXT SSWKRI1     Y   "기준 1"                           /* fmt, v,m25,n1 */
+$PRMTXT SPGZAG Y "페이지의 추가 세부 정보"           /* fmt, v,m40,n1 */
+$PRMTXT SPGIMP Y "가져오기 ..."                            /* fmt, v,m15,n1 */
+$PRMTXT DELZUO Y "삭제"                                /* fmt, v,m15,n1 */
+$PRMTXT GENSSW Y "생성"                              /* fmt, v,m15,n1 */
+$PRMTXT UPDSPR Y "업데이트"                                /* fmt, v,m15,n1 */
+$PRMTXT AKTSSWLST Y "참조 이름 목록"                   /* fmt, v,m30,n1 */
+$PRMTXT SSWKRI1 Y "기준 1"                           /* fmt, v,m25,n1 */
 $PRMTXT SSWKRI1_K   Y   "1" /* int, Abkuerzung fuer SSWKRI1 */  /* fmt, v,m1,n1 */
-$PRMTXT SSWKRI2     Y   "기준 2"                           /* fmt, v,m25,n1 */
+$PRMTXT SSWKRI2 Y "기준 2"                           /* fmt, v,m25,n1 */
 $PRMTXT SSWKRI2_K   Y   "2" /* int, Abkuerzung fuer SSWKRI2 */  /* fmt, v,m1,n1 */
-$PRMTXT SSWKRI3     Y   "기준 3"                           /* fmt, v,m25,n1 */
+$PRMTXT SSWKRI3 Y "기준 3"                           /* fmt, v,m25,n1 */
 $PRMTXT SSWKRI3_K   Y   "3" /* int, Abkuerzung fuer SSWKRI3 */  /* fmt, v,m1,n1 */
-$PRMTXT SSWINF      Y   "정보 ..."                              /* fmt, v,m10,n1 */
-$PRMTXT BEAMOD      Y   "처리 모드"                    /* fmt, v,m20,n1 */
-$PRMTXT MODZUO      Y   "할당만"                           /* fmt, v,m30,n1 */
-$PRMTXT MODEDT      Y   "편집 및 할당"                         /* fmt, v,m30,n1 */
-$PRMTXT MODINS      Y   "직접 삽입 및 할당"              /* fmt, v,m30,n1 */
-$PRMTXT AKTSSW      Y   "참조 이름"                        /* fmt, v,m25,n1 */
-$PRMTXT SSWZAG      Y   "참조 이름에 대한 상세 정보"            /* fmt, v,m40,n1 */
-$PRMTXT SSWKRI      Y   "참조 이름에 대한 기준"           /* fmt, v,m40,n1 */
+$PRMTXT SSWINF Y "정보 ..."                              /* fmt, v,m10,n1 */
+$PRMTXT BEAMOD Y "처리 모드"                    /* fmt, v,m20,n1 */
+$PRMTXT MODZUO Y "할당만"                           /* fmt, v,m30,n1 */
+$PRMTXT MODEDT Y "편집 및 할당"                         /* fmt, v,m30,n1 */
+$PRMTXT MODINS Y "직접 삽입 및 할당"              /* fmt, v,m30,n1 */
+$PRMTXT AKTSSW Y "참조 이름"                        /* fmt, v,m25,n1 */
+$PRMTXT SSWZAG Y "참조 이름에 대한 상세 정보"            /* fmt, v,m40,n1 */
+$PRMTXT SSWKRI Y "참조 이름에 대한 기준"           /* fmt, v,m40,n1 */
 
 
-$PRMTXT PRDPBAHDR   Y   "간행물 및 판" 
+$PRMTXT PRDPBAHDR Y "간행물 및 판" 
 
 
 
 
 $PRMTXT SSWINFHDR   Y   "참조 정보"                        /* fmt, v,m35,n1 */
 /* int, das Subjekt fuer den folgenden Satz ist 'Das Seitenstichwort' */
-$PRMTXT SSWINFKMT   Y   "다음에 나열된 제품에서 사용됩니다."
+$PRMTXT SSWINFKMT Y "다음에 나열된 제품에서 사용됩니다."
 
 
 
-$PRMTXT SPGIMPHDR   Y   "참조 가져오기"                 /* fmt, v,m35,n1 */
+$PRMTXT SPGIMPHDR Y "참조 가져오기"                 /* fmt, v,m35,n1 */
 $PRMTXT IMPORT      Y    @ALG_EXECUTE 
-$PRMTXT VRL         Y   "다음에서 참조 가져오기"            /* fmt, v,m30,n1 */
+$PRMTXT VRL Y "다음에서 참조 가져오기"            /* fmt, v,m30,n1 */
 
  
-$PRMTXT STEBRTHDR   Y   "페이지 크기 수정"
-$PRMTXT STEBRT      Y   "페이지 폭 (타블로이드: 페이지 높이)"
+$PRMTXT STEBRTHDR Y "페이지 크기 수정"
+$PRMTXT STEBRT Y "페이지 폭 (타블로이드: 페이지 높이)"
 
-$PRMTXT STDSTEBRT   Y   "표준 페이지 폭 (타블로이드: 높이)"
+$PRMTXT STDSTEBRT Y "표준 페이지 폭 (타블로이드: 높이)"
 
-$PRMTXT POPOUT      Y   "팝아웃"    /* int, Sonderformat *//* fmt, v,m15,n1 */
-$PRMTXT PULLIN      Y   "풀인"    /* int, Sonderformat *//* fmt, v,m15,n1 */
-$PRMTXT FIXSTEBRT   Y   "특정 페이지 폭 (타블로이드: 높이)"
+$PRMTXT POPOUT Y "팝아웃"    /* int, Sonderformat *//* fmt, v,m15,n1 */
+$PRMTXT PULLIN Y "풀인"    /* int, Sonderformat *//* fmt, v,m15,n1 */
+$PRMTXT FIXSTEBRT Y "특정 페이지 폭 (타블로이드: 높이)"
                                                             /* fmt, v,m45,n1 */
-$PRMTXT MINPFL      Y   "미니 플라우"
+$PRMTXT MINPFL Y "미니 플라우"
 $PRMTXT MINPFLMAS   Y   "접는 방향과 치수"     /* fmt, v,m35,n1 */
-$PRMTXT ALLABHSTE   Y   "해당 위치의 모든 페이지에 대해"    /* fmt, v,m35,n1 */
+$PRMTXT ALLABHSTE Y "해당 위치의 모든 페이지에 대해"    /* fmt, v,m35,n1 */
 
 
 
 $PRMTXT BLTHDR      Y   @PRD_BLT
-$PRMTXT BLTVIWLOG   Y   "제품 보기"                      /* fmt, v,m30,n1 */ 
-$PRMTXT BLTVIWTEC   Y   "포머 보기"                       /* fmt, v,m30,n1 */
+$PRMTXT BLTVIWLOG Y "제품 보기"                      /* fmt, v,m30,n1 */ 
+$PRMTXT BLTVIWTEC Y "포머 보기"                       /* fmt, v,m30,n1 */
 
 
 
-$PRMTXT RSTSCNHDR   Y   "면적 커버리지 값 재설정"            /* fmt, v,m35,n1 */
+$PRMTXT RSTSCNHDR Y "면적 커버리지 값 재설정"            /* fmt, v,m35,n1 */
 $PRMTXT RSTSCNPRD   Y   "제품에 대해"                           /* fmt, v,m30,n1 */
-$PRMTXT RSTSCNSSW   Y   "제품을 가로지르는 페이지 참조에 대해"
+$PRMTXT RSTSCNSSW Y "제품을 가로지르는 페이지 참조에 대해"
 
 
 
 
-$PRMTXT ZUSFKTHDR   Y   "추가 기능/장비 항목"  /* fmt, v,m35,n1 */
+$PRMTXT ZUSFKTHDR Y "추가 기능/장비 항목"  /* fmt, v,m35,n1 */
 
 /* int, TSA-Oberflaeche */
 
-$PRMTXT TSAHDR       Y  "리본 리드"                           /* fmt, v,m35,n1 */                                                                      
-$PRMTXT TSASELHDR    Y  "리본 리드 선택"                 /* fmt, v,m35,n1 */                                                                       
+$PRMTXT TSAHDR Y "리본 리드"                           /* fmt, v,m35,n1 */                                                                      
+$PRMTXT TSASELHDR Y "리본 리드 선택"                 /* fmt, v,m35,n1 */                                                                       
 $PRMTXT INFTSATFBDSC Y  "설명 문자열 포머-폴더-웹 리드"
                         "수집 순서의 책/소책자를 설명합니다."
                         "책/소책자는 기호 | 로 구분됩니다."
                         "각 책/소책자에 대해 어떤 포머가 사용되는지가 표시됩니다."
                         "이 문자열은 프레스 모니터에서 선택을 위해 사용될 수 있습니다."                        
-$PRMTXT INFTSATRIBSS Y  "포머에서 브로드시트(스트레이트) 페이지 수"  /* fmt, v,m80,n1 */                                                     
-$PRMTXT INFTSABSSANF Y  "리본 경로에서 요청된 브로드시트(스트레이트) 페이지 수"  /* fmt, v,m80,n1 */                                                       
-$PRMTXT INFTSABSSERG Y  "리본 경로에서 브로드시트(스트레이트) 페이지 수"  /* fmt, v,m80,n1 */                                                      
-$PRMTXT INFTSAHAPAKT Y  "스티처 활성화"                   /* fmt, v,m80,n1 */                                                                      
+$PRMTXT INFTSATRIBSS Y 	"포머에서 브로드시트(스트레이트) 페이지 수"  /* fmt, v,m80,n1 */                                                     
+$PRMTXT INFTSABSSANF Y 	"리본 경로에서 요청된 브로드시트(스트레이트) 페이지 수"  /* fmt, v,m80,n1 */                                                       
+$PRMTXT INFTSABSSERG Y 	"리본 경로에서 브로드시트(스트레이트) 페이지 수"  /* fmt, v,m80,n1 */                                                      
+$PRMTXT INFTSAHAPAKT Y 	"스티처 활성화"                   /* fmt, v,m80,n1 */                                                                      
 $PRMTXT INFTSAFWT    Y  "폴더 유닛 분리 활성화"    /* fmt, v,m80,n1 */                                                                      
-$PRMTXT INFTSASPU    Y  "실린더 둘레에서 페이지 선택"   /* fmt, v,m80,n1 */
-$PRMTXT TSASELOPN    Y  "선택 ..."                         /* fmt, v,m15,n1 */
+$PRMTXT INFTSASPU Y 	"실린더 둘레에서 페이지 선택"   /* fmt, v,m80,n1 */
+$PRMTXT TSASELOPN Y 	"선택 ..."                         /* fmt, v,m15,n1 */
 
 
 
-$PRMTXT MIXHDR      Y   "혼합 제품 세부 정보"             /* fmt, v,m35,n1 */
-$PRMTXT TEILPROD1   Y   "폴더 유닛 1"                         /* fmt, v,m18,n1 */
-$PRMTXT TEILPROD2   Y   "폴더 유닛 2"                         /* fmt, v,m18,n1 */
-$PRMTXT NME         Y   "제품 이름"                          /* fmt, v,m10,n1 */
-$PRMTXT SLLAFL      Y   "목표"                                /* fmt, v,m15,n1 */
+$PRMTXT MIXHDR Y "혼합 제품 세부 정보"             /* fmt, v,m35,n1 */
+$PRMTXT TEILPROD1 Y "폴더 유닛 1"                         /* fmt, v,m18,n1 */
+$PRMTXT TEILPROD2 Y "폴더 유닛 2"                         /* fmt, v,m18,n1 */
+$PRMTXT NME Y "제품 이름"                          /* fmt, v,m10,n1 */
+$PRMTXT SLLAFL Y "목표"                                /* fmt, v,m15,n1 */
 
 /* int, Kommentar */
 
@@ -401,7 +401,7 @@ $PRMTXT KMTHDR      Y   @ALG_KOM
 
 /* int, erweiterte Maschinenauswahl */
 
-$PRMTXT MSHSELHDR   Y   "확장 프레스 선택"           /* fmt, v,m30,n1 */
+$PRMTXT MSHSELHDR Y "확장 프레스 선택"           /* fmt, v,m30,n1 */
 
 /* int, Ueberpruefung */
 
@@ -412,38 +412,38 @@ $PRMTXT ERRHDR      Y   "데이터 검사 결과"
 
 /* int, Result texts of product check */
 /* int, The text description for the following texts is: */     /* fmt, v,m56,n0 */
-$PRMTXT MIXNOT      Y   "혼합 제품의 제품 이름이 없습니다."
-$PRMTXT BFMNOT      Y   "명목 물리적 분할이 지정되지 않았습니다."
-$PRMTXT BFMINV      Y   "명목 물리적 분할이 유효하지 않습니다!"
-$PRMTXT PGENOT      Y   "페이지 설명이 지정되지 않았습니다."
-$PRMTXT LYTBSSMIS   Y   "브로드시트 페이지에 대한 레이아웃 템플릿이 지정되지 않았습니다."
+$PRMTXT MIXNOT Y "혼합 제품의 제품 이름이 없습니다."
+$PRMTXT BFMNOT Y "명목 물리적 분할이 지정되지 않았습니다."
+$PRMTXT BFMINV Y "명목 물리적 분할이 유효하지 않습니다!"
+$PRMTXT PGENOT Y "페이지 설명이 지정되지 않았습니다."
+$PRMTXT LYTBSSMIS Y "브로드시트 페이지에 대한 레이아웃 템플릿이 지정되지 않았습니다."
 
-$PRMTXT LYTTBLMIS   Y   "타블로이드 페이지에 대한 레이아웃 템플릿이 지정되지 않았습니다."
+$PRMTXT LYTTBLMIS   Y 	"타블로이드 페이지에 대한 레이아웃 템플릿이 지정되지 않았습니다."
 
-$PRMTXT BSSMIS      Y   "브로드시트 페이지가 없는데도"
+$PRMTXT BSSMIS      Y 	"브로드시트 페이지가 없는데도"
                         "  브로드시트 페이지에 대한 레이아웃 템플릿이 지정되었습니다."
-$PRMTXT TBLMIS      Y   "타블로이드 페이지가 없는데도"
+$PRMTXT TBLMIS 	    Y 	"타블로이드 페이지가 없는데도"
                         "  타블로이드 페이지에 대한 레이아웃 템플릿이 지정되었습니다."
-$PRMTXT PGEMIN      Y   "페이지 수가 4보다 적습니다."
-$PRMTXT PGEMAX      Y   "총 페이지 수가 최대치를 초과했습니다"
+$PRMTXT PGEMIN      Y 	"페이지 수가 4보다 적습니다."
+$PRMTXT PGEMAX      Y 	"총 페이지 수가 최대치를 초과했습니다"
                         "  (브로드시트 페이지 192페이지)."
-$PRMTXT PGEODD      Y   "페이지 수가 짝수가 아닙니다."
-$PRMTXT PGEDBL      Y   "중복 페이지 이름이 존재합니다."
+$PRMTXT PGEODD      Y 	"페이지 수가 짝수가 아닙니다."
+$PRMTXT PGEDBL      Y 	"중복 페이지 이름이 존재합니다."
                         "  섹션과 페이지 이름의 조합은 명확해야 합니다!"
-$PRMTXT TBLDEFINV   Y   "타블로이드 정의가 유효하지 않습니다."
-$PRMTXT TBLNUMINV   Y   "타블로이드 페이지 수가 유효하지 않습니다."
+$PRMTXT TBLDEFINV   Y 	"타블로이드 정의가 유효하지 않습니다."
+$PRMTXT TBLNUMINV   Y 	"타블로이드 페이지 수가 유효하지 않습니다."
 $PRMTXT TBLKPLERR   Y   "연결된 타블로이드 페이지에 상충되는 세부 사항이 있습니다"
                         "  (색상 요청, 참조 또는 페이지 높이)."
-$PRMTXT PANANFERR   Y   "파노라마 요청이 최소한 부분적으로 유효하지 않습니다."
+$PRMTXT PANANFERR   Y 	"파노라마 요청이 최소한 부분적으로 유효하지 않습니다."
 
-$PRMTXT PGEDSCINV   Y   "페이지 설명이 유효하지 않습니다!"
-$PRMTXT STEBRTINV   Y   "페이지 폭의 한계를 초과했습니다!"
+$PRMTXT PGEDSCINV   Y 	"페이지 설명이 유효하지 않습니다!"
+$PRMTXT STEBRTINV   Y 	"페이지 폭의 한계를 초과했습니다!"
 $PRMTXT PGENUMDIF   Y   "총 페이지 수가"
                         "  명목 물리적 분할과 일치하지 않습니다."
 $PRMTXT SCNPGEMIS   Y   "면적 커버리지 값이 있는 모든 판이"
                         "  제품에서 사용되고 있지 않습니다."
 $PRMTXT ERRGEPPRB   Y   "계획된 생산 시작 시간이 모든 프레스에서 충족되지 않습니다."
-$PRMTXT ERRGEPPRE   Y   "계획된 생산 종료 시간이 모든 프레스에서 충족되지 않습니다."
+$PRMTXT ERRGEPPRE   Y 	"계획된 생산 종료 시간이 모든 프레스에서 충족되지 않습니다."
 $PRMTXT DIFSLLAFL   Y   "생산 런별 목표 합계가"
                         "  전체 목표와 같지 않습니다."
 $PRMTXT DIFSLLAFLVRB Y  "프레스 컴파운드에 포함된 모든 생산 런에 대해"
@@ -451,12 +451,12 @@ $PRMTXT DIFSLLAFLVRB Y  "프레스 컴파운드에 포함된 모든 생산 런�
                         "  전체 목표와 같지 않습니다."
 $PRMTXT ERRPKTINF   Y   "뭉치 정보가 불완전합니다."
 $PRMTXT DEFNOTERR   Y   "오류 없음."
-$PRMTXT FLDNOT      Y   "계획된 생산 런이 없습니다."
+$PRMTXT FLDNOT 	    Y   "계획된 생산 런이 없습니다."
 $PRMTXT BHFNOTWEB   Y   "웹 리드가 지정되지 않았습니다."
 $PRMTXT BHFNOTPDA   Y   "생산 타입이 지정되지 않았습니다."
 $PRMTXT BHFINVPDA   Y   "지정된 생산 타입이"
                         "  폴더 유닛의 운전 모드와 호환되지 않습니다."
-$PRMTXT BHFINVPAN   Y   "요청된 센터 스프레드를 인쇄할 수 없습니다."
+$PRMTXT BHFINVPAN Y "요청된 센터 스프레드를 인쇄할 수 없습니다."
 
 $PRMTXT BHFNMGSGS   Y   "페이지 수가"
                         "  지정된 생산 타입에 대한 최대 페이지 수를 초과했습니다."
@@ -483,7 +483,7 @@ $PRMTXT PDAVEPSTZFAW Y  "생산 타입 'Collect parallel' 또는 'Fourfold'에�
 $PRMTXT BHFNOTTFR   Y   "선택된 포머-폴더 웹 리드가 없습니다."
 $PRMTXT BHFZUSERR   Y   "추가 기능/장비 항목에 대해"
                         "  허용 범위를 벗어난 값이 입력되었습니다."
-$PRMTXT BHFPAPERR   Y   "지 규격이 불완전합니다." 
+$PRMTXT BHFPAPERR Y     "지 규격이 불완전합니다." 
 $PRMTXT BHFPBLGRMERR Y  "웹 ~1 의 웹 폭이"
                         "  지정된 평량에서 허용되는 값보다 큽니다."
                         <%d>
@@ -500,7 +500,7 @@ $PRMTXT ZLBWEBINV   Y   "웹 리드가 생산 타입에 적합하지 않습니�
 $PRMTXT ZLBNOTSYM   Y   "웹 리드가 생산 타입에 적합하지 않습니다"
                         "  (폴더 유닛으로 가는 라인 수가 비대칭입니다)."
 
-$PRMTXT ZLBBFMDIF   Y   "계산된 물리적 분할이" "  명목 물리적 분할과 다릅니다."                        
+$PRMTXT ZLBBFMDIF   Y 	"계산된 물리적 분할이" "  명목 물리적 분할과 다릅니다."                        
 $PRMTXT ZLBPGELES   Y   "계산된 페이지 수(브로드시트)가"
                         "  페이지 설명에서 요구된 수보다 적습니다."
 $PRMTXT ZLBPGEMOR   Y   "계산된 페이지 수(브로드시트)가"
@@ -508,7 +508,7 @@ $PRMTXT ZLBPGEMOR   Y   "계산된 페이지 수(브로드시트)가"
 $PRMTXT ZLBPANANF   Y   "파노라마 요청을 인쇄할 수 없습니다."
                         "  신문 레이아웃을 보려면"
                         "  '기존 임포지션'을 참조하십시오."
-$PRMTXT ZLBCLRGRP   Y   "선택된 색상을 인쇄할 수 없습니다."
+$PRMTXT ZLBCLRGRP Y "선택된 색상을 인쇄할 수 없습니다."
 $PRMTXT ZLBSPCCLR   Y   "요청된 색상과 다른 특정 색상이"
                         "  인쇄됩니다."
 $PRMTXT ZLBDIFSPC   Y   "한 페이지가 두 가지 다른 특정 색상으로"
@@ -517,11 +517,11 @@ $PRMTXT ZLBDIFSPC   Y   "한 페이지가 두 가지 다른 특정 색상으로"
 $PRMTXT ZLBDIFBCH   Y   "물리적 섹션 구조가 다릅니다"
                         "  (전단지가 서로 다른 위치에 있음)."
                         /* int, bei Vierfach- oder Einfachparallel-Produktion */
-$PRMTXT ERRKNEPRZ   Y   "생산 런별 생산 시작 또는 종료가"
+$PRMTXT ERRKNEPRZ Y "생산 런별 생산 시작 또는 종료가"
                         "  지정되지 않았거나 적절하지 않습니다."
-$PRMTXT ERRKNESLA   Y   "생산 런별 목표가"
+$PRMTXT ERRKNESLA Y "생산 런별 목표가"
                         "  지정되지 않았습니다."
-$PRMTXT ERRUNVSBR   Y   "상충되는 페이지 폭(타블로이드 페이지의 경우: 높이)이"
+$PRMTXT ERRUNVSBR Y "상충되는 페이지 폭(타블로이드 페이지의 경우: 높이)이"
                         "  감지되었습니다"
                         "  이유:"
                         "  ~1;"
@@ -530,17 +530,17 @@ $PRMTXT ERRUNVSBR   Y   "상충되는 페이지 폭(타블로이드 페이지의
                         "  '웹 임포지션' 화면을 사용하여"
                         "  웹의 단일 페이지 위치에 있는 모든 페이지의 페이지 폭을 함께 편집하십시오"
                         <%ls>
-$PRMTXT ERRBERGRZ   Y   "페이지 치수가 한계를 초과했습니다"
+$PRMTXT ERRBERGRZ   Y "페이지 치수가 한계를 초과했습니다"
 $PRMTXT ERRDRWUMF   Y   "동일한 인쇄 커플 위치에서 페이지 폭이 다릅니다"
 $PRMTXT ERRTFSRST   Y   "페이지 폭을 맞출 수 없습니다"
 						"  인쇄 커플에"
                         "  (인쇄 커플 크기 제한 또는 판 제한이"
                         "  위반됨)"
 
-$PRMTXT ERRMPFANF   Y   "미니 플라우 요청이 실현 불가능합니다"
-$PRMTXT ERRMPFBHN   Y   "웹 리드에 미니 플라우가 포함되어 있습니다."
+$PRMTXT ERRMPFANF  Y "미니 플라우 요청이 실현 불가능합니다"
+$PRMTXT ERRMPFBHN    Y     "웹 리드에 미니 플라우가 포함되어 있습니다."
 						" 요청되지 않은"
-$PRMTXT ERRUNVDQA   Y   "상충되는 인쇄 품질 요청이"
+$PRMTXT ERRUNVDQA Y     "상충되는 인쇄 품질 요청이"
                         "  감지되었습니다"
                         "  이유:"
                         "  ~1;"
@@ -596,7 +596,7 @@ $PRMTXT INFBFM_1    Y   "명목 물리적 분할"
                         " 일치해야 합니다."
 $PRMTXT INFBFMFWR   Y   "결합 및 혼합 제품의 물리적 섹션 순서:"
                         "폴더 유닛 2  폴더 유닛 1 "               /* nzu */ 
-$PRMTXT INFBFMFWR_1 Y   "결합 및 혼합 제품의 순서:"
+$PRMTXT INFBFMFWR_1 Y  "결합 및 혼합 제품의 순서:"
                         "폴더 유닛 2  폴더 유닛 1"
 $PRMTXT INFMSH      Y   "프레스"
 $PRMTXT INFMSHSEL   Y   @ALG_MSH
@@ -657,18 +657,18 @@ $PRMTXT INFZAFMPRFW2 Y  "혼합 제품의 경우:"
                         "계획된 목표에 대한 허용치"
                         "그 외의 경우:"
                         "해당 없음"
-$PRMTXT INFZAMFW1    Y  "혼합 제품의 경우:"
+$PRMTXT INFZAMFW1   Y   "혼합 제품의 경우:"
                         "폴더 유닛 1의 제품에 대한 계획된 목표에 대한"
                         "추가 생산 런별 허용치"
                         "그 외의 경우:"
                         "대한 추가 생산 런별 허용치"
                         "계획된 목표에"
-$PRMTXT INFZAMFW2    Y  "혼합 제품의 경우:"
+$PRMTXT INFZAMFW2   Y   "혼합 제품의 경우:"
                         "폴더 유닛 2의 제품에 대한 계획된 목표에 대한"
                         "추가 생산 런별 허용치"
                         "그 외의 경우:"
                         "해당 없음"
-$PRMTXT INFMSHMSTEXP Y  "견본 부수"
+$PRMTXT INFMSHMSTEXP Y "견본 부수"
 $PRMTXT INFGPLPLTPRDBEG Y "판 제작 계획 시작"
 $PRMTXT INFGPLPLTPRDEND Y "판 제작 계획 종료"
 $PRMTXT INFSKT      Y   "섹션 이름(선택 사항)"
@@ -676,7 +676,7 @@ $PRMTXT INFSKT      Y   "섹션 이름(선택 사항)"
                         "참고:"
                         "이름에 의한 섹션 구분은"
                         "물리적 섹션과 다를 수 있습니다."
-$PRMTXT INFSTE      Y   "페이지 이름 열거 또는 범위 지정, 예: 1 - 16"
+$PRMTXT INFSTE Y "페이지 이름 열거 또는 범위 지정, 예: 1 - 16"
 $PRMTXT INFTBL      Y   "타블로이드 섹션 표시"
                         "" + @NOTTBL
                         "" + @TBLGES
@@ -687,14 +687,14 @@ $PRMTXT INFTBL      Y   "타블로이드 섹션 표시"
 $PRMTXT INFTBLLIM   Y   "타블로이드 섹션 표시"
                         "" + @NOTTBL
                         "" + @TBLGES
-$PRMTXT INFSTB      Y   "페이지 명명 규칙 (좌우/우좌)"
-$PRMTXT INFLYTBSS   Y   "브로드시트 페이지용 레이아웃 템플릿" 
-$PRMTXT INFLYTTBL   Y   "타블로이드 페이지용 레이아웃 템플릿" 
-$PRMTXT INFLYTNBR   Y   "레이아웃 재작업"
-$PRMTXT INFSPG      Y   "열기" + " " + @SPGHDR
-$PRMTXT INFBLT      Y   "열기" + " " + @BLTHDR
-$PRMTXT INFSKTOBN   Y   "섹션 앞쪽으로 이동"
-$PRMTXT INFSKTUNT   Y   "섹션 뒤쪽으로 이동"
+$PRMTXT INFSTB Y "페이지 명명 규칙 (좌우/우좌)"
+$PRMTXT INFLYTBSS Y "브로드시트 페이지용 레이아웃 템플릿" 
+$PRMTXT INFLYTTBL Y "타블로이드 페이지용 레이아웃 템플릿" 
+$PRMTXT INFLYTNBR Y "레이아웃 재작업"
+$PRMTXT INFSPG Y "열기" + " " + @SPGHDR
+$PRMTXT INFBLT Y "열기" + " " + @BLTHDR
+$PRMTXT INFSKTOBN Y "섹션 앞쪽으로 이동"
+$PRMTXT INFSKTUNT Y "섹션 뒤쪽으로 이동"
 $PRMTXT INFSKTINS   Y   @PRD_INFSKTINS
 $PRMTXT INFSKTDEL   Y   @PRD_INFSKTDEL
 $PRMTXT INFTBLMRK   Y   "섹션을 타블로이드로 표시"
@@ -704,8 +704,8 @@ $PRMTXT INFTBLMRK   Y   "섹션을 타블로이드로 표시"
                         "브로드시트 페이지에 있어야 하며, 두 번째와 끝에서 두 번째도 마찬가지입니다."
                         "(기초가 되는 순서를 기준으로 한 설명"
                         "브로드시트 페이지)"
-$PRMTXT INFTBLMRKLIM Y  "타블로이드로 표시"
-$PRMTXT INFALLSTE    Y  "모든 섹션의 페이지 나열 (켜기/끄기)"
+$PRMTXT INFTBLMRKLIM Y "타블로이드로 표시"
+$PRMTXT INFALLSTE Y "모든 섹션의 페이지 나열 (켜기/끄기)"
 $PRMTXT INFFSTSKT    Y  @ZTG_SKT
 $PRMTXT INFFSTSTE    Y  "페이지"                                       /* nzu */
                         "참고:"
@@ -764,7 +764,7 @@ $PRMTXT INFSTDSTEBRTBER Y
                         ""
                         "" + @INFLSTSTEBRT
                         <%ls>
-$PRMTXT INFFSTDQA    Y  "인쇄 품질 요청/가용성"
+$PRMTXT INFFSTDQA    Y    "인쇄 품질 요청/가용성"
                         ""
                         "참고:"
                         "런이 선택된 경우 인쇄 품질 요청은"
@@ -780,76 +780,76 @@ $PRMTXT INFSTEBRTNCHSHR   Y  "수축 후 페이지 폭 요청 (켜기/끄기)"
                              "참고:"
                              "'끄기'는 지정된 페이지 폭 요청을"
                              "수축 전 페이지 폭으로 해석함을 의미합니다"
-$PRMTXT INFPOPOUT     Y  "팝아웃 페이지"
-$PRMTXT INFPULLIN     Y  "풀인 페이지"
-$PRMTXT INFFIXSTEBRT  Y  "개별, 특정 페이지 폭/높이가 있는 페이지"
-$PRMTXT INFUMSINN     Y  "안쪽으로 접힘 (페이지 방향)"
-$PRMTXT INFUMSAUS     Y  "바깥쪽으로 접힘 (페이지 뒷면 방향)"
-$PRMTXT INFSTEBRTRST  Y  "페이지 크기 세부 정보를 표준으로 재설정"
-$PRMTXT INFPANMGL     Y   "센터 스프레드 가능"
-$PRMTXT INFPANMNT     Y   "표지 파노라마"
+$PRMTXT INFPOPOUT Y "팝아웃 페이지"
+$PRMTXT INFPULLIN Y "풀인 페이지"
+$PRMTXT INFFIXSTEBRT Y "개별, 특정 페이지 폭/높이가 있는 페이지"
+$PRMTXT INFUMSINN Y "안쪽으로 접힘 (페이지 방향)"
+$PRMTXT INFUMSAUS Y "바깥쪽으로 접힘 (페이지 뒷면 방향)"
+$PRMTXT INFSTEBRTRST Y "페이지 크기 세부 정보를 표준으로 재설정"
+$PRMTXT INFPANMGL Y "센터 스프레드 가능"
+$PRMTXT INFPANMNT      Y   "표지 파노라마"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANMNTNMG  Y   "표지 파노라마가 요청되었지만 사용할 수 없습니다"
+$PRMTXT INFPANMNTNMG   Y   "표지 파노라마가 요청되었지만 사용할 수 없습니다"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANMIT     Y   "센터 스프레드"
+$PRMTXT INFPANMIT      Y   "센터 스프레드"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANMITNMG  Y   "센터 스프레드가 요청되었지만 사용할 수 없습니다"
+$PRMTXT INFPANMITNMG   Y   "센터 스프레드가 요청되었지만 사용할 수 없습니다"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANVDE     Y   "숨겨진 파노라마"
+$PRMTXT INFPANVDE      Y   "숨겨진 파노라마"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANVDENMG  Y   "숨겨진 파노라마가 요청되었지만 사용할 수 없습니다"
+$PRMTXT INFPANVDENMG   Y   "숨겨진 파노라마가 요청되었지만 사용할 수 없습니다"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANUND     Y   "미지정 진정한(분할되지 않은) 파노라마"
+$PRMTXT INFPANUND      Y   "미지정 진정한(분할되지 않은) 파노라마"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANUNDNMG  Y   "미지정 진정한(분할되지 않은) 파노라마가 요청되었지만 사용할 수 없습니다"
+$PRMTXT INFPANUNDNMG   Y   "미지정 진정한(분할되지 않은) 파노라마가 요청되었지만 사용할 수 없습니다"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANPSL     Y   "분할 스프레드(좌측 도련)"
+$PRMTXT INFPANPSL      Y   "분할 스프레드(좌측 도련)"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANPSLNMG  Y   "분할 스프레드(좌측 도련)가 요청되었지만 사용할 수 없습니다"
+$PRMTXT INFPANPSLNMG   Y   "분할 스프레드(좌측 도련)가 요청되었지만 사용할 수 없습니다"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANPSR     Y   "분할 스프레드(우측 도련)"
+$PRMTXT INFPANPSR      Y   "분할 스프레드(우측 도련)"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFPANPSRNMG  Y   "분할 스프레드(우측 도련)가 요청되었지만 사용할 수 없습니다"
+$PRMTXT INFPANPSRNMG   Y   "분할 스프레드(우측 도련)가 요청되었지만 사용할 수 없습니다"
                           ""
                           "요청된 파트너 파노라마 페이지: ~1"
                           <%ls>
-$PRMTXT INFAB_SPL     Y   "A/B-스플릿"
-$PRMTXT INFAB_SPLNMG  Y   "A/B-스플릿이 요청되었지만 실현 불가능합니다"
-$PRMTXT INFBCHMRK     Y   "명목 물리적 분할 기반 섹션 구분자"
-$PRMTXT INFANZZUSFRB  Y   "웹의 인쇄 가능 색상 수 (사용/가용)"
+$PRMTXT INFAB_SPL Y "A/B-스플릿"
+$PRMTXT INFAB_SPLNMG Y "A/B-스플릿이 요청되었지만 실현 불가능합니다"
+$PRMTXT INFBCHMRK Y "명목 물리적 분할 기반 섹션 구분자"
+$PRMTXT INFANZZUSFRB Y "웹의 인쇄 가능 색상 수 (사용/가용)"
 
 $PRMTXT INFPRDGRP     Y   @ZTG_PRDGRP
-$PRMTXT INFPRDSPZANG  Y   "열기" + " " + @PRDSPZANGHDR 
+$PRMTXT INFPRDSPZANG Y "열기" + " " + @PRDSPZANGHDR 
 
-$PRMTXT INFDRKGRP     Y   "인쇄 그룹"
-$PRMTXT INFEXPGEW     Y   "계산된 1부당 중량"
+$PRMTXT INFDRKGRP Y "인쇄 그룹"
+$PRMTXT INFEXPGEW Y "계산된 1부당 중량"
 
-$PRMTXT INFPVR      Y   "명목 물리적 분할과 페이지 설명의 페이지 수" "일치 여부 확인 (켜기/끄기)"                        
-$PRMTXT INFAEZVGB   Y   "자동 인피드 확인 (켜기/끄기)"
-$PRMTXT INFPBLTRF   Y   "추가 위치/폭 지정을 모든 웹에 적용"
-$PRMTXT INFPAPTRF   Y   "지 선택을 모든 웹에 적용"
+$PRMTXT INFPVR Y "명목 물리적 분할과 페이지 설명의 페이지 수" "일치 여부 확인 (켜기/끄기)"                        
+$PRMTXT INFAEZVGB Y "자동 인피드 확인 (켜기/끄기)"
+$PRMTXT INFPBLTRF Y "추가 위치/폭 지정을 모든 웹에 적용"
+$PRMTXT INFPAPTRF Y "지 선택을 모든 웹에 적용"
 $PRMTXT INFSHRFKT   Y   "천분율 수축 계수"
                         "(0: 수축 없음;"
                         " 프레스별 허용 범위: ~1 - ~2)"
@@ -863,14 +863,14 @@ $PRMTXT INFBHNLGE   Y   "웹 위치/폭 (X/. 은 포머상의 한 브로드시�
                         "추가 위치/폭 지정(설정)"
                         "지 및 지 평량   수축 계수(설정)"
                         "대체 지(설정)"
-$PRMTXT INFGESFRB   Y   "전면/후면 총 색상"
-$PRMTXT INFRST      Y   "릴 스플라이서"
+$PRMTXT INFGESFRB Y "전면/후면 총 색상"
+$PRMTXT INFRST Y "릴 스플라이서"
 $PRMTXT INFDEHFHR   Y   "인쇄 유닛을 통한 웹 리드"
                         "구문:"
                         "인쇄 유닛 : 첫 번째 인쇄 커플 * 전면/후면 색상"
-$PRMTXT INFELFETG   Y   "턴잉 유닛으로의 리드 인 레벨" "(> = 좌측, < = 우측)"
-$PRMTXT INFFABTXT   Y   "폴더 상구조 웹 리드 변형(해당되는 경우)"
-$PRMTXT INFWNDETG   Y   "출구 레벨"
+$PRMTXT INFELFETG Y "턴잉 유닛으로의 리드 인 레벨" "(> = 좌측, < = 우측)"
+$PRMTXT INFFABTXT Y "폴더 상구조 웹 리드 변형(해당되는 경우)"
+$PRMTXT INFWNDETG Y "출구 레벨"
 $PRMTXT INFATBTXT   Y   "출구-포머 웹 리드 변형(해당되는 경우;"
                         "웹 삽입 시 자동으로 할당됨)"
 $PRMTXT INFWNDOP    Y   "턴잉 유닛을 거쳐 포머로의 웹 리드"
@@ -881,21 +881,21 @@ $PRMTXT INFWNDOP    Y   "턴잉 유닛을 거쳐 포머로의 웹 리드"
                         "주의:"
                         "X/. ->:   초기 브로드시트 페이지 위치"
                         "-> X/O/.: 포머상의 목표 위치(포머 측)"
-$PRMTXT INFBWD      Y   "베이윈도 레벨"
-$PRMTXT INFTCH      Y   "언더-앤드-업"
-$PRMTXT INFTRE      Y   "포머 레벨"
-$PRMTXT INFAEZ      Y   "자동 인피드 표시기"
-$PRMTXT INFGBO      Y   "그래픽 웹 리드 열기"
-$PRMTXT INFBFS      Y   "웹 리드 검색"
-$PRMTXT INFBFK      Y   "웹 리드 복사"
+$PRMTXT INFBWD Y "베이윈도 레벨"
+$PRMTXT INFTCH Y "언더-앤드-업"
+$PRMTXT INFTRE Y "포머 레벨"
+$PRMTXT INFAEZ Y "자동 인피드 표시기"
+$PRMTXT INFGBO Y "그래픽 웹 리드 열기"
+$PRMTXT INFBFS Y "웹 리드 검색"
+$PRMTXT INFBFK Y "웹 리드 복사"
 $PRMTXT INFSKG      Y   "웹 리드 복잡도에 대한 사용자 정의 평가(선택 사항)"
                         "(웹 리드 검색 결과 정렬에 사용;"
                         " 정렬: 가장 낮은 값이 목록에서 첫 번째)"
-$PRMTXT INFTFB      Y   "<선택된 폴더 유닛>  이름  포머 순서"
-$PRMTXT INFTFBFW    Y   "폴더 유닛"
-$PRMTXT INFTFBTXT   Y   "포머 순서 이름"
-$PRMTXT INFTFR      Y   "포머에서 수집되는 리본의 순서"
-$PRMTXT INFTFS      Y   "열기" + " " + @TFSHDR
+$PRMTXT INFTFB Y "<선택된 폴더 유닛>  이름  포머 순서"
+$PRMTXT INFTFBFW Y "폴더 유닛"
+$PRMTXT INFTFBTXT Y "포머 순서 이름"
+$PRMTXT INFTFR Y "포머에서 수집되는 리본의 순서"
+$PRMTXT INFTFS Y "열기" + " " + @TFSHDR
 
 $PRMTXT INFPLNMSH   Y   @ALG_MSH
 $PRMTXT INFPLNSTZ   Y   @ZTG_STZ_BS
@@ -906,13 +906,13 @@ $PRMTXT INFPLNVRS   Y   @ALG_VRS
 $PRMTXT INFPRDFLT   Y   @PRD_INFFLT
 $PRMTXT INFPRSFLT   Y   @PRD_INFPRSFLT
 $PRMTXT INFPLNSKG   Y   "웹 리드 복잡도 상한"
-$PRMTXT INFPLNFRBSTE Y  "제품의 색상 선택을 고려하시겠습니까?"
-$PRMTXT INFPLNFRBZUO Y  "제품의 잉크 할당을 고려하시겠습니까?"
-$PRMTXT INFPLNDATPOL Y  "검색할 데이터 풀"
-$PRMTXT INFFNDDRW   Y   "웹 리드에서 사용되는 인쇄 커플 수"
-$PRMTXT INFFNDSKG   Y   "웹 리드 복잡도"
+$PRMTXT INFPLNFRBSTE Y "제품의 색상 선택을 고려하시겠습니까?"
+$PRMTXT INFPLNFRBZUO Y "제품의 잉크 할당을 고려하시겠습니까?"
+$PRMTXT INFPLNDATPOL Y "검색할 데이터 풀"
+$PRMTXT INFFNDDRW Y "웹 리드에서 사용되는 인쇄 커플 수"
+$PRMTXT INFFNDSKG Y "웹 리드 복잡도"
 
-$PRMTXT INFBHBRLW   Y   "해당 웹 리드를 보기/편집하려면 여기를 클릭"
+$PRMTXT INFBHBRLW Y "해당 웹 리드를 보기/편집하려면 여기를 클릭"
 $PRMTXT INFBHBPAP   Y   "제로 기준 지 위치  >지 폭<"
                         @RT + ": " + "릴스탠드에서의 지 위치"
                         "지 이름"
@@ -932,12 +932,12 @@ $PRMTXT INFBHBLEG   Y   "외부 및 내부에서의 웹 임포지션"
 $PRMTXT INFDRF      Y   "인쇄 순서"
                         ""
                         @INFDRFLEG
-$PRMTXT INFBHBBHN   Y   "웹 또는 부분 웹의 표현(관련 시 턴잉 설명 포함)"
+$PRMTXT INFBHBBHN Y "웹 또는 부분 웹의 표현(관련 시 턴잉 설명 포함)"
 
-$PRMTXT INFZLBBFM   Y   "지정된 웹 리드를 기반으로 선택된 생산 런에 대해 계산된 물리적 분할"
-$PRMTXT INFZLBSTZ   Y   "지정된 웹 리드를 기반으로 선택된 생산 런에 대해 계산된 페이지 수(브로드시트)"
-$PRMTXT INFPLTANZ   Y   "계산된 색판/더미 판/빈 판 위치 수"
-$PRMTXT INFALLVIW   Y   "세부 보기"
+$PRMTXT INFZLBBFM Y "지정된 웹 리드를 기반으로 선택된 생산 런에 대해 계산된 물리적 분할"
+$PRMTXT INFZLBSTZ Y "지정된 웹 리드를 기반으로 선택된 생산 런에 대해 계산된 페이지 수(브로드시트)"
+$PRMTXT INFPLTANZ Y "계산된 색판/더미 판/빈 판 위치 수"
+$PRMTXT INFALLVIW Y "세부 보기"
 $PRMTXT INFPLTVIW   Y   "판 보기 " /* nzu */
                         ""
                         "참고:"
@@ -955,7 +955,7 @@ $PRMTXT INFPLTVIW_1 Y   "판 보기"  /* fmt, v,m56,n0 */
                         "  회색 = 더미 판"
                         "  배경색 = 빈 판 위치"
                         "- 핀: 판 유형이 수동으로 할당됨"
-$PRMTXT INFPLTMAN   Y   "판 할당이 수동으로 수정되었습니다."
+$PRMTXT INFPLTMAN Y "판 할당이 수동으로 수정되었습니다."
                         ""
                         "주의:"
                         "수동으로 할당된 판 유형은"
@@ -969,10 +969,10 @@ $PRMTXT INFPLTRSTOPTALF Y "판 할당을 모든 계획된 생산 런의"  /* fmt
 
 $PRMTXT INFDGRMSH   Y   @ALG_MSH
 $PRMTXT INFGEPPRB   Y   @ALG_GEPPRB
-$PRMTXT INFZLBSTA   Y   "선택된 생산 런에 대한 실린더 임포지션 계산 결과"
+$PRMTXT INFZLBSTA   Y "선택된 생산 런에 대한 실린더 임포지션 계산 결과"
                         "녹색 체크: 웹 리드가 페이지 설명에 지정된 요구 사항을 충족함"
                         "빨간 X: 웹 리드가 페이지 설명에 지정된 요구 사항을 충족하지 못함"
-$PRMTXT INFDGRFPS   Y   "생산 순서에 대한 잉크 임포지션 최적화 (켜기/끄기)"
+$PRMTXT INFDGRFPS Y "생산 순서에 대한 잉크 임포지션 최적화 (켜기/끄기)"
 
 $PRMTXT INFSPGSKT   Y   @ZTG_SKT
 $PRMTXT INFSPGSTE   Y   @INFFSTSTE
@@ -981,8 +981,8 @@ $PRMTXT INFSSW      Y   "참고:"
                         "해당 참조 이름의 면적 커버리지 값이"
                         "프리셋팅에 사용됩니다(주석 전용이 아닌 경우)."
 
-$PRMTXT INFSPGZAG   Y   "자유롭게 사용할 수 있는 추가 데이터 필드 3개"
-$PRMTXT INFSPGIMP   Y   "모든 페이지(페이지가 선택되지 않은 경우) 또는"
+$PRMTXT INFSPGZAG Y "자유롭게 사용할 수 있는 추가 데이터 필드 3개"
+$PRMTXT INFSPGIMP   Y "모든 페이지(페이지가 선택되지 않은 경우) 또는"
                         "선택된 페이지에 대해 다른 제품에서"
                         "참조를 가져옵니다 "
                         "(참고:"
@@ -1000,10 +1000,10 @@ $PRMTXT INFUPDSPR   Y   "분판 참조 업데이트"
                         "(현재 참조가 없는 요청된 모든 색상에 대해"
                         " 참조를 생성하고"
                         " 요청되지 않은 색상에 대한 참조를 삭제)"
-$PRMTXT INFSSWLST   Y   "데이터베이스의 참조 이름"
-$PRMTXT INFSSWLSTANZ Y  "선택 목록의 참조 이름 수"
-$PRMTXT INFSSWGESANZ Y  "데이터베이스의 참조 이름 총 수"
-$PRMTXT INFSSWSELANZ Y  "선택된 참조 이름 수"
+$PRMTXT INFSSWLST Y "데이터베이스의 참조 이름"
+$PRMTXT INFSSWLSTANZ Y "선택 목록의 참조 이름 수"
+$PRMTXT INFSSWGESANZ Y "데이터베이스의 참조 이름 총 수"
+$PRMTXT INFSSWSELANZ Y "선택된 참조 이름 수"
 $PRMTXT INFSSWKRI   Y   "저장된 참조 이름에 구조적으로 접근하기 위한"
                         "사용자 정의 기준"
 $PRMTXT INFSSWFLT   Y   @ALG_INFFLT
@@ -1018,19 +1018,19 @@ $PRMTXT INFSSWINS   Y   "현재 참조 이름과 세부 정보 및 기준을"
                         "데이터베이스에 저장"
                         "(참고:" "세부 정보는 참조 이름에 관련됩니다. 따라서"
                         "모든 제품에서 동일한 참조 이름을 사용할 때 세부 정보는 동일합니다!)"
-$PRMTXT INFSSWDEL   Y   "선택된 참조 이름을 데이터베이스에서 삭제"
+$PRMTXT INFSSWDEL Y "선택된 참조 이름을 데이터베이스에서 삭제"
 
 $PRMTXT INFSSWASG   Y   "페이지 개요에서 선택된 페이지에"
                         "참조 이름 할당"
 $PRMTXT INFMAXLGNPKT Y  "참고: 뭉치당 층 수는"
                         "20을 초과해서는 안 됩니다." 
 
-$PRMTXT INFPUBKNGLST Y  "간행물 식별자 목록 열기"
-$PRMTXT INFPUBNAMLST Y  "간행물 설명 목록 열기"
-$PRMTXT INFASGKNGLST Y  "판 식별자 목록 열기"
-$PRMTXT INFPLTRSTDRW Y  "인쇄 커플"
-$PRMTXT INFPLTRSTDEL Y  "드라이브 측의 마지막 판 삭제"
-$PRMTXT INFPLTRSTACC Y  "선택된 판 할당 적용"
+$PRMTXT INFPUBKNGLST Y "간행물 식별자 목록 열기"
+$PRMTXT INFPUBNAMLST Y "간행물 설명 목록 열기"
+$PRMTXT INFASGKNGLST Y "판 식별자 목록 열기"
+$PRMTXT INFPLTRSTDRW Y "인쇄 커플"
+$PRMTXT INFPLTRSTDEL Y "드라이브 측의 마지막 판 삭제"
+$PRMTXT INFPLTRSTACC Y "선택된 판 할당 적용"
 
 /* int, Messages */
 /* int, The text description for the following texts is: */          /* fmt, v,m300,n0 */
@@ -1063,7 +1063,7 @@ $PRMTXT GLFMSHNOTEDT Y  "불가능:"
 $PRMTXT FLDUSED     Y   "불가능:"
                         "프레스가 이미 삽입되었습니다!"
 
-$PRMTXT FLDUSEDPRM  Y   "프레스 ~1 이(가) 이미 삽입되었습니다." 
+$PRMTXT FLDUSEDPRM Y "프레스 ~1 이(가) 이미 삽입되었습니다." 
                         <%ls>
 
 $PRMTXT OVWFLD      Y   "경고:"
@@ -1379,7 +1379,7 @@ $PRMTXT INIPGEDSC   Y   "페이지 설명을"
 $PRMTXT INIPGEDSCBBH Y  "페이지 설명을"
                         "물리적 분할에 자동으로 맞추시겠습니까?"
 
-$PRMTXT TXTERR      Y   "텍스트 처리 중 오류가 발생했습니다!"
+$PRMTXT TXTERR Y  "텍스트 처리 중 오류가 발생했습니다!"
 
 $PRMTXT ISTEXI      Y   "경고:"
                         "제품이 편집되었습니다."
@@ -1395,7 +1395,7 @@ $PRMTXT PGEERR      Y   "페이지 설명이 유효하지 않으며"
                         "저장되지 않습니다!"
                         "데이터를 저장하시겠습니까?"
 
-$PRMTXT BFMPGEERR   Y   "물리적 분할과 페이지 설명이"
+$PRMTXT BFMPGEERR   Y  "물리적 분할과 페이지 설명이"
                         "유효하지 않으며 저장되지 않습니다!"
                         "데이터를 저장하시겠습니까?"
 
@@ -1498,11 +1498,11 @@ $PRMTXT MWBNOTFND   Y   "경고:"
                         "페이지 개요에"
                         "데이터베이스에서 삭제된 참조 이름이 포함되어 있습니다!"
 
-$PRMTXT TABMITERR   Y   "불가능:"
+$PRMTXT TABMITERR Y "불가능:"
                         "표시된 블록이 타블로이드 중앙을 가로지릅니다."
                         "이동이 불가능합니다!"
 
-$PRMTXT ALTRSTSCN   Y   "정말로 면적 커버리지 값을 재설정하시겠습니까?"
+$PRMTXT ALTRSTSCN Y "정말로 면적 커버리지 값을 재설정하시겠습니까?"
 
 
 $PRMTXT WDTUEBLST   Y   "주의:"
@@ -1541,14 +1541,14 @@ $PRMTXT SOLLAUFLAGE       Y   "저장 시 다른 기준으로"
                               "프레스별 목표 부수가 계산됩니다." 
                               "생산 데이터" 
                               + @ABWBERGRS
-$PRMTXT FORTDRUCKLEISTUNG Y   "저장 시 다른 생산 데이터를 기준으로"
+$PRMTXT FORTDRUCKLEISTUNG Y "저장 시 다른 생산 데이터를 기준으로"
                               "생산 런 출력이 계산됩니다." 
                               + @ABWBERGRS
-$PRMTXT PRODUKTIONSENDE   Y   "저장 시 다른 기준으로"
+$PRMTXT PRODUKTIONSENDE Y "저장 시 다른 기준으로"
                               "프레스별 생산 종료 시간이 계산됩니다." 
                               "생산 데이터"
                               + @ABWBERGRS
-$PRMTXT PRODUKTIONSBEGINN Y   "저장 시 다른 기준으로"
+$PRMTXT PRODUKTIONSBEGINN Y "저장 시 다른 기준으로"
                               "프레스별 생산 시작 시간이 계산됩니다." 
                               "생산 데이터"
                               + @ABWBERGRS
@@ -1652,7 +1652,7 @@ $PRMTXT UNVSTEBRT      Y   "주의:"
                            "빨간색으로 강조 표시됩니다(첫 번째 충돌)."
                            <%ls>
  
-$PRMTXT UNVBERGRZ      Y   "페이지 치수가 한계를 초과했습니다"
+$PRMTXT UNVBERGRZ Y "페이지 치수가 한계를 초과했습니다"
  
 $PRMTXT UNVDRWUMF      Y   "동일한 위치에서 페이지 폭이 다릅니다"
 						   "인쇄 커플"
@@ -1662,7 +1662,7 @@ $PRMTXT UNVTFSRST      Y   "페이지 폭을 인쇄 커플에 맞출 수 없습�
                            "위반됨)"
 
 
-$PRMTXT UNVMPFANF      Y   "미니 플라우 요청이 실현 불가능합니다"
+$PRMTXT UNVMPFANF Y 	"미니 플라우 요청이 실현 불가능합니다"
 
 $PRMTXT UNVDQAANF      Y   "주의:"
                            "상충되는 인쇄 품질 요청이"
@@ -1677,13 +1677,13 @@ $PRMTXT UNVDQAANF      Y   "주의:"
                            <%ls>
 
 
-$PRMTXT UNVDQASTE      Y   "상호 의존 페이지에 대한 상충되는 요청"
+$PRMTXT UNVDQASTE Y 	"상호 의존 페이지에 대한 상충되는 요청"
  
 
 $PRMTXT UNVDQAFRB      Y   "선택된 색상이 요청된"
                            "인쇄 품질과 호환되지 않습니다"
  
-$PRMTXT UNVDQAPAP      Y   "지정된 지가 요청된"
+$PRMTXT UNVDQAPAP Y 	"지정된 지가 요청된"
                            "인쇄 품질과 호환되지 않습니다"
 
 $PRMTXT ANPSBSERR      Y   "주의:"
@@ -1731,4 +1731,4 @@ $PRMTXT ERRBSSANZNUL   Y   "불가능:"
                            "또는"
                            "다른 리본 리드를 선택하십시오"
 
-$PRMTXT RSTMANPLTALT   Y   "정말로 수동 판 할당을 재설정하시겠습니까?"
+$PRMTXT RSTMANPLTALT Y "정말로 수동 판 할당을 재설정하시겠습니까?"
